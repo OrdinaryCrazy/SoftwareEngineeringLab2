@@ -379,6 +379,7 @@ INPUT chapters/intro.tex
 INPUT chapters/intro.tex
 INPUT chapters/overview.tex
 INPUT chapters/overview.tex
+INPUT figures/chat.png
 INPUT chapters/concrete_requirement.tex
 INPUT chapters/concrete_requirement.tex
 INPUT chapters/concrete_requirement/sigle_contact.tex
