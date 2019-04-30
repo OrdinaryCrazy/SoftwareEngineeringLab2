@@ -1,124 +1,61 @@
 \chapter{具体需求}
-<The following sections must be repeated for each requirement. >
-
-在每一条需求描述中重复下列部分
+% <The following sections must be repeated for each requirement. >
+% 在每一条需求描述中重复下列部分
 \section{功能需求}
-This section describes how the input of the software is translated to the output. It describes the essential action the software must perform.
-
-For each kind of function, or each independent function in some cases, the requirements of input, process and output must be described, which are usually organized with the following four subsections:
-
-本子章节应描述软件产品的输入怎样被转换成输出。它描述了软件必须执行的基本动作。 
-
-对每一类功能或有时对每一个单独的功能，必须描述输入、处理、输出方面的需求。这些通常以下面四个子段落来组织：
-\subsection{功能需求1}
-Please don't use "Functional Requirement(1)" as the title of the functional requirement. Name the functional requirements with a few simple words and a requirement ID.  For example:
-
-R.INTF.CALC.001 Calculating expression
-
-R.INTF.CALC.002 Print
-
-Naming the requirement ID shall follow the Software Requirements Management Procedure (REP01)
-
-用需求编号加上简短词汇做为功能需求名，不要用“功能需求（1）”作为功能名，例如：R.INTF.CALC.001 计算表达式
-
-R.INTF.CALC.002 打印
-
-需求编号规则按照软件需求管理规程(REP01)进行
-\subsubsection{介绍}
-<Itemize the detailed functional requirements associated with this feature. These are the software capabilities that must be present in order for the user to carry out the services provided by the feature.  Include how the project should respond to anticipated error conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and necessary. Use "TBD" as a placeholder to indicate when necessary information is not yet available. >
-
-逐条列出与本特性相关的功能需求。包括项目如何响应预期的错误输入，非法条件和无效输入。需求应该简明，完整，不含糊，可验证，必要的。 当需要的信息不确定的时候使用“待定”。
-\subsubsection{输入}
-This section consists of:
-A. Detailed description of all input data of the function, including:
-Source of input
-Quantify
-Measurement units
-Timing requirements
-Valid input range that contains the precision and tolerance
-B. Reference of interface specification or interface control document that are provided in proper place.
-
-本子段落应包含下列内容：
-
-A. 对该功能所有输入数据的详细描述，包括：
-
-		输入来源
-		数量
-		度量单位
-		时间要求
-		包含精度和容忍度的有效输入范围
-		
-B. 在适当的地方提供的对接口规格或接口控制文档的参考。
-\subsubsection{处理}
-Describes all the operations on the input data, and the process to get the output data, including the following specifications:
-A. Verification of input data
-B. Exact order of the operations, including the time sequene of each event.
-C. Response to exception, such as:
-		 Overflow
-		Communication failure
-		Error process
-D. Any method used to transfer the input data to the output data. (such as equation,mathematic algorithm and logical operation)
-For example.
-		The formula to calculate the income tax in a pay roll.
-		the weather model used for weather forecast
-E. Verification of output data.
-本子段落应描述对输入数据所执行的所有操作和如何获得输出的过程。这包括下列规格：
-
-A. 输入数据的有效性检测。
-
-B. 操作的确切次序，包括各事件的时序。
-
-C. 对异常情况的回应，例如：
-		溢出
-		通信失败
-		错误处理
-D. 用于把系统输入转换到相应输出的任何方法（诸如方程式，数学算法，逻辑操作）。例如，这可能描述下列方面：
-		对工资单里代扣所得税的计算公式。
-		用于气象预报的气象模型。
-		
-E.	对输出数据的有效性检测。
-\subsubsection{输出}
-This section should include:
-A. The detailed description of output data of the function, including:
-		Target to output to (Such as a printer or a file)
-		Quantity
-		Measurement units
-		Time sequence
-		Valid output range including the precision and tolerance
-		Process of the invalid value.
-		Error message.
-B. Reference of interface specification or interface control document that are provided in proper place.
-For the systems with their requirements focused on the input/output actions, all the important input/output actions and the time sequences of the input/output pairs should be described in the SRS. In a system that inputs and actions are memorized as the basis for the reactions to be taken, the timing sequence for the input/output pairs must be available here. This kind of functional action is similar to a status machine.  
-本子段落应包含：
-
-A. 对该功能所有输出数据的详细描述，这个描述包括：
-		输出的到何处（如打印机，文件）
-		数量
-		度量单位
-		时序
-		包含精确度和容忍度的有效输出范围
-		对非法值的处理
-		错误消息
-		
-B. 在适当的地方提供对接口规格或接口控制文档的参考。
-
-此外，对那些需求集中在输入/输出行为的系统，SRS应描述所有重要的输入/输出行为及输入输出对的次序。对一个需要记忆其行为以根据输入和过去的行为进行反应的系统，输入输出对的次序是要求的；这种功能行为就类似于有限状态机。
+% 本子章节应描述软件产品的输入怎样被转换成输出。它描述了软件必须执行的基本动作。 
+% 对每一类功能或有时对每一个单独的功能，必须描述输入、处理、输出方面的需求。这些通常以下面四个子段落来组织：
+\input{chapters/concrete_requirement/sigle_contact}
+\input{chapters/concrete_requirement/group_contact}
+\input{chapters/concrete_requirement/activity_task_organization}
+\input{chapters/concrete_requirement/av_contact}
+\input{chapters/concrete_requirement/address_book}
+\input{chapters/concrete_requirement/chat_record}
+\input{chapters/concrete_requirement/message_notification}
+\input{chapters/concrete_requirement/board}
+% R.INTF.CALC.001 Calculating expression
+% R.INTF.CALC.002 Print
+% 用需求编号加上简短词汇做为功能需求名，不要用“功能需求（1）”作为功能名，例如：R.INTF.CALC.001 计算表达式
+% 需求编号规则按照软件需求管理规程(REP01)进行
+% \subsubsection{介绍}
+% 逐条列出与本特性相关的功能需求。包括项目如何响应预期的错误输入，非法条件和无效输入。需求应该简明，完整，不含糊，可验证，必要的。 当需要的信息不确定的时候使用“待定”。
+% \subsubsection{输入}
+% 本子段落应包含下列内容：
+% A. 对该功能所有输入数据的详细描述，包括：
+%		输入来源
+%		数量
+%		度量单位
+%		时间要求
+%		包含精度和容忍度的有效输入范围	
+% B. 在适当的地方提供的对接口规格或接口控制文档的参考。
+% \subsubsection{处理}
+% 本子段落应描述对输入数据所执行的所有操作和如何获得输出的过程。这包括下列规格：
+% A. 输入数据的有效性检测。
+% B. 操作的确切次序，包括各事件的时序。
+% C. 对异常情况的回应，例如：
+%		溢出
+%		通信失败
+%		错误处理
+% D. 用于把系统输入转换到相应输出的任何方法（诸如方程式，数学算法，逻辑操作）。例如，这可能描述下列方面：
+%		对工资单里代扣所得税的计算公式。
+%		用于气象预报的气象模型。	
+% E.	对输出数据的有效性检测。
+% \subsubsection{输出}
+% 本子段落应包含：
+% A. 对该功能所有输出数据的详细描述，这个描述包括：
+%		输出的到何处（如打印机，文件）
+%		数量
+%		度量单位
+%		时序
+%		包含精确度和容忍度的有效输出范围
+%		对非法值的处理
+%		错误消息	
+% B. 在适当的地方提供对接口规格或接口控制文档的参考。
+% 此外，对那些需求集中在输入/输出行为的系统，SRS应描述所有重要的输入/输出行为及输入输出对的次序。对一个需要记忆其行为以根据输入和过去的行为进行反应的系统，输入输出对的次序是要求的；这种功能行为就类似于有限状态机。
 \section{性能需求}
 <If there are performance requirements, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specifies the timing relationships for real time systems. Such requirements should be made as specific as possible. >
 
 如果有性能方面的需求，在这里列出并解释他们的原理。以帮助开发者理解意图以做出正确的设计选择。在实时系统中的时序关系。保证需求尽可能的详细而精确。
 \subsection{性能需求1}
-Describes the statically and dynamically quantized requirements on the software (or the interaction between user and the software)
-Static quantized requirement could include:
-A. Maximum number of terminal supported.
-B. Maximum number of users that can use the software at the same time.
-C. Maximum number of files and records to be processed
-D. Maximum size of  tables and files
-Dynamically quantized requirements could include:
-A. Specific duration of normal value and peak value of workload (e.g., one hour)
-B. Number of event and task and data volume to be processed 
-All these requirements should be described by measurable term, for example, saying "95% of the events should be processed in 1 second", instead of saying "the operator need not wait for the business to complete."
-Note: The quantized constraint of a detailed requirement should be described in the subsection of the detailed requirement.
 本子章节应从整体上描述静态和动态的量化的对软件（或人与软件交互）的需求。
 
 静态的量化需求可能包括：
@@ -127,9 +64,9 @@ A. 支持的终端数目。
 
 B. 支持的同时使用的用户数目。
 
-C.处理的文件和记录的数目。
+C. 处理的文件和记录的数目。
 
-D.表和文件的大小。
+D. 表和文件的大小。
 
 动态的量化需求可能包括:
 
