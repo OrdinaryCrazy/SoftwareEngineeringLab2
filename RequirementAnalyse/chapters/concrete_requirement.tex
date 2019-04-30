@@ -50,15 +50,39 @@
 \subsection{总体性能需求}
 
 \subsubsection{支持的终端数目}
+\begin{itemize}
+	\item 移动端：1个；PC端：1 - 50个。
+\end{itemize}
 \subsubsection{支持的同时使用的用户数目}
+\begin{itemize}
+	\item 服务器集群可以支持不少于1000万用户同时在线使用。
+\end{itemize}
 \subsubsection{处理的文件和记录的数目}
+\begin{itemize}
+	\item 单个用户云端存储：文本$\geq$ 10000个，图片$\geq$ 1000000张，音视频$\geq$ 1000段，历史记录$\geq$ 500000条 
+	\item 单个用户单次处理（发送，上传）：文本$\leq$ 50个，图片$\leq$ 20张，音视频$\leq$ 10段，历史记录$\leq$ 50条
+	\item 群文件：文本$\geq$ 100000个，图片$\geq$ 10000000张，音视频$\geq$ 10000段，历史记录$\geq$ 5000000条 
+	\item 群文件单次处理（发送，上传）：文本$\leq$ 500个，图片$\leq$ 200张，音视频$\leq$ 100段，历史记录$\leq$ 500条 
+\end{itemize}
 \subsubsection{表和文件的大小}
+\begin{itemize}
+	\item 单个文件$\leq$ 10GB
+\end{itemize}
 \subsubsection{同时处理的事务数量}
+同时处理的事务(功能请求，消息发送，文件上传)数量：
+\begin{itemize}
+	\item 客户端：$\leq$ 15个
+	\item 服务器端：$\geq$ $10^{8}$ 个
+\end{itemize}
 \subsubsection{正常信息发送延迟}
+正常信息(客户端处理器不繁忙，网络传输速度$\geq$ 10KB/s)发送延迟 $\leq$ 0.30s。
 \subsubsection{正常操作响应时间}
+正常操作(客户端处理器不繁忙，网络传输速度$\geq$ 10KB/s)响应时间 $\leq$ 0.15s。
 \subsubsection{平台适应性}
+本系统提供安卓移动客户端，IOS移动客户端，WindowsPC客户端，Linux操作系统客户端版本。
 \subsubsection{内存占用限制}
-\subsubsection{正常工作状态耗电限制}
+正常工作状态（平均状态）内存占用$\leq$ 256MB, 峰值状态内存占用$\leq$ 512MB，平稳无操作状态下自动结束无用进程。
+% \subsubsection{正常工作状态耗电限制}
 
 \subsection{具体功能的性能需求}
 % \subsubsection{一对一即时通讯}
@@ -91,9 +115,17 @@
 %====================================================================================================================
 \subsection{软件接口}
 \subsubsection{移动端}
-
+	\begin{enumerate}
+		\item 操作系统平台：Android 4.0以上，IOS 6以上
+		\item 开发语言：JAVA
+		\item 开发工具：Eclipse IDE 2019‑03
+	\end{enumerate}
 \subsubsection{PC端}
-
+	\begin{enumerate}
+		\item 操作系统平台：Windows7以上，Linux4.1.0以上，IOS 6以上
+		\item 开发语言：JAVA
+		\item 开发工具：Eclipse IDE 2019‑03
+	\end{enumerate}
 %====================================================================================================================
 % 详细描述与其他系统 /模块 /项目之间的接口
 % 在此应描述如何使用其它（必需的）软件产品（例如，数据管理系统，操作系统，或算法工具包），
@@ -106,17 +138,17 @@
 %====================================================================================================================
 \subsection{硬件接口}
 \subsubsection{移动端}
-\begin{enumerate}
-	\item 处理器要求：MSM800系列，Exynos5433以上，HelioX10以上，麒麟系列，A8以上
-	\item 运行环境：Android 4.0以上，
-	\item 内存要求：512MB以上
-\end{enumerate}
+	\begin{enumerate}
+		\item 处理器要求：MSM800系列，Exynos5433以上，HelioX10以上，麒麟系列，A8以上
+		\item 运行环境：Android 4.0以上，IOS 6以上
+		\item 内存要求：512MB以上
+	\end{enumerate}
 \subsubsection{PC端}
-\begin{enumerate}
-	\item 处理器要求：
-	\item 运行环境：
-	\item 内存要求：
-\end{enumerate}
+	\begin{enumerate}
+		\item 处理器要求：Intel® Core™ i5以上
+		\item 运行环境：jdk11.0
+		\item 内存要求：512MB以上 
+	\end{enumerate}
 %====================================================================================================================
 % 详细描述与硬件的接口
 % 在此描述软件产品和系统硬件组件之间接口的逻辑特征，也包括支持哪些设备、怎样支持这些设备和协议等。
