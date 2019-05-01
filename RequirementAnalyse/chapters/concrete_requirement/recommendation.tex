@@ -1,6 +1,18 @@
-% 戴路
 \subsection{R.INTF.CALC.009: 个性化好友推荐功能}
+为了扩大社交圈，用户需要更多的好友。于是，我们设计了该功能，为用户推荐志趣相投的好友。
 \subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以输入一定的条件，系统会根据这些条件个性化地推荐好友
+  \item 用户可以向推荐的好友发送好友请求
+\end{itemize}
 \subsubsection{输入}
+好友选择条件。
 \subsubsection{处理}
+\begin{itemize}
+  \item 根据用户平时的聊天信息、好友信息等，利用推荐算法得到一个用户集合。
+  \item 根据用户的好友选择条件，从该集合中选择符合要求的用户子集。
+  \item 从该子集中随机向用户输出五个符合要求的用户作为推荐的好友。
+\end{itemize}
 \subsubsection{输出}
+向用户展示系统推荐的好友。

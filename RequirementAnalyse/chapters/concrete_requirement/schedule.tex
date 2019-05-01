@@ -1,6 +1,17 @@
-% 王浩宇
 \subsection{R.INTF.CALC.012: 日历管理功能}
+在工作中存在着许多重要的时间节点，而日历可以很好地显示这些节点，管理我们的工作。于是，我们提供了日历管理功能。
 \subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以在日历中新建、删除、修改、查看活动项（活动项包括时间和活动简介等）。
+  \item 在活动的时间到达时，对用户进行提醒。
+\end{itemize}
 \subsubsection{输入}
+对活动项的增、删、改、查。
 \subsubsection{处理}
+\begin{itemize}
+  \item 使用数据库维护所有的活动项，实现增、删、改、查功能。
+  \item 在活动的时间到达时，调用消息提醒接口，对用户进行提醒。
+\end{itemize}
 \subsubsection{输出}
+在日历界面展示活动项增、删、改、查后的结果。

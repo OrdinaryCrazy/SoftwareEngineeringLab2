@@ -1,6 +1,21 @@
-% 王浩宇
 \subsection{R.INTF.CALC.006: 聊天记录功能}
+在很多时候，用户需要之前的聊天内容。于是，我们提供了聊天记录功能。
 \subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户查询聊天记录，且保持设备间同步。
+  \item 允许用户导出聊天记录（txt格式、xls格式等）。
+\end{itemize}
 \subsubsection{输入}
+对聊天记录的查询条件（时间、聊天对象、关键词等），以及导出命令和格式。
 \subsubsection{处理}
+\begin{itemize}
+  \item 在用户聊天的同时，记录所有的聊天内容，存放在聊天记录中（聊天记录存储在云端）。
+  \item 对用户提供的查询条件，检索聊天记录，返回对应的内容。
+  \item 在导出时，将聊天记录以对应的格式写入文件。
+\end{itemize}
 \subsubsection{输出}
+\begin{itemize}
+  \item 向用户展示查询得到的聊天内容。
+  \item 导出操作会输出一个写有聊天记录的文件。如果文件写入失败（目录不存在、存储已满等），向用户报错。
+\end{itemize}

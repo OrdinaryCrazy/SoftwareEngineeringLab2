@@ -1,6 +1,18 @@
-% 王浩宇
 \subsection{R.INTF.CALC.007: 消息提醒功能}
+在使用中，用户往往不能及时查看其他人发送的聊天信息。于是，我们设计了消息提醒功能。
 \subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 当有新的消息收到时，对用户进行提醒（如提示声等）。
+  \item 对未读信息进行特殊标记，并统计未读信息的数目。
+\end{itemize}
 \subsubsection{输入}
+无
 \subsubsection{处理}
+\begin{itemize}
+  \item 使用监听线程监听服务器发送的信息，每当有消息时发出提示声。
+  \item 使用一个队列存储未读信息，所有接收到的消息先放入该队列，队列长度就是未读信息数目。
+  \item 每当一条消息被读后，将它从队列移除。
+\end{itemize}
 \subsubsection{输出}
+未读消息的标记以及提示声。
