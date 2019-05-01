@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {2.1.1}项目介绍}{7}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}产品环境介绍}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}软件功能}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}用户特征}{9}{section.2.3}
-\contentsline {section}{\numberline {2.4}假设和依赖关系}{10}{section.2.4}
+\contentsline {section}{\numberline {2.3}用户特征}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}假设和依赖关系}{9}{section.2.4}
 \addvspace {12bp}
 \contentsline {chapter}{\numberline {第3章\hspace {.3em}}具体需求}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}功能需求}{11}{section.3.1}
@@ -115,37 +115,47 @@
 \contentsline {section}{\numberline {4.3}技术限制}{16}{section.4.3}
 \addvspace {12bp}
 \contentsline {chapter}{\numberline {第5章\hspace {.3em}}软件质量特性}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}正确性}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}可靠性}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}效率}{17}{section.5.3}
+\contentsline {section}{\numberline {5.4}完整性}{17}{section.5.4}
+\contentsline {section}{\numberline {5.5}易使用性}{17}{section.5.5}
+\contentsline {section}{\numberline {5.6}可维护性}{17}{section.5.6}
+\contentsline {section}{\numberline {5.7}可测试性}{17}{section.5.7}
+\contentsline {section}{\numberline {5.8}复用性}{17}{section.5.8}
+\contentsline {section}{\numberline {5.9}安全保密性}{18}{section.5.9}
+\contentsline {section}{\numberline {5.10}可理解性}{18}{section.5.10}
+\contentsline {section}{\numberline {5.11}互联性}{18}{section.5.11}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第6章\hspace {.3em}}其他需求}{18}{chapter.6}
-\contentsline {section}{\numberline {6.1}编码需求}{18}{section.6.1}
-\contentsline {section}{\numberline {6.2}错误处理}{18}{section.6.2}
-\contentsline {section}{\numberline {6.3}代码可维护性}{18}{section.6.3}
-\contentsline {section}{\numberline {6.4}增量更新能力}{18}{section.6.4}
-\contentsline {section}{\numberline {6.5}数据库}{18}{section.6.5}
-\contentsline {section}{\numberline {6.6}操作}{18}{section.6.6}
-\contentsline {section}{\numberline {6.7}本地化}{18}{section.6.7}
+\contentsline {chapter}{\numberline {第6章\hspace {.3em}}其他需求}{19}{chapter.6}
+\contentsline {section}{\numberline {6.1}编码需求与代码可维护性}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}错误处理}{19}{section.6.2}
+\contentsline {section}{\numberline {6.3}增量更新能力}{19}{section.6.3}
+\contentsline {section}{\numberline {6.4}数据库}{19}{section.6.4}
+\contentsline {section}{\numberline {6.5}操作}{19}{section.6.5}
+\contentsline {section}{\numberline {6.6}本地化}{20}{section.6.6}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第7章\hspace {.3em}}依赖关系}{19}{chapter.7}
+\contentsline {chapter}{\numberline {第7章\hspace {.3em}}依赖关系}{21}{chapter.7}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第8章\hspace {.3em}}需求分级}{20}{chapter.8}
+\contentsline {chapter}{\numberline {第8章\hspace {.3em}}需求分级}{23}{chapter.8}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第9章\hspace {.3em}}待确定问题}{21}{chapter.9}
+\contentsline {chapter}{\numberline {第9章\hspace {.3em}}待确定问题}{24}{chapter.9}
 \addvspace {12bp}
-\contentsline {chapter}{参考文献}{22}{chapter*.7}
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}可行性分析结果}{23}{appendix.A}
-\contentsline {section}{\numberline {A.1}技术可行性}{23}{section.A.1}
-\contentsline {section}{\numberline {A.2}经济可行性}{23}{section.A.2}
-\contentsline {section}{\numberline {A.3}法律可行性}{23}{section.A.3}
-\contentsline {section}{\numberline {A.4}可行性分析结论}{23}{section.A.4}
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}需求建模 }{24}{appendix.B}
-\contentsline {section}{\numberline {B.1}数据流图}{24}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{24}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}层数据流图}{24}{subsection.B.1.2}
-\contentsline {section}{\numberline {B.2}数据字典}{24}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}数据流说明}{24}{subsection.B.2.1}
-\contentsline {subsubsection}{\numberline {B.2.1.1}数据流1名称}{24}{subsubsection.B.2.1.1}
-\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{24}{subsection.B.2.2}
-\contentsline {subsubsection}{\numberline {B.2.2.1}数据存储1名称}{24}{subsubsection.B.2.2.1}
-\contentsline {subsection}{\numberline {B.2.3}加工说明}{24}{subsection.B.2.3}
-\contentsline {subsubsection}{\numberline {B.2.3.1}加工1名称}{24}{subsubsection.B.2.3.1}
+\contentsline {chapter}{参考文献}{25}{chapter*.9}
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}可行性分析结果}{26}{appendix.A}
+\contentsline {section}{\numberline {A.1}技术可行性}{26}{section.A.1}
+\contentsline {section}{\numberline {A.2}经济可行性}{26}{section.A.2}
+\contentsline {section}{\numberline {A.3}法律可行性}{26}{section.A.3}
+\contentsline {section}{\numberline {A.4}可行性分析结论}{26}{section.A.4}
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}需求建模 }{27}{appendix.B}
+\contentsline {section}{\numberline {B.1}数据流图}{27}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{27}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}层数据流图}{27}{subsection.B.1.2}
+\contentsline {section}{\numberline {B.2}数据字典}{27}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}数据流说明}{27}{subsection.B.2.1}
+\contentsline {subsubsection}{\numberline {B.2.1.1}数据流1名称}{27}{subsubsection.B.2.1.1}
+\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{27}{subsection.B.2.2}
+\contentsline {subsubsection}{\numberline {B.2.2.1}数据存储1名称}{27}{subsubsection.B.2.2.1}
+\contentsline {subsection}{\numberline {B.2.3}加工说明}{27}{subsection.B.2.3}
+\contentsline {subsubsection}{\numberline {B.2.3.1}加工1名称}{27}{subsubsection.B.2.3.1}
 \contentsfinish 
