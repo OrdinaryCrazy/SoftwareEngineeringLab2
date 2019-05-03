@@ -59,3 +59,8 @@ This is a group project repository.
 *   <https://wenku.baidu.com/view/e8aadfe7b9d528ea80c77941.html>
 *   <https://wenku.baidu.com/view/ff0da54733687e21af45a947.html>
 *   <https://www.docin.com/p-937134005_3.html>
+*   [《需求ID编码规则》](<https://wenku.baidu.com/view/6888fb68866fb84ae55c8d79?sfr_fb=0&tdsourcetag=s_pcqq_aiomsg&qq-pf-to=pcqq.group>)
+*   [信鸽新闻app需求分析文档](<https://wenku.baidu.com/view/ae9f9e3dd15abe23492f4d01.html?rec_flag=default>)
+*   [软件工程 学习管理系统 需求分析文档](<https://wenku.baidu.com/view/e5d586956bec0975f465e29d.html>)
+*   [软件需求分析报告模板(完整版)](<https://wenku.baidu.com/view/d784292d5acfa1c7ab00cc18.html>)
+*   [网上选课系统分析文档](<https://wenku.baidu.com/view/8c2d99e10975f46527d3e1c3.html>)
