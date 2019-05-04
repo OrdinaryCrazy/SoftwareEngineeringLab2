@@ -23,189 +23,189 @@
 \contentsline {subsubsection}{\numberline {3.1.2.1}R.INTF.CALC.002.1: 群管理}{10}{subsubsection.3.1.2.1}% 
 \contentsline {subsubsection}{\numberline {3.1.2.2}R.INTF.CALC.002.2: 群聊天}{10}{subsubsection.3.1.2.2}% 
 \contentsline {subsubsection}{\numberline {3.1.2.3}R.INTF.CALC.002.3: 情境功能}{11}{subsubsection.3.1.2.3}% 
-\contentsline {subsection}{\numberline {3.1.3}R.INTF.CALC.003: 活动/任务发布与管理功能}{11}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.3}R.INTF.CALC.003: 活动/任务发布与管理功能}{12}{subsection.3.1.3}% 
 \contentsline {subsubsection}{\numberline {3.1.3.1}介绍}{12}{subsubsection.3.1.3.1}% 
 \contentsline {subsubsection}{\numberline {3.1.3.2}输入}{12}{subsubsection.3.1.3.2}% 
 \contentsline {subsubsection}{\numberline {3.1.3.3}处理}{12}{subsubsection.3.1.3.3}% 
-\contentsline {subsubsection}{\numberline {3.1.3.4}输出}{12}{subsubsection.3.1.3.4}% 
-\contentsline {subsection}{\numberline {3.1.4}R.INTF.CALC.004: 音视频通话(会议)功能}{12}{subsection.3.1.4}% 
-\contentsline {subsubsection}{\numberline {3.1.4.1}介绍}{12}{subsubsection.3.1.4.1}% 
+\contentsline {subsubsection}{\numberline {3.1.3.4}输出}{13}{subsubsection.3.1.3.4}% 
+\contentsline {subsection}{\numberline {3.1.4}R.INTF.CALC.004: 音视频通话(会议)功能}{13}{subsection.3.1.4}% 
+\contentsline {subsubsection}{\numberline {3.1.4.1}介绍}{13}{subsubsection.3.1.4.1}% 
 \contentsline {subsubsection}{\numberline {3.1.4.2}输入}{13}{subsubsection.3.1.4.2}% 
 \contentsline {subsubsection}{\numberline {3.1.4.3}处理}{13}{subsubsection.3.1.4.3}% 
-\contentsline {subsubsection}{\numberline {3.1.4.4}输出}{13}{subsubsection.3.1.4.4}% 
-\contentsline {subsection}{\numberline {3.1.5}R.INTF.CALC.005: 通讯录功能}{13}{subsection.3.1.5}% 
-\contentsline {subsubsection}{\numberline {3.1.5.1}R.INTF.CALC.005.1: 好友管理}{13}{subsubsection.3.1.5.1}% 
-\contentsline {subsubsection}{\numberline {3.1.5.2}R.INTF.CALC.005.2: 群聊管理}{14}{subsubsection.3.1.5.2}% 
-\contentsline {subsubsection}{\numberline {3.1.5.3}R.INTF.CALC.005.3: 黑名单}{15}{subsubsection.3.1.5.3}% 
-\contentsline {subsection}{\numberline {3.1.6}R.INTF.CALC.006: 聊天记录功能}{15}{subsection.3.1.6}% 
-\contentsline {subsubsection}{\numberline {3.1.6.1}介绍}{15}{subsubsection.3.1.6.1}% 
+\contentsline {subsubsection}{\numberline {3.1.4.4}输出}{14}{subsubsection.3.1.4.4}% 
+\contentsline {subsection}{\numberline {3.1.5}R.INTF.CALC.005: 通讯录功能}{14}{subsection.3.1.5}% 
+\contentsline {subsubsection}{\numberline {3.1.5.1}R.INTF.CALC.005.1: 好友管理}{14}{subsubsection.3.1.5.1}% 
+\contentsline {subsubsection}{\numberline {3.1.5.2}R.INTF.CALC.005.2: 群聊管理}{15}{subsubsection.3.1.5.2}% 
+\contentsline {subsubsection}{\numberline {3.1.5.3}R.INTF.CALC.005.3: 黑名单}{16}{subsubsection.3.1.5.3}% 
+\contentsline {subsection}{\numberline {3.1.6}R.INTF.CALC.006: 聊天记录功能}{16}{subsection.3.1.6}% 
+\contentsline {subsubsection}{\numberline {3.1.6.1}介绍}{16}{subsubsection.3.1.6.1}% 
 \contentsline {subsubsection}{\numberline {3.1.6.2}输入}{16}{subsubsection.3.1.6.2}% 
 \contentsline {subsubsection}{\numberline {3.1.6.3}处理}{16}{subsubsection.3.1.6.3}% 
-\contentsline {subsubsection}{\numberline {3.1.6.4}输出}{16}{subsubsection.3.1.6.4}% 
-\contentsline {subsection}{\numberline {3.1.7}R.INTF.CALC.007: 消息提醒功能}{16}{subsection.3.1.7}% 
-\contentsline {subsubsection}{\numberline {3.1.7.1}介绍}{16}{subsubsection.3.1.7.1}% 
-\contentsline {subsubsection}{\numberline {3.1.7.2}输入}{16}{subsubsection.3.1.7.2}% 
-\contentsline {subsubsection}{\numberline {3.1.7.3}处理}{16}{subsubsection.3.1.7.3}% 
+\contentsline {subsubsection}{\numberline {3.1.6.4}输出}{17}{subsubsection.3.1.6.4}% 
+\contentsline {subsection}{\numberline {3.1.7}R.INTF.CALC.007: 消息提醒功能}{17}{subsection.3.1.7}% 
+\contentsline {subsubsection}{\numberline {3.1.7.1}介绍}{17}{subsubsection.3.1.7.1}% 
+\contentsline {subsubsection}{\numberline {3.1.7.2}输入}{17}{subsubsection.3.1.7.2}% 
+\contentsline {subsubsection}{\numberline {3.1.7.3}处理}{17}{subsubsection.3.1.7.3}% 
 \contentsline {subsubsection}{\numberline {3.1.7.4}输出}{17}{subsubsection.3.1.7.4}% 
 \contentsline {subsection}{\numberline {3.1.8}R.INTF.CALC.008: Board(广场)功能}{17}{subsection.3.1.8}% 
-\contentsline {subsubsection}{\numberline {3.1.8.1}介绍}{17}{subsubsection.3.1.8.1}% 
-\contentsline {subsubsection}{\numberline {3.1.8.2}输入}{17}{subsubsection.3.1.8.2}% 
-\contentsline {subsubsection}{\numberline {3.1.8.3}处理}{17}{subsubsection.3.1.8.3}% 
-\contentsline {subsubsection}{\numberline {3.1.8.4}输出}{17}{subsubsection.3.1.8.4}% 
-\contentsline {subsection}{\numberline {3.1.9}R.INTF.CALC.009: 个性化好友推荐功能}{17}{subsection.3.1.9}% 
-\contentsline {subsubsection}{\numberline {3.1.9.1}介绍}{18}{subsubsection.3.1.9.1}% 
-\contentsline {subsubsection}{\numberline {3.1.9.2}输入}{18}{subsubsection.3.1.9.2}% 
-\contentsline {subsubsection}{\numberline {3.1.9.3}处理}{18}{subsubsection.3.1.9.3}% 
-\contentsline {subsubsection}{\numberline {3.1.9.4}输出}{18}{subsubsection.3.1.9.4}% 
-\contentsline {subsection}{\numberline {3.1.10}R.INTF.CALC.010: 在线文档协作平台功能}{18}{subsection.3.1.10}% 
-\contentsline {subsubsection}{\numberline {3.1.10.1}介绍}{18}{subsubsection.3.1.10.1}% 
-\contentsline {subsubsection}{\numberline {3.1.10.2}输入}{19}{subsubsection.3.1.10.2}% 
-\contentsline {subsubsection}{\numberline {3.1.10.3}处理}{19}{subsubsection.3.1.10.3}% 
-\contentsline {subsubsection}{\numberline {3.1.10.4}输出}{19}{subsubsection.3.1.10.4}% 
-\contentsline {subsection}{\numberline {3.1.11}R.INTF.CALC.011: 账号保护和隐私保护功能}{19}{subsection.3.1.11}% 
-\contentsline {subsubsection}{\numberline {3.1.11.1}介绍}{19}{subsubsection.3.1.11.1}% 
-\contentsline {subsubsection}{\numberline {3.1.11.2}输入}{19}{subsubsection.3.1.11.2}% 
-\contentsline {subsubsection}{\numberline {3.1.11.3}处理}{19}{subsubsection.3.1.11.3}% 
-\contentsline {subsubsection}{\numberline {3.1.11.4}输出}{20}{subsubsection.3.1.11.4}% 
-\contentsline {subsection}{\numberline {3.1.12}R.INTF.CALC.012: 日历管理功能}{20}{subsection.3.1.12}% 
-\contentsline {subsubsection}{\numberline {3.1.12.1}介绍}{20}{subsubsection.3.1.12.1}% 
-\contentsline {subsubsection}{\numberline {3.1.12.2}输入}{20}{subsubsection.3.1.12.2}% 
-\contentsline {subsubsection}{\numberline {3.1.12.3}处理}{20}{subsubsection.3.1.12.3}% 
-\contentsline {subsubsection}{\numberline {3.1.12.4}输出}{20}{subsubsection.3.1.12.4}% 
-\contentsline {subsection}{\numberline {3.1.13}R.INTF.CALC.013: 个人本地和云端文件管理功能}{20}{subsection.3.1.13}% 
-\contentsline {subsubsection}{\numberline {3.1.13.1}介绍}{20}{subsubsection.3.1.13.1}% 
-\contentsline {subsubsection}{\numberline {3.1.13.2}输入}{21}{subsubsection.3.1.13.2}% 
-\contentsline {subsubsection}{\numberline {3.1.13.3}处理}{21}{subsubsection.3.1.13.3}% 
-\contentsline {subsubsection}{\numberline {3.1.13.4}输出}{21}{subsubsection.3.1.13.4}% 
-\contentsline {subsection}{\numberline {3.1.14}R.INTF.CALC.014: 邮箱接口功能}{21}{subsection.3.1.14}% 
-\contentsline {subsubsection}{\numberline {3.1.14.1}介绍}{21}{subsubsection.3.1.14.1}% 
-\contentsline {subsubsection}{\numberline {3.1.14.2}输入}{21}{subsubsection.3.1.14.2}% 
-\contentsline {subsubsection}{\numberline {3.1.14.3}处理}{22}{subsubsection.3.1.14.3}% 
-\contentsline {subsubsection}{\numberline {3.1.14.4}输出}{22}{subsubsection.3.1.14.4}% 
-\contentsline {section}{\numberline {3.2}性能需求}{22}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}总体性能需求}{22}{subsection.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.2.1.1}支持的终端数目}{22}{subsubsection.3.2.1.1}% 
-\contentsline {subsubsection}{\numberline {3.2.1.2}支持的同时使用的用户数目}{22}{subsubsection.3.2.1.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1.3}处理的文件和记录的数目}{22}{subsubsection.3.2.1.3}% 
-\contentsline {subsubsection}{\numberline {3.2.1.4}表和文件的大小}{22}{subsubsection.3.2.1.4}% 
-\contentsline {subsubsection}{\numberline {3.2.1.5}同时处理的事务数量}{22}{subsubsection.3.2.1.5}% 
-\contentsline {subsubsection}{\numberline {3.2.1.6}正常信息发送延迟}{23}{subsubsection.3.2.1.6}% 
-\contentsline {subsubsection}{\numberline {3.2.1.7}正常操作响应时间}{23}{subsubsection.3.2.1.7}% 
-\contentsline {subsubsection}{\numberline {3.2.1.8}平台适应性}{23}{subsubsection.3.2.1.8}% 
-\contentsline {subsubsection}{\numberline {3.2.1.9}内存占用限制}{23}{subsubsection.3.2.1.9}% 
-\contentsline {subsection}{\numberline {3.2.2}具体功能的性能需求}{23}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}外部接口需求}{23}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}用户接口}{23}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}软件接口}{23}{subsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.2.1}移动端}{23}{subsubsection.3.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.3.2.2}PC端}{24}{subsubsection.3.3.2.2}% 
-\contentsline {subsubsection}{\numberline {3.3.2.3}服务器端}{24}{subsubsection.3.3.2.3}% 
-\contentsline {subsection}{\numberline {3.3.3}硬件接口}{24}{subsection.3.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.3.1}移动端}{24}{subsubsection.3.3.3.1}% 
-\contentsline {subsubsection}{\numberline {3.3.3.2}PC端}{24}{subsubsection.3.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.4}通讯接口}{25}{subsection.3.3.4}% 
+\contentsline {subsubsection}{\numberline {3.1.8.1}介绍}{18}{subsubsection.3.1.8.1}% 
+\contentsline {subsubsection}{\numberline {3.1.8.2}输入}{18}{subsubsection.3.1.8.2}% 
+\contentsline {subsubsection}{\numberline {3.1.8.3}处理}{18}{subsubsection.3.1.8.3}% 
+\contentsline {subsubsection}{\numberline {3.1.8.4}输出}{18}{subsubsection.3.1.8.4}% 
+\contentsline {subsection}{\numberline {3.1.9}R.INTF.CALC.009: 个性化好友推荐功能}{18}{subsection.3.1.9}% 
+\contentsline {subsubsection}{\numberline {3.1.9.1}介绍}{19}{subsubsection.3.1.9.1}% 
+\contentsline {subsubsection}{\numberline {3.1.9.2}输入}{19}{subsubsection.3.1.9.2}% 
+\contentsline {subsubsection}{\numberline {3.1.9.3}处理}{19}{subsubsection.3.1.9.3}% 
+\contentsline {subsubsection}{\numberline {3.1.9.4}输出}{19}{subsubsection.3.1.9.4}% 
+\contentsline {subsection}{\numberline {3.1.10}R.INTF.CALC.010: 在线文档协作平台功能}{19}{subsection.3.1.10}% 
+\contentsline {subsubsection}{\numberline {3.1.10.1}介绍}{19}{subsubsection.3.1.10.1}% 
+\contentsline {subsubsection}{\numberline {3.1.10.2}输入}{20}{subsubsection.3.1.10.2}% 
+\contentsline {subsubsection}{\numberline {3.1.10.3}处理}{20}{subsubsection.3.1.10.3}% 
+\contentsline {subsubsection}{\numberline {3.1.10.4}输出}{20}{subsubsection.3.1.10.4}% 
+\contentsline {subsection}{\numberline {3.1.11}R.INTF.CALC.011: 账号保护和隐私保护功能}{20}{subsection.3.1.11}% 
+\contentsline {subsubsection}{\numberline {3.1.11.1}介绍}{20}{subsubsection.3.1.11.1}% 
+\contentsline {subsubsection}{\numberline {3.1.11.2}输入}{20}{subsubsection.3.1.11.2}% 
+\contentsline {subsubsection}{\numberline {3.1.11.3}处理}{20}{subsubsection.3.1.11.3}% 
+\contentsline {subsubsection}{\numberline {3.1.11.4}输出}{21}{subsubsection.3.1.11.4}% 
+\contentsline {subsection}{\numberline {3.1.12}R.INTF.CALC.012: 日历管理功能}{21}{subsection.3.1.12}% 
+\contentsline {subsubsection}{\numberline {3.1.12.1}介绍}{21}{subsubsection.3.1.12.1}% 
+\contentsline {subsubsection}{\numberline {3.1.12.2}输入}{21}{subsubsection.3.1.12.2}% 
+\contentsline {subsubsection}{\numberline {3.1.12.3}处理}{21}{subsubsection.3.1.12.3}% 
+\contentsline {subsubsection}{\numberline {3.1.12.4}输出}{21}{subsubsection.3.1.12.4}% 
+\contentsline {subsection}{\numberline {3.1.13}R.INTF.CALC.013: 个人本地和云端文件管理功能}{21}{subsection.3.1.13}% 
+\contentsline {subsubsection}{\numberline {3.1.13.1}介绍}{22}{subsubsection.3.1.13.1}% 
+\contentsline {subsubsection}{\numberline {3.1.13.2}输入}{22}{subsubsection.3.1.13.2}% 
+\contentsline {subsubsection}{\numberline {3.1.13.3}处理}{22}{subsubsection.3.1.13.3}% 
+\contentsline {subsubsection}{\numberline {3.1.13.4}输出}{22}{subsubsection.3.1.13.4}% 
+\contentsline {subsection}{\numberline {3.1.14}R.INTF.CALC.014: 邮箱接口功能}{22}{subsection.3.1.14}% 
+\contentsline {subsubsection}{\numberline {3.1.14.1}介绍}{22}{subsubsection.3.1.14.1}% 
+\contentsline {subsubsection}{\numberline {3.1.14.2}输入}{23}{subsubsection.3.1.14.2}% 
+\contentsline {subsubsection}{\numberline {3.1.14.3}处理}{23}{subsubsection.3.1.14.3}% 
+\contentsline {subsubsection}{\numberline {3.1.14.4}输出}{23}{subsubsection.3.1.14.4}% 
+\contentsline {section}{\numberline {3.2}性能需求}{23}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}总体性能需求}{23}{subsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.1}支持的终端数目}{23}{subsubsection.3.2.1.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.2}支持的同时使用的用户数目}{23}{subsubsection.3.2.1.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1.3}处理的文件和记录的数目}{23}{subsubsection.3.2.1.3}% 
+\contentsline {subsubsection}{\numberline {3.2.1.4}表和文件的大小}{23}{subsubsection.3.2.1.4}% 
+\contentsline {subsubsection}{\numberline {3.2.1.5}同时处理的事务数量}{24}{subsubsection.3.2.1.5}% 
+\contentsline {subsubsection}{\numberline {3.2.1.6}正常信息发送延迟}{24}{subsubsection.3.2.1.6}% 
+\contentsline {subsubsection}{\numberline {3.2.1.7}正常操作响应时间}{24}{subsubsection.3.2.1.7}% 
+\contentsline {subsubsection}{\numberline {3.2.1.8}平台适应性}{24}{subsubsection.3.2.1.8}% 
+\contentsline {subsubsection}{\numberline {3.2.1.9}内存占用限制}{24}{subsubsection.3.2.1.9}% 
+\contentsline {subsection}{\numberline {3.2.2}具体功能的性能需求}{24}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}外部接口需求}{25}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}用户接口}{25}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}软件接口}{25}{subsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.2.1}移动端}{25}{subsubsection.3.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2.2}PC端}{25}{subsubsection.3.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.3.2.3}服务器端}{25}{subsubsection.3.3.2.3}% 
+\contentsline {subsection}{\numberline {3.3.3}硬件接口}{26}{subsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.3.1}移动端}{26}{subsubsection.3.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.3.2}PC端}{26}{subsubsection.3.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.4}通讯接口}{26}{subsection.3.3.4}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第4章\hspace {.3em}}总体设计约束}{26}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}标准符合性}{26}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}硬件约束}{26}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}移动端}{26}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}PC端}{26}{subsection.4.2.2}% 
-\contentsline {section}{\numberline {4.3}技术限制}{26}{section.4.3}% 
+\contentsline {chapter}{\numberline {第4章\hspace {.3em}}总体设计约束}{27}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}标准符合性}{27}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}硬件约束}{27}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}移动端}{27}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}PC端}{27}{subsection.4.2.2}% 
+\contentsline {section}{\numberline {4.3}技术限制}{27}{section.4.3}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第5章\hspace {.3em}}软件质量特性}{27}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}正确性}{27}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}可靠性}{27}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}效率}{27}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}完整性}{27}{section.5.4}% 
-\contentsline {section}{\numberline {5.5}易使用性}{27}{section.5.5}% 
-\contentsline {section}{\numberline {5.6}可维护性}{27}{section.5.6}% 
-\contentsline {section}{\numberline {5.7}可测试性}{27}{section.5.7}% 
-\contentsline {section}{\numberline {5.8}复用性}{27}{section.5.8}% 
-\contentsline {section}{\numberline {5.9}安全保密性}{28}{section.5.9}% 
-\contentsline {section}{\numberline {5.10}可理解性}{28}{section.5.10}% 
-\contentsline {section}{\numberline {5.11}互联性}{28}{section.5.11}% 
+\contentsline {chapter}{\numberline {第5章\hspace {.3em}}软件质量特性}{28}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}正确性}{28}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}可靠性}{28}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}效率}{28}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}完整性}{28}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}易使用性}{28}{section.5.5}% 
+\contentsline {section}{\numberline {5.6}可维护性}{28}{section.5.6}% 
+\contentsline {section}{\numberline {5.7}可测试性}{28}{section.5.7}% 
+\contentsline {section}{\numberline {5.8}复用性}{28}{section.5.8}% 
+\contentsline {section}{\numberline {5.9}安全保密性}{29}{section.5.9}% 
+\contentsline {section}{\numberline {5.10}可理解性}{29}{section.5.10}% 
+\contentsline {section}{\numberline {5.11}互联性}{29}{section.5.11}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第6章\hspace {.3em}}其他需求}{29}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}编码需求与代码可维护性}{29}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}错误处理}{29}{section.6.2}% 
-\contentsline {section}{\numberline {6.3}增量更新能力}{29}{section.6.3}% 
-\contentsline {section}{\numberline {6.4}数据库}{29}{section.6.4}% 
-\contentsline {section}{\numberline {6.5}操作}{29}{section.6.5}% 
-\contentsline {section}{\numberline {6.6}本地化}{30}{section.6.6}% 
+\contentsline {chapter}{\numberline {第6章\hspace {.3em}}其他需求}{30}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}编码需求与代码可维护性}{30}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}错误处理}{30}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}增量更新能力}{30}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}数据库}{30}{section.6.4}% 
+\contentsline {section}{\numberline {6.5}操作}{30}{section.6.5}% 
+\contentsline {section}{\numberline {6.6}本地化}{31}{section.6.6}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第7章\hspace {.3em}}依赖关系}{31}{chapter.7}% 
+\contentsline {chapter}{\numberline {第7章\hspace {.3em}}依赖关系}{32}{chapter.7}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第8章\hspace {.3em}}需求分级}{32}{chapter.8}% 
+\contentsline {chapter}{\numberline {第8章\hspace {.3em}}需求分级}{33}{chapter.8}% 
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第9章\hspace {.3em}}待确定问题}{33}{chapter.9}% 
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}可行性分析结果}{34}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}技术可行性}{34}{section.A.1}% 
-\contentsline {section}{\numberline {A.2}经济可行性}{34}{section.A.2}% 
-\contentsline {section}{\numberline {A.3}法律可行性}{34}{section.A.3}% 
-\contentsline {section}{\numberline {A.4}可行性分析结论}{34}{section.A.4}% 
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}需求建模 }{35}{appendix.B}% 
-\contentsline {section}{\numberline {B.1}数据流图}{35}{section.B.1}% 
-\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{35}{subsection.B.1.1}% 
-\contentsline {subsection}{\numberline {B.1.2}层数据流图}{35}{subsection.B.1.2}% 
-\contentsline {section}{\numberline {B.2}数据字典}{35}{section.B.2}% 
-\contentsline {subsection}{\numberline {B.2.1}数据流说明}{35}{subsection.B.2.1}% 
-\contentsline {subsubsection}{\numberline {B.2.1.1}音视频信息(out)}{35}{subsubsection.B.2.1.1}% 
-\contentsline {subsubsection}{\numberline {B.2.1.2}音视频信息(in)}{35}{subsubsection.B.2.1.2}% 
-\contentsline {subsubsection}{\numberline {B.2.1.3}好友请求(out)}{35}{subsubsection.B.2.1.3}% 
-\contentsline {subsubsection}{\numberline {B.2.1.4}好友请求(in)}{36}{subsubsection.B.2.1.4}% 
-\contentsline {subsubsection}{\numberline {B.2.1.5}聊天消息(out)}{36}{subsubsection.B.2.1.5}% 
-\contentsline {subsubsection}{\numberline {B.2.1.6}聊天消息(in)}{36}{subsubsection.B.2.1.6}% 
-\contentsline {subsubsection}{\numberline {B.2.1.7}消息查询请求}{37}{subsubsection.B.2.1.7}% 
-\contentsline {subsubsection}{\numberline {B.2.1.8}文件(out)}{37}{subsubsection.B.2.1.8}% 
-\contentsline {subsubsection}{\numberline {B.2.1.9}文件(in)}{37}{subsubsection.B.2.1.9}% 
-\contentsline {subsubsection}{\numberline {B.2.1.10}协同文档内容(out)}{38}{subsubsection.B.2.1.10}% 
-\contentsline {subsubsection}{\numberline {B.2.1.11}协同文档内容(in)}{38}{subsubsection.B.2.1.11}% 
-\contentsline {subsubsection}{\numberline {B.2.1.12}个人信息}{38}{subsubsection.B.2.1.12}% 
-\contentsline {subsubsection}{\numberline {B.2.1.13}个人日程信息}{39}{subsubsection.B.2.1.13}% 
-\contentsline {subsubsection}{\numberline {B.2.1.14}日历表}{39}{subsubsection.B.2.1.14}% 
-\contentsline {subsubsection}{\numberline {B.2.1.15}好友推荐信息}{39}{subsubsection.B.2.1.15}% 
-\contentsline {subsubsection}{\numberline {B.2.1.16}联系人列表}{40}{subsubsection.B.2.1.16}% 
-\contentsline {subsubsection}{\numberline {B.2.1.17}任务/活动}{40}{subsubsection.B.2.1.17}% 
-\contentsline {subsubsection}{\numberline {B.2.1.18}成员信息}{40}{subsubsection.B.2.1.18}% 
-\contentsline {subsubsection}{\numberline {B.2.1.19}权限信息}{41}{subsubsection.B.2.1.19}% 
-\contentsline {subsubsection}{\numberline {B.2.1.20}完成情况}{41}{subsubsection.B.2.1.20}% 
-\contentsline {subsubsection}{\numberline {B.2.1.21}成员反馈信息}{42}{subsubsection.B.2.1.21}% 
-\contentsline {subsubsection}{\numberline {B.2.1.22}团队用户信息}{42}{subsubsection.B.2.1.22}% 
-\contentsline {subsubsection}{\numberline {B.2.1.23}用户信息}{42}{subsubsection.B.2.1.23}% 
-\contentsline {subsubsection}{\numberline {B.2.1.24}好友推荐名单}{43}{subsubsection.B.2.1.24}% 
-\contentsline {subsubsection}{\numberline {B.2.1.25}系统错误反馈}{43}{subsubsection.B.2.1.25}% 
-\contentsline {subsubsection}{\numberline {B.2.1.26}上传的云文件}{43}{subsubsection.B.2.1.26}% 
-\contentsline {subsubsection}{\numberline {B.2.1.27}下载的云文件}{44}{subsubsection.B.2.1.27}% 
-\contentsline {subsubsection}{\numberline {B.2.1.28}云文件上传请求}{44}{subsubsection.B.2.1.28}% 
-\contentsline {subsubsection}{\numberline {B.2.1.29}云文件下载请求}{44}{subsubsection.B.2.1.29}% 
-\contentsline {subsubsection}{\numberline {B.2.1.30}云文件}{45}{subsubsection.B.2.1.30}% 
-\contentsline {subsubsection}{\numberline {B.2.1.31}上传的文件}{45}{subsubsection.B.2.1.31}% 
-\contentsline {subsubsection}{\numberline {B.2.1.32}上传的群文件}{45}{subsubsection.B.2.1.32}% 
-\contentsline {subsubsection}{\numberline {B.2.1.33}上传的日历文件}{46}{subsubsection.B.2.1.33}% 
-\contentsline {subsubsection}{\numberline {B.2.1.34}下载的文件}{46}{subsubsection.B.2.1.34}% 
-\contentsline {subsubsection}{\numberline {B.2.1.35}下载的群文件}{46}{subsubsection.B.2.1.35}% 
-\contentsline {subsubsection}{\numberline {B.2.1.36}下载的日历文件}{47}{subsubsection.B.2.1.36}% 
-\contentsline {subsubsection}{\numberline {B.2.1.37}团队日程信息}{47}{subsubsection.B.2.1.37}% 
-\contentsline {subsubsection}{\numberline {B.2.1.38}冲突信息反馈}{47}{subsubsection.B.2.1.38}% 
-\contentsline {subsubsection}{\numberline {B.2.1.39}聊天记录}{48}{subsubsection.B.2.1.39}% 
-\contentsline {subsubsection}{\numberline {B.2.1.40}查询请求}{48}{subsubsection.B.2.1.40}% 
-\contentsline {subsubsection}{\numberline {B.2.1.41}记录消息}{48}{subsubsection.B.2.1.41}% 
-\contentsline {subsubsection}{\numberline {B.2.1.42}初始文档}{49}{subsubsection.B.2.1.42}% 
-\contentsline {subsubsection}{\numberline {B.2.1.43}总文档}{49}{subsubsection.B.2.1.43}% 
-\contentsline {subsubsection}{\numberline {B.2.1.44}文档任务}{50}{subsubsection.B.2.1.44}% 
-\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{50}{subsection.B.2.2}% 
-\contentsline {subsubsection}{\numberline {B.2.2.1}本地文件存储}{50}{subsubsection.B.2.2.1}% 
-\contentsline {subsubsection}{\numberline {B.2.2.2}云文件存储}{50}{subsubsection.B.2.2.2}% 
-\contentsline {subsubsection}{\numberline {B.2.2.3}消息记录存储}{51}{subsubsection.B.2.2.3}% 
-\contentsline {subsubsection}{\numberline {B.2.2.4}用户信息存储}{51}{subsubsection.B.2.2.4}% 
-\contentsline {subsubsection}{\numberline {B.2.2.5}协作文档存储}{51}{subsubsection.B.2.2.5}% 
-\contentsline {subsection}{\numberline {B.2.3}加工说明}{52}{subsection.B.2.3}% 
-\contentsline {subsubsection}{\numberline {B.2.3.1}文件管理}{52}{subsubsection.B.2.3.1}% 
-\contentsline {subsubsection}{\numberline {B.2.3.2}云文件管理}{53}{subsubsection.B.2.3.2}% 
-\contentsline {subsubsection}{\numberline {B.2.3.3}日历管理}{53}{subsubsection.B.2.3.3}% 
-\contentsline {subsubsection}{\numberline {B.2.3.4}团队管理}{54}{subsubsection.B.2.3.4}% 
-\contentsline {subsubsection}{\numberline {B.2.3.5}通讯管理}{55}{subsubsection.B.2.3.5}% 
-\contentsline {subsubsection}{\numberline {B.2.3.6}用户信息管理}{55}{subsubsection.B.2.3.6}% 
-\contentsline {subsubsection}{\numberline {B.2.3.7}在线文档协作平台}{56}{subsubsection.B.2.3.7}% 
-\contentsline {subsubsection}{\numberline {B.2.3.8}错误信息处理单元}{57}{subsubsection.B.2.3.8}% 
+\contentsline {chapter}{\numberline {第9章\hspace {.3em}}待确定问题}{34}{chapter.9}% 
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}可行性分析结果}{35}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}技术可行性}{35}{section.A.1}% 
+\contentsline {section}{\numberline {A.2}经济可行性}{35}{section.A.2}% 
+\contentsline {section}{\numberline {A.3}法律可行性}{35}{section.A.3}% 
+\contentsline {section}{\numberline {A.4}可行性分析结论}{35}{section.A.4}% 
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}需求建模 }{36}{appendix.B}% 
+\contentsline {section}{\numberline {B.1}数据流图}{36}{section.B.1}% 
+\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{36}{subsection.B.1.1}% 
+\contentsline {subsection}{\numberline {B.1.2}层数据流图}{36}{subsection.B.1.2}% 
+\contentsline {section}{\numberline {B.2}数据字典}{36}{section.B.2}% 
+\contentsline {subsection}{\numberline {B.2.1}数据流说明}{36}{subsection.B.2.1}% 
+\contentsline {subsubsection}{\numberline {B.2.1.1}音视频信息(out)}{36}{subsubsection.B.2.1.1}% 
+\contentsline {subsubsection}{\numberline {B.2.1.2}音视频信息(in)}{36}{subsubsection.B.2.1.2}% 
+\contentsline {subsubsection}{\numberline {B.2.1.3}好友请求(out)}{36}{subsubsection.B.2.1.3}% 
+\contentsline {subsubsection}{\numberline {B.2.1.4}好友请求(in)}{37}{subsubsection.B.2.1.4}% 
+\contentsline {subsubsection}{\numberline {B.2.1.5}聊天消息(out)}{37}{subsubsection.B.2.1.5}% 
+\contentsline {subsubsection}{\numberline {B.2.1.6}聊天消息(in)}{37}{subsubsection.B.2.1.6}% 
+\contentsline {subsubsection}{\numberline {B.2.1.7}消息查询请求}{38}{subsubsection.B.2.1.7}% 
+\contentsline {subsubsection}{\numberline {B.2.1.8}文件(out)}{38}{subsubsection.B.2.1.8}% 
+\contentsline {subsubsection}{\numberline {B.2.1.9}文件(in)}{38}{subsubsection.B.2.1.9}% 
+\contentsline {subsubsection}{\numberline {B.2.1.10}协同文档内容(out)}{39}{subsubsection.B.2.1.10}% 
+\contentsline {subsubsection}{\numberline {B.2.1.11}协同文档内容(in)}{39}{subsubsection.B.2.1.11}% 
+\contentsline {subsubsection}{\numberline {B.2.1.12}个人信息}{39}{subsubsection.B.2.1.12}% 
+\contentsline {subsubsection}{\numberline {B.2.1.13}个人日程信息}{40}{subsubsection.B.2.1.13}% 
+\contentsline {subsubsection}{\numberline {B.2.1.14}日历表}{40}{subsubsection.B.2.1.14}% 
+\contentsline {subsubsection}{\numberline {B.2.1.15}好友推荐信息}{40}{subsubsection.B.2.1.15}% 
+\contentsline {subsubsection}{\numberline {B.2.1.16}联系人列表}{41}{subsubsection.B.2.1.16}% 
+\contentsline {subsubsection}{\numberline {B.2.1.17}任务/活动}{41}{subsubsection.B.2.1.17}% 
+\contentsline {subsubsection}{\numberline {B.2.1.18}成员信息}{41}{subsubsection.B.2.1.18}% 
+\contentsline {subsubsection}{\numberline {B.2.1.19}权限信息}{42}{subsubsection.B.2.1.19}% 
+\contentsline {subsubsection}{\numberline {B.2.1.20}完成情况}{42}{subsubsection.B.2.1.20}% 
+\contentsline {subsubsection}{\numberline {B.2.1.21}成员反馈信息}{43}{subsubsection.B.2.1.21}% 
+\contentsline {subsubsection}{\numberline {B.2.1.22}团队用户信息}{43}{subsubsection.B.2.1.22}% 
+\contentsline {subsubsection}{\numberline {B.2.1.23}用户信息}{43}{subsubsection.B.2.1.23}% 
+\contentsline {subsubsection}{\numberline {B.2.1.24}好友推荐名单}{44}{subsubsection.B.2.1.24}% 
+\contentsline {subsubsection}{\numberline {B.2.1.25}系统错误反馈}{44}{subsubsection.B.2.1.25}% 
+\contentsline {subsubsection}{\numberline {B.2.1.26}上传的云文件}{44}{subsubsection.B.2.1.26}% 
+\contentsline {subsubsection}{\numberline {B.2.1.27}下载的云文件}{45}{subsubsection.B.2.1.27}% 
+\contentsline {subsubsection}{\numberline {B.2.1.28}云文件上传请求}{45}{subsubsection.B.2.1.28}% 
+\contentsline {subsubsection}{\numberline {B.2.1.29}云文件下载请求}{45}{subsubsection.B.2.1.29}% 
+\contentsline {subsubsection}{\numberline {B.2.1.30}云文件}{46}{subsubsection.B.2.1.30}% 
+\contentsline {subsubsection}{\numberline {B.2.1.31}上传的文件}{46}{subsubsection.B.2.1.31}% 
+\contentsline {subsubsection}{\numberline {B.2.1.32}上传的群文件}{46}{subsubsection.B.2.1.32}% 
+\contentsline {subsubsection}{\numberline {B.2.1.33}上传的日历文件}{47}{subsubsection.B.2.1.33}% 
+\contentsline {subsubsection}{\numberline {B.2.1.34}下载的文件}{47}{subsubsection.B.2.1.34}% 
+\contentsline {subsubsection}{\numberline {B.2.1.35}下载的群文件}{47}{subsubsection.B.2.1.35}% 
+\contentsline {subsubsection}{\numberline {B.2.1.36}下载的日历文件}{48}{subsubsection.B.2.1.36}% 
+\contentsline {subsubsection}{\numberline {B.2.1.37}团队日程信息}{48}{subsubsection.B.2.1.37}% 
+\contentsline {subsubsection}{\numberline {B.2.1.38}冲突信息反馈}{48}{subsubsection.B.2.1.38}% 
+\contentsline {subsubsection}{\numberline {B.2.1.39}聊天记录}{49}{subsubsection.B.2.1.39}% 
+\contentsline {subsubsection}{\numberline {B.2.1.40}查询请求}{49}{subsubsection.B.2.1.40}% 
+\contentsline {subsubsection}{\numberline {B.2.1.41}记录消息}{49}{subsubsection.B.2.1.41}% 
+\contentsline {subsubsection}{\numberline {B.2.1.42}初始文档}{50}{subsubsection.B.2.1.42}% 
+\contentsline {subsubsection}{\numberline {B.2.1.43}总文档}{50}{subsubsection.B.2.1.43}% 
+\contentsline {subsubsection}{\numberline {B.2.1.44}文档任务}{51}{subsubsection.B.2.1.44}% 
+\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{51}{subsection.B.2.2}% 
+\contentsline {subsubsection}{\numberline {B.2.2.1}本地文件存储}{51}{subsubsection.B.2.2.1}% 
+\contentsline {subsubsection}{\numberline {B.2.2.2}云文件存储}{51}{subsubsection.B.2.2.2}% 
+\contentsline {subsubsection}{\numberline {B.2.2.3}消息记录存储}{52}{subsubsection.B.2.2.3}% 
+\contentsline {subsubsection}{\numberline {B.2.2.4}用户信息存储}{52}{subsubsection.B.2.2.4}% 
+\contentsline {subsubsection}{\numberline {B.2.2.5}协作文档存储}{52}{subsubsection.B.2.2.5}% 
+\contentsline {subsection}{\numberline {B.2.3}加工说明}{53}{subsection.B.2.3}% 
+\contentsline {subsubsection}{\numberline {B.2.3.1}文件管理}{53}{subsubsection.B.2.3.1}% 
+\contentsline {subsubsection}{\numberline {B.2.3.2}云文件管理}{54}{subsubsection.B.2.3.2}% 
+\contentsline {subsubsection}{\numberline {B.2.3.3}日历管理}{54}{subsubsection.B.2.3.3}% 
+\contentsline {subsubsection}{\numberline {B.2.3.4}团队管理}{55}{subsubsection.B.2.3.4}% 
+\contentsline {subsubsection}{\numberline {B.2.3.5}通讯管理}{56}{subsubsection.B.2.3.5}% 
+\contentsline {subsubsection}{\numberline {B.2.3.6}用户信息管理}{56}{subsubsection.B.2.3.6}% 
+\contentsline {subsubsection}{\numberline {B.2.3.7}在线文档协作平台}{57}{subsubsection.B.2.3.7}% 
+\contentsline {subsubsection}{\numberline {B.2.3.8}错误信息处理单元}{58}{subsubsection.B.2.3.8}% 
 \contentsfinish 
