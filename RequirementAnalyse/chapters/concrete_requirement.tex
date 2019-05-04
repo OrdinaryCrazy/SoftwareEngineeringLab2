@@ -28,20 +28,438 @@
 % 此外，对那些需求集中在输入/输出行为的系统，SRS应描述所有重要的输入/输出行为及输入输出对的次序。
 % 对一个需要记忆其行为以根据输入和过去的行为进行反应的系统，输入输出对的次序是要求的；这种功能行为就类似于有限状态机。
 %====================================================================================================================
-\input{chapters/concrete_requirement/sigle_contact}
-\input{chapters/concrete_requirement/group_contact}
-\input{chapters/concrete_requirement/activity_task_organization}
-\input{chapters/concrete_requirement/av_contact}
-\input{chapters/concrete_requirement/address_book}
-\input{chapters/concrete_requirement/chat_record}
-\input{chapters/concrete_requirement/message_notification}
-\input{chapters/concrete_requirement/board}
-\input{chapters/concrete_requirement/recommendation}
-\input{chapters/concrete_requirement/onlinedoc}
-\input{chapters/concrete_requirement/security}
-\input{chapters/concrete_requirement/schedule}
-\input{chapters/concrete_requirement/file}
-\input{chapters/concrete_requirement/mailbox_interface}
+\subsection{R.INTF.CALC.001: 一对一即时通讯功能}
+这是聊天软件最基本的功能。
+\subsubsection{介绍}
+对用户而言，该功能的基本需求为:
+\begin{itemize}
+  \item 用户可以向好友发送聊天信息。
+  \item 用户可以接收到好友发送的聊天信息。
+\end{itemize}
+\subsubsection{输入}
+用户选择相应的好友，输入向他发送的聊天信息。
+\subsubsection{处理}
+\begin{itemize}
+  \item 客户端向服务器发送聊天信息。
+  \item 如果好友在线，则服务器立即转发该信息；否则，进行缓存，直到好友上线再转发该信息。
+  \item 客户端使用一个监听线程监听服务器，接收服务器转发的信息。
+\end{itemize}
+\subsubsection{输出}
+在聊天界面展示接收到的聊天信息。
+
+
+\subsection{R.INTF.CALC.002: 多情境群聊功能}
+在日常使用中，用户经常会有群聊的需求。群聊并不是聊天人数的简单增加，而是聊天场景的扩展——从一对一的聊天场景扩展为多人的聊天场景。我们对多种群聊场景提供支持，如课程、工作小组等。
+
+\subsubsection{R.INTF.CALC.002.1: 群管理}
+\textbf{介绍：}
+
+对用户而言，该功能的基本需求为:
+\begin{itemize}
+  \item 群主可以创建或解散群聊，并为群聊选择场景。
+  \item 群主可以任命群成员为管理员，或解除管理员的权限。
+  \item 群主和管理员可以批准或拒绝入群申请。
+  \item 群主和管理员可以邀请其他人加入群聊。
+\end{itemize}
+
+\textbf{输入：}
+
+用户在群管理面板进行操作，管理群聊。
+
+\textbf{处理：}
+
+将群成员列表作为数据库管理，对其实现增、删、改、查操作。
+
+\textbf{输出：}
+
+管理操作完成后的群信息。
+
+\subsubsection{R.INTF.CALC.002.2: 群聊天}
+\textbf{介绍：}
+
+对用户而言，该功能的基本需求为:
+\begin{itemize}
+  \item 用户可以在群聊中发言。
+  \item 用户可以接收到群聊中其他成员的发言。
+\end{itemize}
+
+\textbf{输入：}
+
+用户选择相应的群聊，输入自己的发言。
+
+\textbf{处理：}
+
+\begin{itemize}
+  \item 客户端向服务器发送发言信息。
+  \item 服务器向所有群成员转发该信息。如果某位成员不在线，则进行缓存，直到其上线再转发该信息。
+  \item 客户端使用一个监听线程监听服务器，接收服务器转发的信息。
+\end{itemize}
+
+\textbf{输出：}
+
+在群聊界面展示接收到的发言信息。
+
+\subsubsection{R.INTF.CALC.002.3: 情境功能}
+\textbf{介绍：}
+
+在每一个群聊场景中，用户对此有一些额外的需求：
+
+\begin{itemize}
+  \item \textbf{课程：}
+        \begin{itemize}
+        \item 课程作业需求。
+        \item 课堂签到需求。
+        \item 考试成绩、平时作业成绩查询需求。
+        \end{itemize}
+  \item \textbf{工作小组：}
+        \begin{itemize}
+        \item 工作进度管理需求。
+        \item 工作汇报协同制作需求。
+        \end{itemize}
+\end{itemize}
+
+\textbf{输入：}
+
+用户在功能界面对各种功能的操作，如发布和查看作业、进行签到、发布和查询成绩、更新和查看工作进度、协同写作工作汇报等。
+
+\textbf{处理：}
+
+\begin{itemize}
+    \item 对课程作业需求，可以调用任务管理接口实现。
+    \item 对课堂签到需求，可以通过在指定时间进行GPS定位，判断用户是否位于指定地点实现。
+    \item 对成绩查询需求，可以通过只允许特定的用户查看成绩文件的特定部分实现（每一个人只能看到自己的成绩条目）。
+    \item 对工作进度管理需求，可以调用任务管理接口实现。
+    \item 对工作汇报协同制作需求，可以调用在线文档写作平台实现。
+\end{itemize}
+
+\textbf{输出：}
+
+展示功能使用后的结果，如作业的内容、签到成功提示、成绩、工作完成进度、工作汇报等。
+
+\subsection{R.INTF.CALC.003: 活动/任务发布与管理功能}
+在一个组织中，有许多的集体活动或任务，它们一般由多人参与，对每个人而言，时间、地点等信息都相同。于是，我们提供了该功能，使得组织的管理者可以发布和管理任务，并自动通知所有参与者，直接插入他们的日历中。
+\subsubsection{介绍}
+对用户而言，该功能的需求为：
+\begin{itemize}
+  \item 组织的管理者可以发布任务，设置任务的参与者、截止时间、地点、具体内容等信息。
+  \item 组织的管理者可以修改或删除已经发布的任务。
+  \item 任务的参与者会自动接收到任务信息，任务的截止时间等重要时间节点会被自动插入到参与者的日历中。如果任务被删改，每一次改动的具体信息也都会被自动接收，且日历中也会做出相应的改动。
+  \item 应当有一个独立的入口可以查看所有的任务，并提供不同的筛选和排序方式。
+\end{itemize}
+\subsubsection{输入}
+用户对任务的增、删、改、查。
+\subsubsection{处理}
+\begin{itemize}
+  \item 使用数据库管理所有的任务，实现增、删、改、查功能，注意针对不同的用户身份提供不同的权限。
+  \item 在任务发生修改时，将修改的内容告知所有参与者。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 在任务管理界面展示任务增、删、改、查后的结果。
+  \item 一旦任务发生修改，向用户展示任务修改的内容。可以考虑调用邮件、短信等接口，使用电子邮件或短信来告知用户。
+  \item 调用日历接口，自动插入、删除、修改日历中的活动项。
+\end{itemize}
+
+\subsection{R.INTF.CALC.004: 音视频通话(会议)功能}
+在我们的日常使用中，仅仅通过文字进行聊天并不能够满足我们的需求，因此我们提供了音视频通话（会议）功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户向其他用户发起建立连接的请求，以开始音视频通话
+  \item 用户可以接受或拒绝其他用户发起的连接请求
+  \item 双方的音视频信息应当实时传输
+  \item 允许用户随时单方面停止连接
+\end{itemize}
+\subsubsection{输入}
+用户在聊天界面发起连接请求或停止连接，接受或拒绝对方的连接请求。
+\subsubsection{处理}
+\begin{itemize}
+  \item 权限检查：检查是否拥有所有必需的权限，如视频连接所需的摄像头权限，音频连接所需的麦克风和扬声器权限。如果缺少权限，就向用户请求对应的权限。
+  \item 向对方发起建立连接的请求，等待对方接受。
+  \item 调用摄像头或麦克风对用户的图像或声音进行实时录制，并发送给连接的另一方。
+  \item 为了减少流量，传输中的音视频内容应当被压缩，可以采用现有的成熟的压缩算法。
+  \item 对接收到的数据进行缓存，再播放，保证播放不会乱序。
+  \item 如果发生用户点击按钮停止连接的事件，就断开连接，停止服务。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 如果没有得到必需的权限，则停止服务，退出该模块。
+  \item 如果请求被对方拒绝，则停止服务，退出该模块。
+  \item 使用屏幕播放视频或扬声器播放音频，直到用户停止连接。
+\end{itemize}
+
+\subsection{R.INTF.CALC.005: 通讯录功能}
+在日常使用中，我们一般不会和陌生人通信，而是和好友进行联系，或是在加入的群聊中发言。于是，我们使用通讯录管理所有的好友和群聊。
+
+\subsubsection{R.INTF.CALC.005.1: 好友管理}
+\textbf{介绍：}
+
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以添加其他人为好友，可以通过账号查询、二维码等多种方式添加好友，向其发送好友请求。
+  \item 用户可以接受或拒绝其他用户的好友请求。
+  \item 用户可以在通讯录中查询好友。
+  \item 用户可以单方面删除好友。
+  \item 用户可以为好友进行分组。
+  \item 用户可以为好友增加备注信息。
+\end{itemize}
+
+\textbf{输入：}
+
+用户在通讯录界面对好友进行的管理。
+
+\textbf{处理：}
+
+\begin{itemize}
+  \item \textbf{添加好友：} 可以根据提供的信息定位到具体的用户，向他发送请求。在他接受后，把他的信息加入通讯录。
+  \item \textbf{删除好友：} 从用户的通讯录中删除该好友，同时从他的通讯录中删除用户信息。
+  \item \textbf{查询好友：} 从通讯录中找到对应的好友，可以采用遍历、二分查找、哈希等方法。
+  \item \textbf{备注好友：} 为好友增加备注。
+  \item \textbf{好友分组：} 在通讯录中对好友分组管理。
+\end{itemize}
+
+\textbf{输出：}
+
+修改后的新的通讯录。
+
+\subsubsection{R.INTF.CALC.005.2: 群聊管理}
+
+\textbf{介绍：}
+
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以加入群聊，可以通过账号查询、二维码等多种方式加入群聊，向其发送入群申请。
+  \item 用户可以接受或拒绝入群邀请。
+  \item 用户可以在通讯录中查询群聊。
+  \item 用户可以退出群聊。
+\end{itemize}
+
+\textbf{输入：}
+
+用户在通讯录界面对群聊进行的管理。
+
+\textbf{处理：}
+
+\begin{itemize}
+  \item \textbf{添加群聊：} 可以根据提供的信息定位到具体的群聊，向其发送入群请求。在申请被接受后，把群聊的信息加入通讯录。
+  \item \textbf{退出群聊：} 从用户的通讯录中删除该群聊，同时从它的群成员中删除用户信息。
+  \item \textbf{查询群聊：} 从通讯录中找到对应的群聊，可以采用遍历、二分查找、哈希等方法。
+\end{itemize}
+
+\textbf{输出：}
+
+展示用户在上述操作后的新通讯录。
+
+\subsubsection{R.INTF.CALC.005.3: 黑名单}
+
+\textbf{介绍：}
+
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以将其他人加入或移出黑名单。
+  \item 用户不会接收来自黑名单的任何信息。
+\end{itemize}
+
+\textbf{输入：}
+
+用户在通讯录界面对群聊进行的管理。
+
+\textbf{处理：}
+
+\begin{itemize}
+  \item 把被选中的用户加入或移出黑名单。
+  \item 服务器在转发信息时，如果发送方在接收方的黑名单中，立即将该信息丢弃。
+\end{itemize}
+
+\textbf{输出：}
+
+展示用户在上述操作后的新通讯录。
+
+\subsection{R.INTF.CALC.006: 聊天记录功能}
+在很多时候，用户需要查询之前的聊天内容。于是，我们提供了聊天记录功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户查询聊天记录，且保持设备间同步。
+  \item 允许用户导出聊天记录（txt格式、xls格式等）。
+\end{itemize}
+\subsubsection{输入}
+用户在聊天记录界面输入的查询条件（时间、聊天对象、关键词等），以及选择的导出格式。
+\subsubsection{处理}
+\begin{itemize}
+  \item 在用户聊天的同时，记录所有的聊天内容，存放在聊天记录中（聊天记录存储在云端）。
+  \item 对用户提供的查询条件，检索聊天记录，返回对应的内容。
+  \item 在导出时，将聊天记录以对应的格式写入文件。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 向用户展示查询得到的聊天内容。
+  \item 导出操作会输出一个写有聊天记录的文件。如果文件写入失败（目录不存在、存储已满等），向用户报错。
+\end{itemize}
+
+\subsection{R.INTF.CALC.007: 消息提醒功能}
+在使用中，用户往往不能及时查看其他人发送的聊天信息。于是，我们设计了消息提醒功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 当有新的消息收到时，对用户进行提醒（如提示声等）。
+  \item 对未读信息进行特殊标记，并统计未读信息的数目。
+\end{itemize}
+\subsubsection{输入}
+无
+\subsubsection{处理}
+\begin{itemize}
+  \item 使用监听线程监听服务器发送的信息，每当有消息时发出提示声。
+  \item 使用一个队列存储未读信息，所有接收到的消息先放入该队列，队列长度就是未读信息数目。
+  \item 每当一条消息被读后，将它从队列移除。
+\end{itemize}
+\subsubsection{输出}
+未读消息的标记以及提示声。
+
+\subsection{R.INTF.CALC.008: Board(广场)功能}
+用户可能有一些希望向不特定的多人展示的信息，于是我们提供了Board功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户修改自己的Board，向其中插入新的日志、修改或删除旧的日志。
+  \item 用户的日志中可以插入图片或视频、音频文件。
+  \item 用户可以为自己的Board设置权限，如浏览权限和评论权限。
+  \item 在拥有权限的情况下，用户可以浏览好友的Board并对某些日志进行评论。
+\end{itemize}
+\subsubsection{输入}
+在自己的Board界面，用户输入的日志内容；在浏览他人或自己的日志时，用户输入的评论。
+\subsubsection{处理}
+\begin{itemize}
+  \item 读取用户的输入，对Board进行修改。
+  \item 在用户浏览他人的Board或评论他人的日志前，进行权限检查。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 如果没有权限，拒绝用户的浏览或评论请求。
+  \item 向用户展示Board信息。
+\end{itemize}
+
+\subsection{R.INTF.CALC.009: 个性化好友推荐功能}
+为了扩大社交圈，用户需要更多的好友。于是，我们设计了该功能，为用户推荐志趣相投的好友。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 系统会为用户个性化地推荐好友
+  \item 用户可以向推荐的好友发送好友请求
+\end{itemize}
+\subsubsection{输入}
+无
+\subsubsection{处理}
+\begin{itemize}
+  \item 根据用户平时的聊天信息、好友信息等，利用推荐算法和社区算法得到一个用户集合。
+  \item 从该集合中随机向用户输出五个符合要求的用户作为推荐的好友。
+\end{itemize}
+\subsubsection{输出}
+向用户展示系统推荐的好友。
+
+\subsection{R.INTF.CALC.010: 在线文档协作平台功能}
+在团队协作中，用户经常会有在线文档协作的需求。于是，我们提供了该功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户创建或删除在线文档。
+  \item 文档创建者可以邀请其他用户参与协作。
+  \item 用户可以接受或拒绝其他用户的协作邀请。
+  \item 多名用户可以同时对同一个文档进行修改而不发生冲突。
+  \item 在线文档可以被导出。
+\end{itemize}
+\subsubsection{输入}
+对在线文档的修改。
+\subsubsection{处理}
+\begin{itemize}
+  \item 在线文档存储在云端。
+  \item 利用锁等机制，可以避免用户的修改发生冲突。
+  \item 根据在线文档的格式，将其内容写入本地文件。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 向用户实时显示在线文档。
+  \item 如果写入失败，应当向用户报错。
+  \item 在线文档导出后，在本地保存导出的文档。
+\end{itemize}
+
+\subsection{R.INTF.CALC.011: 账号保护和隐私保护功能}
+账号的安全性对用户而言十分重要。于是，我们提供了该功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以使用邮箱对账号进行绑定。
+  \item 用户可以将账号与设备进行绑定。
+\end{itemize}
+\subsubsection{输入}
+用户绑定的邮箱、设备。
+\subsubsection{处理}
+\begin{itemize}
+  \item 将邮箱与账号进行绑定，在修改密码等敏感操作时必须通过邮箱进行验证。
+  \item 将邮箱与设备绑定，在未绑定的设备上登录时必须使用绑定设备验证。
+\end{itemize}
+\subsubsection{输出}
+如果绑定成功，提示绑定成功；否则，提示绑定失败。
+
+\subsection{R.INTF.CALC.012: 日历管理功能}
+在工作中存在着许多重要的时间节点，而日历可以很好地显示这些节点，管理我们的工作。于是，我们提供了日历管理功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以在日历中新建、删除、修改、查看活动项（活动项包括时间和活动简介等）。
+  \item 在活动的时间到达时，对用户进行提醒。
+\end{itemize}
+\subsubsection{输入}
+对活动项的增、删、改、查。
+\subsubsection{处理}
+\begin{itemize}
+  \item 使用数据库维护所有的活动项，实现增、删、改、查功能。
+  \item 在活动的时间到达时，调用消息提醒接口，对用户进行提醒。
+\end{itemize}
+\subsubsection{输出}
+在日历界面展示活动项增、删、改、查后的结果。
+
+\subsection{R.INTF.CALC.013: 个人本地和云端文件管理功能}
+在聊天中，用户经常会发送一些文件。于是，我们提供了文件管理功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 允许用户向其他用户发送文件。
+  \item 用户可以接受来自他人的文件并保存在本地。
+  \item 每一位用户都有一定大小的云存储空间。
+  \item 所有发送的文件都会默认在云端保存一定时间，用户还可以指定某些文件永久保存。
+\end{itemize}
+\subsubsection{输入}
+用户发送的文件。
+\subsubsection{处理}
+\begin{itemize}
+  \item 搭建云服务器，对所有的文件进行云端存储。
+  \item 定期删除过期的云端文件。
+  \item 将用户接收的文件保存在本地。
+\end{itemize}
+\subsubsection{输出}
+\begin{itemize}
+  \item 如果云存储空间不足，提示用户扩容。
+  \item 如果本地存储空间不足，向用户报错。
+  \item 在本地保存用户接收的文件。
+\end{itemize}
+\subsection{R.INTF.CALC.014: 邮箱接口功能}
+邮箱在日常生活中被广泛应用。于是，我们提供了邮箱接口功能。
+\subsubsection{介绍}
+对用户而言，该功能的需求为:
+\begin{itemize}
+  \item 用户可以为自己的账户绑定一个邮箱。
+  \item 一旦邮箱收到新的邮件，就会给用户以消息提醒。
+\end{itemize}
+\subsubsection{输入}
+用户绑定的邮箱，以及邮件信息。
+\subsubsection{处理}
+\begin{itemize}
+  \item 在账户信息中增加一个条目，存储绑定的电子邮箱。
+  \item 通过第三方查询绑定的电子邮箱是否有邮件，一旦有邮件就调用消息提醒接口进行提醒。
+\end{itemize}
+\subsubsection{输出}
+使用消息提醒接口进行消息提醒。
 
 \section{性能需求}
 %====================================================================================================================
