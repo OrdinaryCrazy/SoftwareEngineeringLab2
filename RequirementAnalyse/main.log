@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.6960 64-bit) (preloaded format=xelatex 2019.3.16)  4 MAY 2019 21:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.6960 64-bit) (preloaded format=xelatex 2019.3.16)  4 MAY 2019 21:26
 entering extended mode
 **d:/labs_software_engineering/SoftwareEngineeringLab2/RequirementAnalyse/main.
 tex
@@ -12896,6 +12896,11 @@ Missing character: There is no 据 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 类 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 型 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
+
+ []
+
 Missing character: There is no 好 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 友 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 请 in font [lmroman12-regular]:mapping=tex-text;!
@@ -14099,6 +14104,11 @@ Missing character: There is no 完 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 成 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 时 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 间 in font [lmroman12-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--225
+
+ []
+
 Missing character: There is no 数 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 据 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 类 in font [lmroman12-regular]:mapping=tex-text;!
@@ -14130,6 +14140,11 @@ Missing character: There is no 完 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 成 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 时 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 间 in font [lmroman12-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--232
+
+ []
+
 Missing character: There is no 用 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 户 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 信 in font [lmroman12-regular]:mapping=tex-text;!
@@ -14150,6 +14165,20 @@ Missing character: There is no 通 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 讯 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 公 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 司 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[43]
 Missing character: There is no 内 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 容 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
@@ -14188,20 +14217,6 @@ Missing character: There is no 通 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 讯 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 公 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 司 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[43]
 Missing character: There is no 去 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 向 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
@@ -14364,6 +14379,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--271
 
  []
 
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[44]
 Missing character: There is no 下 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 载 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 的 in font [lmroman12-regular]:mapping=tex-text;!
@@ -14386,20 +14415,6 @@ Missing character: There is no 文 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 件 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[44]
 Missing character: There is no 内 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 容 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
@@ -15850,7 +15865,7 @@ Missing character: There is no 名 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 文 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 件 in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--494
+Underfull \hbox (badness 10000) in paragraph at lines 491--495
 
  []
 
@@ -15967,7 +15982,7 @@ Missing character: There is no 天 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 记 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 录 in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--503
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
 
@@ -16120,7 +16135,7 @@ Missing character: There is no 人 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 简 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 介 in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 511--514
 
  []
 
@@ -16163,17 +16178,6 @@ Missing character: There is no 当 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 前 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 文 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 档 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 输 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 出 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 数 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 据 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 流 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 下 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 载 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 的 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 文 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 档 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
@@ -16188,6 +16192,17 @@ Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
 [52]
+Missing character: There is no 输 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 出 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 数 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 据 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 流 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 下 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 载 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 的 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 文 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 档 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 排 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 列 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 方 in font [lmroman12-regular]:mapping=tex-text;!
@@ -16259,7 +16274,7 @@ Missing character: There is no 档 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 内 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 容 in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
 
  []
 
@@ -16378,7 +16393,7 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 535.
+nput line 536.
 Missing character: There is no 代 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 码 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 代 in font [lmroman12-regular]:mapping=tex-text;!
@@ -16396,16 +16411,16 @@ Missing character: There is no 件 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 535--535
+Overfull \hbox (48.0pt too wide) in paragraph at lines 536--536
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--535
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
 
  []
 
-chapters/appendixB.tex:535: Undefined control sequence
+chapters/appendixB.tex:536: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -16576,6 +16591,20 @@ Missing character: There is no 云 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 件 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ； in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[53]
 Missing character: There is no 发 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 送 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;!
@@ -16600,20 +16629,6 @@ Missing character: There is no 传 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 和 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 下 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 载 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[53]
 Missing character: There is no 输 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 入 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 数 in font [lmroman12-regular]:mapping=tex-text;!
@@ -16703,12 +16718,12 @@ Missing character: There is no 件 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 570--570
+Overfull \hbox (48.0pt too wide) in paragraph at lines 571--571
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
 
  []
 
@@ -16886,12 +16901,12 @@ Missing character: There is no 历 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 589--589
+Overfull \hbox (48.0pt too wide) in paragraph at lines 590--590
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--589
+Underfull \hbox (badness 10000) in paragraph at lines 590--590
 
  []
 
@@ -16939,6 +16954,20 @@ Missing character: There is no 该 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 日 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 程 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ； in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[54]
 Missing character: There is no 上 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 传 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 新 in font [lmroman10-regular]:mapping=tex-text;!
@@ -17003,20 +17032,6 @@ Missing character: There is no 突 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 信 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 息 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ； in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[54]
 Missing character: There is no 结 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 束 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 任 in font [lmroman10-regular]:mapping=tex-text;!
@@ -17203,12 +17218,12 @@ Missing character: There is no 队 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 621--621
+Overfull \hbox (48.0pt too wide) in paragraph at lines 622--622
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 621--621
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
 
  []
 
@@ -17356,6 +17371,20 @@ Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 档 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 任 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 务 in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[55]
 Missing character: There is no 发 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 布 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 初 in font [lmroman10-regular]:mapping=tex-text;!
@@ -17408,20 +17437,6 @@ Missing character: There is no 传 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 群 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 件 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[55]
 Missing character: There is no 通 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 讯 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
@@ -17537,12 +17552,12 @@ Missing character: There is no 讯 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 660--660
+Overfull \hbox (48.0pt too wide) in paragraph at lines 661--661
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--660
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
 
  []
 
@@ -17777,6 +17792,20 @@ Missing character: There is no 用 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 户 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 信 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 息 in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[56]
 Missing character: There is no 激 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 发 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 条 in font [lmroman12-regular]:mapping=tex-text;!
@@ -17818,12 +17847,12 @@ Missing character: There is no 息 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 管 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 687--687
+Overfull \hbox (48.0pt too wide) in paragraph at lines 688--688
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--687
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
 
  []
 
@@ -17838,20 +17867,6 @@ Missing character: There is no 户 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 在 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 线 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ： in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[56]
 Missing character: There is no 立 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 刻 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 转 in font [lmroman10-regular]:mapping=tex-text;!
@@ -18084,12 +18099,12 @@ Missing character: There is no 作 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 平 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 台 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 712--712
+Overfull \hbox (48.0pt too wide) in paragraph at lines 713--713
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 712--712
+Underfull \hbox (badness 10000) in paragraph at lines 713--713
 
  []
 
@@ -18177,6 +18192,20 @@ Missing character: There is no 修 in font [lmroman10-regular]:mapping=tex-text;
 Missing character: There is no 改 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 内 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 容 in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
+Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
+[57]
 Missing character: There is no 修 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 改 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;!
@@ -18248,20 +18277,6 @@ Missing character: There is no 不 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 兼 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 容 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 等 in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 即 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 时 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 通 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 讯 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 系 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 统 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 需 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 求 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 规 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 格 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
-Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
-[57]
 Missing character: There is no 输 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 入 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 数 in font [lmroman12-regular]:mapping=tex-text;!
@@ -18355,12 +18370,12 @@ Missing character: There is no 理 in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no 单 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 元 in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (48.0pt too wide) in paragraph at lines 741--741
+Overfull \hbox (48.0pt too wide) in paragraph at lines 742--742
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--741
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
 
  []
 
@@ -18408,19 +18423,9 @@ Missing character: There is no 说 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 明 in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no 书 in font [lmroman9-regular]:mapping=tex-text;!
  [58]
-
-d:/labs_software_engineering/SoftwareEngineeringLab2/RequirementAnalyse/main.te
-x:78: LaTeX Error: \begin{itemize} on input line 475 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
-(main.aux)
+ (main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 
@@ -18439,18 +18444,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 475 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
  39919 strings out of 427748
  792678 string characters out of 3153626
- 1050975 words of memory out of 3000000
+ 1051688 words of memory out of 3000000
  43414 multiletter control sequences out of 15000+200000
  537873 words of font info for 97 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 62i,10n,81p,608b,2002s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,10n,81p,608b,1932s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on main.pdf (61 pages).
