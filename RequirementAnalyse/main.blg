@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: ustcauthoryear.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib/tex.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+c   knuth  donald e
+c   knuth  donald e
+c   lamport  leslie
+c   mittelbach  frank   zz2004   goossens  michel   braams  johannes   carlisle  david
+a   刘海洋
+You've used 5 entries,
+            3913 wiz_defined-function locations,
+            826 strings with 6459 characters,
+and the built_in function-call counts, 6583 in all, are:
+= -- 212
+> -- 774
+< -- 479
++ -- 262
+- -- 24
+* -- 133
+:= -- 820
+add.period$ -- 23
+call.type$ -- 5
+change.case$ -- 20
+chr.to.int$ -- 244
+cite$ -- 10
+duplicate$ -- 569
+empty$ -- 213
+format.name$ -- 28
+if$ -- 1414
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 41
+num.names$ -- 20
+pop$ -- 275
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 559
+stack$ -- 0
+substring$ -- 267
+swap$ -- 7
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 35
+warning$ -- 0
+while$ -- 24
+width$ -- 0
+write$ -- 87
