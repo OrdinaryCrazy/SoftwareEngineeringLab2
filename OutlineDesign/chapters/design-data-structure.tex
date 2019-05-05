@@ -1,0 +1,33 @@
+\chapter{数据结构设计}
+\section{逻辑结构设计}
+\subsection{用户管理系统数据结构设计}
+讲述本系统内需要什么数据结构。这指的是程序运行过程中维护的数据结构。只是举个例子，此处应和3.3一致。
+\subsection{客户端数据结构}
+
+\subsection{用户端数据结构}
+
+\section{物理结构设计}
+各数据结构无特殊物理结构要求。（如果有，比如说hadoop等，应当具体说明）
+
+\section{数据结构与程序模块的关系}
+[此处指的是不同的数据结构分配到哪些模块去实现。可按不同的端拆分此表]
+\begin{table}[htbp]
+\centering
+\caption{数据结构与程序代码的关系表} \label{tab:datastructure-module}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    · & 模块1 & 模块2 & 模块3 \\
+    \hline
+    结构1 & · & Y & · \\
+    \hline
+    结构2 & · & Y & · \\
+    \hline
+    结构3 & · & Y & · \\
+    \hline
+    结构4 & Y & · & · \\
+    \hline
+    结构5 & · & · & Y \\
+    \hline
+\end{tabular}
+\note{各项数据结构的实现与各个程序模块的分配关系}
+\end{table}
