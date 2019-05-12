@@ -30,24 +30,44 @@
 \section{处理流程}
     %--------------------------------------------------------------
     \subsection{总体流程}
-        此处应当有一个图和对应的描述。
+        % 此处应当有一个图和对应的描述。
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.75]{总体流程.png}\label{tab:classification}
             \caption{总体流程}\label{fig:noted-figure}
         \end{figure}
+        \newpage
     %--------------------------------------------------------------
     \subsection{系统基本流程}
-        此处应当有一个图和对应的描述。
+        % 此处应当有一个图和对应的描述。
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale = 0.75]{系统总体流程.png}\label{tab:classification}
+            \caption{系统基本流程}\label{fig:noted-figure}
+        \end{figure}
+        \newpage
     %--------------------------------------------------------------
     \subsection{客户端基本流程}
-        这只是举个例子，如果没有客户端则不需要此节。
+        % 这只是举个例子，如果没有客户端则不需要此节。
+        用户注册/登录之后，在客户端进行各种功能的调用，所有的功能在用户信息管理模块提供
+        的信息下运行，接收用户操作信息，将消息提示返回给用户。
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale = 0.45]{OutlineDesign/figures/客户端基本流程.jpg}
+            \label{tab:classification}
+            \caption{客户端基本流程}
+            \label{fig:noted-figure}
+        \end{figure}
+        \newpage
     %--------------------------------------------------------------
     \subsection{服务器端基本流程}
-    服务器端流程如图\ref{fig:server_flow}所示。客户端1和2展示了一对一聊天和群聊的服务器处理过程；客户端4和5展示了音视频通讯的过程；
-    客户端1与服务器间的箭头展示了查询的过程；客户端3与服务器间的箭头展示了更新的过程（许多功能都可以抽象为查询和更新，在后面会详细说明）。
+    服务器端流程如图\ref{fig:server_flow}所示。
+    客户端1和2展示了一对一聊天和群聊的服务器处理过程；客户端4和5展示了音视频通讯的过程；
+    客户端1与服务器间的箭头展示了查询的过程；
+    客户端3与服务器间的箭头展示了更新的过程
+    （许多功能都可以抽象为查询和更新，在后面会详细说明）。
     服务器使用SQL语句向数据库集群发送查询或更新请求，集群返回查询或更新的结果。
-        \begin{figure}
+        \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{OutlineDesign/figures/server_flow.png}
             \caption{服务器端流程}

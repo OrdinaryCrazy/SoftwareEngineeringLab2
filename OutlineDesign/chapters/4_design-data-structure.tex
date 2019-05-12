@@ -2,24 +2,181 @@
 %=================================================================================
     \section{逻辑结构设计}
     %-----------------------------------------------------------------------------
-        \subsection{用户管理系统数据结构设计}
+        \subsection{客户端和服务器端通用数据结构}
         %================================ GUIDE ==================================
         % 讲述本系统内需要什么数据结构。这指的是程序运行过程中维护的数据结构。
         % 只是举个例子，此处应和3.3一致。
         %================================ GUIDE ==================================
     %-----------------------------------------------------------------------------
-        \subsection{客户端端数据结构}
-    %-----------------------------------------------------------------------------
-        \subsection{服务器端数据结构}
-    %-----------------------------------------------------------------------------
-    \begin{lstlisting}[language=Java, caption=示例代码, label={code:first-code}]
-    public class Message{
-        User sender,receiver;
-        String message;
-        Time sendtime;
-    }
-    \end{lstlisting}
+        \subsection{客户端特有数据结构}
 
+    %-----------------------------------------------------------------------------
+        \subsection{服务器端特有数据结构}
+    %-----------------------------------------------------------------------------
+\subsubsection{数据结构1：User}
+该数据结构定义了用户的基本属性。
+\begin{lstlisting}[language=Java, caption=User定义]
+public class User{
+    private String ID;//用户ID，唯一
+    private String name;//昵称，不唯一
+    private String sex="Male";//性别，默认男性
+    private Date birthday;//用户的出生日期，可以为空
+    private Time createTime;//账户创建时间
+    private String address;//用户地址，可以为空
+    private String email;//用户绑定的邮箱，可以为空
+    public User(String ID){
+
+    }
+    public User(String ID,String name,String sex,
+        Date birthday,String address,String email){
+
+    }
+    public String getID(){
+
+    }
+    public String getName(){
+
+    }
+    public void setName(String name){
+
+    }
+    public String getSex(){
+
+    }
+    public void setSex(String sex){
+
+    }
+    public Date getBirthday(){
+
+    }
+    public void setBirthday(Date birthday){
+
+    }
+    public int getAge(){
+
+    }
+    public Time getCreateTime(){
+
+    }
+    public void setCreateTime(Time createTime){
+
+    }
+    public String getAddress(){
+
+    }
+    public void setAddress(String address){
+
+    }
+    public String getEmail(){
+
+    }
+    public void setEmail(String email){
+
+    }
+}
+\end{lstlisting}
+
+\subsubsection{数据结构2：Message}
+该数据结构定义了一对一聊天时发送的信息，所有属性都是不可修改的。
+\begin{lstlisting}[language=Java, caption=Message定义]
+public class Message{
+    private User sender,receiver;//该信息的发送方和接收方
+    private String message;//信息内容
+    private Time sendtime;//发送时间
+    public Message(User sender,User receiver,String message,
+        Time sendtime){
+
+    }
+    public User getSender(){
+
+    }
+    public User getReceiver(){
+
+    }
+    public String getMessage(){
+        
+    }
+    public Time getSendtime(){
+
+    }
+}
+\end{lstlisting}
+    
+\subsubsection{数据结构3：GroupMessage}
+该数据结构定义了群聊时发送的信息，继承自Message类。同样，所有属性都是不可修改的。
+\begin{lstlisting}[language=Java, caption=GroupMessage定义]
+public class GroupMessage extends Message{
+    private Group group;//所属的群聊
+    public GroupMessage(Group group,User sender,User receiver,
+        String message,Time sendtime){
+
+    }
+    public Group getGroup(){
+
+    }
+}
+\end{lstlisting}
+
+\subsubsection{数据结构4：Group}
+该数据结构定义了群聊的基本属性。
+\begin{lstlisting}[language=Java, caption=Group定义]
+public class Group{
+    private String ID;//群ID，唯一
+    private String name;//群名称，不唯一
+    private User master;//群主
+    private User[] managerList;//管理员列表
+    private User[] memberList;//群成员列表
+    private Scene scene; //场景
+    public Group(String ID,User master){
+
+    }
+    public String getID(){
+
+    }
+    public String getName(){
+
+    }
+    public void setName(String name){
+
+    }
+    public User getMaster(){
+
+    }
+    public User[] getManagerList(){
+
+    }
+    public User[] getMemberList(){
+
+    }
+    public void appointManager(User user){
+    //任命管理员
+    }
+    public void dismissManager(User user){
+    //解除管理员职务
+    }
+    public void addMember(User user){
+    //增加群成员
+    }
+    public void deleteMember(User user){
+    //删除群成员
+    }
+    public Scene getScene(){
+
+    }
+    public void setScene(Scene scene){
+        
+    }
+}
+\end{lstlisting}
+
+
+
+
+
+
+
+
+    %-----------------------------------------------------------------------------
     \section{物理结构设计}
     %-----------------------------------------------------------------------------
         各数据结构无特殊物理结构要求。
