@@ -1,11 +1,200 @@
 \chapter{接口设计}
 %====================================================================================
-    \section{外部接口}
+\section{外部接口}
 %====================================================================================
 % 比如说需要用到支付宝等外部支付系统，接口应当如何封装。
-
+%====================================================================================
 \subsection{支付宝接口}
 详细讲述不同的接口（查询状态、支付交易、获取回执等）
 
 \section{内部接口}
-\subsection{Message}
+\subsection{用户信息管理模块}
+\begin{lstlisting}[language=Java, caption=用户信息管理模块接口]
+public class UserInfoManager{
+    public static void uploadUser(User user){
+        //将用户信息上传到服务器
+    }
+    public static User downloadUser(String userID){
+        //从服务器下载对应ID的用户信息
+    }
+    public static User[] getRecommandedFriends(){
+        //向服务器获取个性化的推荐好友
+    }
+    public static void sendFriendRequest(User user){
+        //发送好友请求
+    }
+    public static SystemMessage[] receiveFriendRequest(){
+        //获取发送给自己的好友请求
+    }
+    public static void responseFriendRequest(
+        SystemMessage request,boolean accept){
+        //对好友请求进行回复
+    }
+}
+
+\end{lstlisting}
+
+
+
+
+\subsection{通讯管理模块}
+\begin{lstlisting}[language=Java, caption=通讯管理模块接口]
+public class CommunicationManager{
+    public static void sendMessage(Message message){
+        //发送信息
+    }
+    public static Message receiveMessage(){
+        //接收信息（阻塞）
+    }
+    public static boolean sendRadioConnectionRequest(
+        User user,int type){
+        //发送音视频连接请求（阻塞+超时机制）
+    }
+    public static Connection 
+        receiveRadioConnectionRequest(){
+        //获取并回复发送给自己的音视频连接请求
+    }
+    public static void sendRadio(Connection connection,
+        byte[] data){
+        //发送音视频数据
+    }
+    public static byte[] receiveRadio(
+        Connection connection){
+        //接收发送给自己的音视频数据
+    }
+    public static void uploadMessage(Message message){
+        //上传聊天信息
+    }
+    public static Message[] downloadMessage(
+        User user,Date date){
+        //下载与指定对象在指定时间的聊天记录(null不进行指定)
+    }
+}
+\end{lstlisting}
+
+
+\subsection{文件管理模块}
+\begin{lstlisting}[language=Java, caption=文件管理模块接口]
+public class FileManager{
+    public static void saveFile(File file,String path){
+        //保存文件
+    }
+    public static File loadFile(String path){
+        //加载指定文件
+    }
+    public static String[] searchFile(String name){
+        //查询指定文件
+    }
+    public static Message sendFile(User user,File file){
+        //向指定用户发送文件,文件信息存放在返回的Message中。
+        //这个Message将被发送给对方，对方可以使用这个Message接收文件
+    }
+    public static File receiveFile(Message message){
+        //使用存放有文件信息的Message接收文件
+    }
+
+}
+\end{lstlisting}
+
+\subsection{云文件管理模块}
+\begin{lstlisting}[language=Java, caption=云文件管理模块接口]
+public class CloudFileManager{
+    public static String defaultURL;
+    public static void uploadFile(File file,String url){
+        //上传云文件
+    }
+    public static File downloadFile(String url){
+        //下载云文件
+    }
+    public static String[] searchFile(String name){
+        //查询指定的云文件
+    }
+    public static String getFileInfo(String url){
+        //得到指定url对应的文件信息
+    }
+}
+\end{lstlisting}
+
+\subsection{团队管理模块}
+\begin{lstlisting}[language=Java, caption=团队管理模块接口]
+public class GroupManager{
+    public static void uploadFile(Group group,File file){
+        //上传群文件
+    }
+    public static File downloadFile(Group group,
+        String name){
+        //下载群文件
+    }
+    public static Group createGroup(User user,String name){
+        //创建群聊
+    }
+    public static Group getGroup(String groupID){
+        //得到对应ID的群聊
+    }
+    public static void disbandGroup(Group group){
+        //解散群聊
+    }
+    public static void updateGroupInfo(Group group,
+        int type,User user){
+        //对群管理信息进行更新，包括增减群成员和改变群成员权限
+    }
+    public static void publishTask(Group group,Task task){
+        //发布任务
+    }
+    public static void updateTask(Group group,Task task){
+        //更新任务
+    }
+}
+\end{lstlisting}
+
+\subsection{日历管理模块}
+\begin{lstlisting}[language=Java, caption=日历管理模块接口]
+public class CalanderManager{
+    public static Activity[][] calanderBuffer;
+    public static Activity[] downloadActivities(){
+        //下载活动项
+    }
+    public static void uploadActivity(Activity activity){
+        //上传活动项
+    }
+    public static void deleteActivity(Activity activity){
+        //删除活动项
+    }
+    public static void addActivity(Activity activity){
+        //新增活动项
+    }
+    public static void getActivities(Date date,int length){
+        //获取某一段时间的所有活动，写入calanderBuffer
+    }
+}
+\end{lstlisting}
+
+\subsection{共享文档管理模块}
+\begin{lstlisting}[language=Java, caption=共享文档管理模块接口]
+public class DocumentCooperationManager{
+    public static String createDocument(File file){
+        //创建共享文档，返回URL
+    }
+    public static File openDocument(String url){
+        //使用URL打开共享文档
+    }
+    public static void sendUpdate(String url,Update update){
+        //发送更改
+    }
+    public static Update receiveUpdate(){
+        //接收更改
+    }
+    public static File applyUpdate(File file,Update update){
+        //应用更改
+    }
+}
+\end{lstlisting}
+
+\subsection{错误管理模块}
+\begin{lstlisting}[language=Java, caption=错误管理模块接口]
+public class ErrorManager{
+    public static void reportError(Exception ex){
+        //向服务器报告错误
+    }
+}
+\end{lstlisting}
