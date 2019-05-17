@@ -108,8 +108,8 @@ public class Message{
 \begin{lstlisting}[language=Java, caption=GroupMessage定义]
 public class GroupMessage extends Message{
     private Group group;//所属的群聊
-    public GroupMessage(Group group,User sender,User receiver,
-        String message,Time sendtime){
+    public GroupMessage(Group group,User sender,
+        User receiver, String message,Time sendtime){
 
     }
     public Group getGroup(){
@@ -408,7 +408,7 @@ public class AddressBook{
 }
 \end{lstlisting}
 
-\subsection{数据结构4：Task\_server}
+\subsubsection{数据结构4：Task\_server}
 该数据结构定义了任务的基本属性，它将在活动/任务发布与管理功能中应用。
 \begin{lstlisting}[language=Java, caption=Task定义]
 public class Task{
@@ -455,30 +455,32 @@ public class UserInfoManagement{
     private static User[] Users;//存储所有的用户
     private static User[] OnlineUsers; //存储所有的在线用户
     
-    public static void registerUser(User\_server user){
+    public static void registerUser(User_server user){
         //用户注册
     }
-    public static int selectUser(User\_server user){
+    public static int selectUser(User_server user){
         //在Users列表中查询用户对应项
     }
-    public static User\_server[] recommendUser(User\_server user){
+    public static User_server[] recommendUser(User_server
+    user){
         //推荐好友列表
     }
-    public static AddressBook\_
+    public static AddressBook(
     
  User_server user){
         //查找某个user的联系人列表
-    }   pserver(public static void deleteUser(User\_server user){
+    }   pserver(public static void deleteUser(User_server 
+    user){
         //删除用户
     }
     public static void UpdateUser(int UserID){
         //更新Users列表中的User信息
         //（例如绑定邮箱后需更新Users列表中对应user的email项）
     }
-    public static void upLoad(User\_server user){
+    public static void upLoad(User_server user){
         //向数据库上传
     }
-    public static User[] downLoad(User\_server user){
+    public static User[] downLoad(User_server user){
         //从数据库下载用户信息，并打包为User结构体
     }
 \end{lstlisting}
@@ -498,21 +500,26 @@ public class Group{
 %--------
 \begin{lstlisting}[language=Java, caption=通讯管理类]
 public class CommunicationManagement{
-    private static Message[] messageBuffer; //存储待转发的消息队列
+    private static Message[] messageBuffer; 
+    //存储待转发的消息队列
     
-    public static Message\_server Receive(Message\_server message\_received){
+    public static Message_server Receive(Message_server
+    
+    message_received){
         //接收消息
     }
-    public static void Send(Message\_server message\_send){
+    public static void Send(Message_server message_send){
         //发送消息
     }
-    public static void Transfer(User\_server sender, User\_server Receiver){
+    public static void Transfer(User_server sender, 
+    User\_server Receiver){
         //转发消息
     )
-    public static void upLoad(Message\_server message){
+    public static void upLoad(Message_server message){
         //向数据库上传聊天记录
     }
-    public static Message\_server downLoad(Message\_server message){
+    public static Message_server downLoad(Message_server 
+    message){
         //从数据库下载聊天记录，并打包为Message类
     }
 }
@@ -522,32 +529,38 @@ public class CommunicationManagement{
 %--------
 \begin{lstlisting}[language=Java, caption=文件管理类]
 public class FileManagement{
-    private static Message\_server[]  FileRecord; 
+    private static Message_server[]  FileRecord; 
     //记录所有的文件信息及其存储地址
     
-    public static int selectRecord(Message\_server record){
+    public static int selectRecord(Message_server record){
         //查询文件记录在FileRecord中的对应项
     }
     
-    public static Message\_server ReceiveFileRecord(){
-        //接收文件记录(其为Message的一种类型，记录了发送者，接收者，存储地址等信息)
+    public static Message_server ReceiveFileRecord(){
+        //接收文件记录(其为Message的一种类型，记录了发送者，
+        接收者，存储地址等信息)
     }
     public static File ReceiveFile(int FileID){
         //接收文件, 并将其绑定到对应的文件记录
     }
-    public static void SendFileRecord(Message\_server filerecord){
-        //发送文件记录(其为Message的一种类型，记录了发送者，接收者，存储地址等信息)
+    public static void SendFileRecord(Message_server 
+    filerecord){
+        //发送文件记录(其为Message的一种类型，记录了发送者，
+        接收者，存储地址等信息)
     }
-    public static void SendFile(Message\_server filerecord, File file){
+    public static void SendFile(Message_server filerecord,
+    File file){
         //发送文件
     }
-    public static void Transfer(Message\_server filerecord, File file){
+    public static void Transfer(Message_server filerecord,
+    File file){
         //转发文件
     }
-    public static void upLoad(Message\_server record, File file){
+    public static void upLoad(Message_server record, 
+    File file){
         //向数据库上传文件
     }
-    public static File downLoad(Message\_server record){
+    public static File downLoad(Message_server record){
         //根据文件记录中的地址，从数据库下载文件
     }
     
@@ -558,24 +571,32 @@ public class FileManagement{
 %--------
 \begin{lstlisting}[language=Java, caption=日历管理类]
 public class CalendarManagement{
-    public static void Activity\_server[][] calendarBuffer;//存储需要修改的日历
+    public static void Activity_server[][] calendarBuffer;
     
-    public static int[] selectCalendar(Activity\_server activity){
+    //存储需要修改的日历
+    
+    public static int[] selectCalendar(Activity_server
+    activity){
         //查找日历缓存表中的对应日历项
     }
-    public static void addActivity(int[] calendarID, Activity\_server activity){
+    public static void addActivity(int[] calendarID, 
+    Activity_server activity){
         //向单个或多个日历中添加活动
     }
-    public static void deleteActivity(int[] calendarID, Activity\_server activity){
+    public static void deleteActivity(int[] calendarID, 
+    Activity_server activity){
         //向单个或多个日历中删除活动
     }
-    public static void updateActivity(int [] calendarID, Activity\_server activity){
+    public static void updateActivity(int [] calendarID, 
+    Activity_server activity){
         //向单个或多个日历中更新活动
     }
-    public static void upLoad(Activity\_server[] Calendar){
+    public static void upLoad(Activity_server
+    [] Calendar){
         //向数据库上传日历
     }
-    public static Activity_server[] downLoad(Activity\_server[] Calendar){
+    public static Activity_server[] downLoad(
+    Activity_server[] Calendar){
         //从数据库下载日历
     }
     
@@ -588,22 +609,24 @@ public class CalendarManagement{
 public static class GroupManagement{
     public static Group_server[] Groups;
     
-    public static int selectGroup(Group\_server group){
+    public static int selectGroup(Group_server group){
         //在群组管理列表中寻找对应项
     }
-    public static void Assign_Task(Task\_server[] task){
+    public static void Assign_Task(Task_server[] task){
         //向组员发布任务
     }
-    public static void setAuthority(Group\_server group){
+    public static void setAuthority(Group_server group){
         //设置群组中用户的权限
     }
-    public static void reflect(SystemMessage\_server message){
+    public static void reflect(SystemMessage_server 
+    message){
         //根据组员的反馈信息调整任务
     }
-    public static void upLoad(Group\_server[] group){
+    public static void upLoad(Group_server[] group){
         //向数据库上传团队信息
     }
-    public static Group_server[] downLoad(Group\_server[] group){
+    public static Group_server[] downLoad(Group_server[] 
+    group){
         //从数据库下载团队信息
     }
 }
