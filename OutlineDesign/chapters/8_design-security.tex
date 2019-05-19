@@ -3,8 +3,55 @@
 % 可能的内容包括保密性、是否采取加密传输、密钥如何分发和管理等。
 %===================================================================
     \section{保密性}
+    对以下信息在客户端和服务器加密保存，单次使用后立即销毁解密副本：
+    \begin{itemize}
+        \item 用户信息文件
+        \item 用户登录、注册、注销、密码修改信息
+        \item 用户安全问题与相关设置信息
+        \item 用户操作日志
+        \item 用户日历
+        \item 用户通讯录
+        \item 用户聊天记录
+        \item 用户Board日志
+        \item 在线文档
+        \item 用户邮件
+    \end{itemize}
 %===================================================================
     \section{加密传输}
+    \subsection{RSA算法加密小型数据}
+    对客户端和服务器、客户端和客户端之间的小型数据传输，适合采用RSA加密。\\
+    例如: 用户名，密码, 验证信息，保密问题等\\
+    RSA算法的流程为：
+    公钥与私钥的产生
+假设Alice想要通过一个不可靠的媒体接收Bob的一条私人消息。她可以用以下的方式来产生一个公钥和一个私钥：
+
+随意选择两个大的素数 {\displaystyle {p}} 和 {\displaystyle {q}}， {\displaystyle{}p} 不等于 {\displaystyle q}，计算 {\displaystyle N=pq}。\\
+根据欧拉函数，求得 {\displaystyle r=\varphi (N)=\varphi (p)\varphi (q)=(p-1)(q-1)} \\
+选择一个小于 {\displaystyle r} 的整数 {\displaystyle e} ，使 {\displaystyle e} 与 {\displaystyle r} 互质。并求得 {\displaystyle e} 关于 {\displaystyle r} 的模逆元，命名为 {\displaystyle d} （求 {\displaystyle d} 令 {\displaystyle ed\equiv 1{\pmod {r}}} ）。（模逆元存在，当且仅当 {\displaystyle e} 与 {\displaystyle r} 互质）
+将 {\displaystyle p} 和 {\displaystyle q} 的记录销毁。\\
+{\displaystyle (N,e)}是公钥， {\displaystyle (N,d)}是私钥。Alice将她的公钥 {\displaystyle (N,e)} 传给Bob，而将她的私钥 {\displaystyle (N,d)}藏起来。
+
+加密消息\\
+假设Bob想给Alice送一个消息 {\displaystyle m} ，他知道Alice产生的 {\displaystyle N} 和 {\displaystyle e} 。他使用起先与Alice约好的格式将 {\displaystyle m} 转换为一个小于 {\displaystyle N} 的非负整数 {\displaystyle n} ，比如他可以将每一个字转换为这个字的Unicode码，然后将这些数字连在一起组成一个数字。假如他的信息非常长的话，他可以将这个信息分为几段，然后将每一段转换为 {\displaystyle n} 。用下面这个公式他可以将 {\displaystyle n} 加密为 {\displaystyle c} ：
+
+{\displaystyle c\equiv n^{e}{\pmod {N}}}
+计算 {\displaystyle c} 并不复杂。Bob算出 {\displaystyle c} c后就可以将它传递给Alice。
+
+解密消息
+Alice得到Bob的消息 {\displaystyle c} c后就可以利用她的密钥 {\displaystyle d} d来解码。她可以用以下这个公式来将 {\displaystyle c} c转换为 {\displaystyle n} n：
+
+{\displaystyle n\equiv c^{d}\ (\mathrm {mod} \ N)} {\displaystyle n\equiv c^{d}\ (\mathrm {mod} \ N)}
+得到 {\displaystyle n} n后，她可以将原来的信息 {\displaystyle m} m重新复原。
+
+解码的原理是
+
+{\displaystyle c^{d}\equiv n^{e\cdot d}\ (\mathrm {mod} \ N)}  c^d \equiv n^{e \cdot d}\ (\mathrm{mod}\ N)
+已知 {\displaystyle ed\equiv 1{\pmod {r}}} {\displaystyle ed\equiv 1{\pmod {r}}}，即 {\displaystyle ed=1+h\varphi (N)} {\displaystyle ed=1+h\varphi (N)}。 由欧拉定理得：
+
+{\displaystyle n^{ed}=n^{1+h\varphi (N)}=n\left(n^{\varphi (N)}\right)^{h}\equiv n(1)^{h}{\pmod {N}}\equiv n{\pmod {N}}} {\displaystyle n^{ed}=n^{1+h\varphi (N)}=n\left(n^{\varphi (N)}\right)^{h}\equiv n(1)^{h}{\pmod {N}}\equiv n{\pmod {N}}}
+    
+    \subsection{}
 %===================================================================
     \section{人机认证与安全问题}
+    在登录、注册、修改密码、绑定邮箱等敏感操作的界面添加人机认证（图形/短信验证码，手动滑块）并要求用户回答个人信息和安全设置中的安全问题。
 %===================================================================

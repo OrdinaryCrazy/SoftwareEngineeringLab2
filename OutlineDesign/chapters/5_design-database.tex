@@ -23,23 +23,73 @@
 \end{itemize}
 
 \section{逻辑设计}
-是否需要满足某一种范式。
+\subsection{实体与属性设计}
+\begin{table}[htbp]
+\centering
+\caption{实体设计} \label{tab:client-database}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    实体 & 说明 & 属性 \\
+    \hline
+    用户 & 存储用户的信息和状态 & ID(主键),名字，email, 电话号码等 \\
+    \hline
+    团队 & 团队的信息 & 团队ID(主键), 队长ID, 队名等 \\
+    \hline
+    文件 & 传输的文件 & 文件ID(主键), 文件内容 \\
+    \hline
+    日历 & 所有用户的日历 & 用户ID(主键), 时间，内容 \\
+    \hline 
+    协作文档 & 存储在线协作文档 & 文档ID(主键), 文档内容 \\
+    \hline
+\end{tabular}
+\note{实体设计}
+\end{table}
+
+\subsection{关系设计}
+\begin{table}[htbp]
+\centering
+\caption{关系设计} \label{tab:client-database}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    关系 & 说明 & 属性 \\
+    \hline
+    包含关系 & 团队包含用户 & ID(主键),名字，email, 电话号码等 \\
+    \hline
+    管理关系 & 团队管理文件 & 团队ID(主键), 用户ID(主键), 权限等 \\
+    \hline 
+    收发关系 & 用户收发文件 & 发送者ID(主键), 接收者ID(主键)，文件ID(主键) ，发送时间\\
+    \hline
+    发布关系 & 团队发布日历 & 团队ID(主键), 用户ID(主键), 任务时间（主键），发布时间，任务内容等 \\
+    \hline
+    制定关系 & 用户制定日历 & . \\
+    \hline 
+    聊天关系 & 用户和用户聊天 & 发送者ID(主键), 接收者ID(主键)，发送时间（主键），接受时间 \\
+    \hline 
+    好友关系 & 用户和用户是好友 & 用户一ID(主键), 用户二ID(主键) \\
+    
+    \hline
+\end{tabular}
+\note{关系设计}
+\end{table}
+\subsection{ER图}
         \begin{figure}[ht]
             \centering
             \includegraphics[scale =0.6]{数据库.png}\label{tab:classification}
             \caption{数据库逻辑图}\label{fig:noted-figure}
         \end{figure}
         \newpage
-画个实体的逻辑关系表/图在此处。
+
 
 \section{物理设计}
 \subsection{数据库产品}
-采用Oracle数据库和Hbase分布式数据库结合。\\
-采用Oracle集中数据库存储文件，用户信息。\\
-采用分布式数据库Hbase(NoSQL)存储聊天信息，多媒体信息。\\
+\begin{itemize}
+    \item 采用Oracle数据库和Hbase分布式数据库结合
+    \item 采用Oracle集中数据库存储文件，用户信息
+    \item 采用分布式数据库Hbase(NoSQL)存储聊天信息，多媒体信息
+    \item 集中存储用户信息，文件有利于数据管理，分析，隐私保护
+    \item 分布存储有利于系统性能提升，且可避免单点失效导致服务丢失
+\end{itemize}
 
-集中存储用户信息，文件有利于数据管理，分析，隐私保护\\
-分布存储有利于系统性能提升，且可避免单点失效导致服务丢失。\\
 
 \subsection{实体属性、类型、精度}
 \subsubsection{用户数据表设计}
