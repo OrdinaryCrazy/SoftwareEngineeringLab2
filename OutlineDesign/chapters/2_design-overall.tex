@@ -283,7 +283,13 @@
         \item 客户端在聊天记录界面向用户展示查询得到的聊天内容
         \item 客户端如果文件写入失败（目录不存在、存储已满等），弹出窗口向用户报错
     \end{enumerate}
-    
+    %------------------------
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.4]{OutlineDesign/figures/聊天记录功能·具体流程.png}
+            \caption{聊天记录功能·具体流程}
+            \label{fig:server_flow}
+        \end{figure}
     %--------------------------------------------------------------
     \subsection{R.INTF.CALC.007: 消息提醒功能·具体流程}
     \begin{enumerate}
@@ -292,6 +298,7 @@
         \item 客户端每当一条消息被读后，将它从队列移除
     \end{enumerate}
     %------------------------
+    \newpage
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{OutlineDesign/figures/消息提醒功能·具体流程.png}
@@ -314,7 +321,12 @@
         \item 如果没有权限，客户端弹窗拒绝用户的浏览或评论请求
         \item 客户端在 Board 界面向用户展示日志和评论信息
     \end{enumerate}
-    
+    \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.4]{OutlineDesign/figures/Board广场功能·具体流程.png}
+            \caption{ Board广场功能·具体流程}
+            \label{fig:server_flow}
+        \end{figure}
     %--------------------------------------------------------------
     \subsection{R.INTF.CALC.009: 个性化好友推荐功能·具体流程}
     \begin{enumerate}
@@ -324,6 +336,7 @@
         \item 客户端在好友查询界面，当用户没有输入查询条件时，默认展示推荐的好友
     \end{enumerate}
     %------------------------
+    \newpage
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{OutlineDesign/figures/个性化好友推荐功能·具体流程.png}
@@ -342,7 +355,13 @@
         \item 客户端根据在线文档的格式，将其内容写入本地文件
         \item 客户端在在线文档协作平台向用户实时显示在线文档
     \end{enumerate}
-    
+    %------------------------
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.4]{OutlineDesign/figures/在线文档协作平台功能·具体流程.png}
+            \caption{在线文档协作平台功能·具体流程}
+            \label{fig:server_flow}
+        \end{figure}
     %--------------------------------------------------------------
     \subsection{R.INTF.CALC.011: 账号保护和隐私保护功能·具体流程}
     \begin{enumerate}
@@ -355,6 +374,7 @@
         \item 服务器如果绑定成功，客户端提示绑定成功；否则，客户端提示绑定失败
     \end{enumerate}
     %------------------------
+    \newpage
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{OutlineDesign/figures/账号保护和隐私保护功能·具体流程.png}
@@ -411,6 +431,7 @@
         \item 客户端通过第三方查询绑定的电子邮箱是否有邮件，一旦有邮件就调用消息提醒接口进行提醒
     \end{enumerate}
      %------------------------
+     \newpage
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{OutlineDesign/figures/邮箱接口功能·具体流程.png}
