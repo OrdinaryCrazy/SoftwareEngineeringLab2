@@ -1,44 +1,205 @@
-\chapter{需求建模 }
+\chapter{\color{red} 需求建模}
 %======================================================================================
 \begin{landscape}
-    \section{数据流图}
+    \section{\color{red} 数据流图}
     
-        \subsection{顶层数据流图}
+        \subsection{\color{red} 顶层数据流图}
         %======================================================================================
         % 在这里画出顶层数据流图
         %======================================================================================
     
         \begin{figure}[ht]
             \centering
-            \includegraphics[scale = 0.75]{top_level.png}\label{tab:classification}
-            \caption{顶层数据流图}\label{fig:noted-figure}
-            \note{本图片说明了数据在实体与系统之间的流动}
+            \includegraphics[scale = 0.75]{top_level_new.png}\label{tab:classification}
+            \caption{\color{red} 顶层数据流图}\label{fig:noted-figure}
+            \note{\color{red} 本图片说明了数据在实体与系统之间的流动}
         \end{figure}
     \end{landscape}
         \newpage
     \begin{landscape}
-        \subsection{层数据流图}
+        \subsection{\color{red} 层数据流图}
         %======================================================================================
         % 在这里画出0层数据流图
         \begin{figure}[ht]
             \centering
-            \includegraphics[scale = 0.75]{0_level.png}\label{tab:classification}
-            \caption{0层数据流图}\label{fig:noted-figure}
-            \note{本图片细化说明了数据在实体，加工，存储之间的流动}
+            \includegraphics[scale = 0.75]{0_level_new.png}\label{tab:classification}
+            \caption{\color{red} 0层数据流图}\label{fig:noted-figure}
+            \note{\color{red} 本图片细化说明了数据在实体，加工，存储之间的流动}
         \end{figure}
         %======================================================================================
     \end{landscape}
         \newpage
 %======================================================================================
-    \section{数据字典}
+    \section{\color{red} 数据字典}
 
-        \subsection{数据流说明}
+        \subsection{\color{red} 数据流说明}
             
             %======================================================================================
             % 与数据流图中的名称一致，采用数据描述符号说明数据流的内容
             %===========================================================
             % 个人用户
             %======================================================================================
+            \subsubsection{\color{red} 审批申请}
+            \begin{itemize}
+                \item 来源：个人用户
+                \item 去向：审批模块
+                \item 内容：审批申请 = 申请编号 + 申请标题 + 申请材料
+                \item 数据类型：\\
+                    申请编号 = \{0...9\}\\
+                    申请标题 = \{char\}\\
+                    申请材料 = 二进制文件包\\
+            \end{itemize}
+            \subsubsection{\color{red} 审批结果}
+            \begin{itemize}
+                \item 来源：审批模块
+                \item 去向：个人用户
+                \item 内容：审批结果 = 审批编号 + 审批标题 + 审批结果
+                \item 数据类型：\\
+                    审批编号 = \{0...9\}\\
+                    审批标题 = \{char\}\\
+                    审批结果 = \{char\}\\
+            \end{itemize}
+            \subsubsection{\color{red} 第三方账号信息}
+            \begin{itemize}
+                \item 来源：个人用户
+                \item 去向：第三方账号同步管理
+                \item 内容：第三方账号信息 = 用户账号 + 第三方平台账号 + 第三方平台登陆密码
+                \item 数据类型：\\
+                    用户账号 = \{0...9\}\\
+                    第三方平台账号 = \{0...9\}\\
+                    第三方平台登陆密码 = \{char\}\\
+            \end{itemize}
+            \subsubsection{\color{red} 第三方账户内容}
+            \begin{itemize}
+                \item 来源：第三方账号同步管理
+                \item 去向：个人用户
+                \item 内容：第三方账户内容 = 用户账号 + 第三方平台账号 + 第三方平台消息
+                \item 数据类型：\\
+                    用户账号 = \{0...9\}\\
+                    第三方平台账号 = \{0...9\}\\
+                    第三方平台消息 = 二进制数据包\\
+            \end{itemize}
+            \subsubsection{\color{red} 提出的issue}
+            \begin{itemize}
+                \item 来源：个人用户
+                \item 去向：团队管理
+                \item 内容：提出的issue = 提出者账号 + 提出时间 + issue内容
+                \item 数据类型：\\
+                    提出者账号 = \{0...9\}\\
+                    提出时间 = time\\
+                    issue内容 = \{char\}\\
+            \end{itemize}
+            \subsubsection{\color{red} 查询issue的请求}
+            \begin{itemize}
+                \item 来源：个人用户
+                \item 去向：团队管理
+                \item 内容：提出的issue = 查询者账号 + [issue编号 | issue内容 ]
+                \item 数据类型：\\
+                    查询者账号 = \{0...9\}\\
+                    issue编号 = \{0...9\}\\
+                    issue内容 = \{char\}\\
+            \end{itemize}
+            \subsubsection{\color{red} issue的解决方案}
+            \begin{itemize}
+                \item 来源：团队管理
+                \item 去向：个人用户
+                \item 内容：issue的解决方案 = issue编号 + issue内容 + 解决方案内容
+                \item 数据类型：\\
+                    issue编号 = \{0...9\}\\
+                    issue内容 = \{char\}\\
+                    解决方案内容 = \{char\}\\
+            \end{itemize}
+            \subsubsection{\color{red} 发布的调研}
+            \begin{itemize}
+                \item 来源：个人用户
+                \item 去向：调研管理
+                \item 内容：发布的调研 = 调研标题 + 调研方式 + {受访人表} + 调查问卷 + 时间限制
+                \item 数据类型：\\
+                    调研标题 = \{char\}\\
+                    调研方式 = ["所有人可见" | "部分人可见"] \\
+                    受访人表 = \{账号\}\\
+                    账号 = \{0...9\}\\
+                    调查问卷 = 二进制文件包 \\
+                    时间限制 = time \\
+            \end{itemize}
+            \subsubsection{\color{red} 回收的调研}
+            \begin{itemize}
+                \item 来源：调研管理
+                \item 去向：个人用户
+                \item 内容：回收的调研 = 调研标题 + 调研结果
+                \item 数据类型：\\
+                    调研标题 = \{char\}\\
+                    调研结果 = 二进制文件包\\
+            \end{itemize}
+            
+            \subsubsection{\color{red} 上传的调研文件}
+            \begin{itemize}
+            \item 来源：调研管理
+            \item 去向：本地文件存储
+            \item 内容：调研文件 = 用户账号 + 调研编号 + 文件
+            \item 数据类型：\\
+            用户账号 = \{0...9\}\\
+            调研编号 = \{0...9\}\\
+            文件 = 二进制数据包\\
+            \end{itemize}
+
+            \subsubsection{\color{red} 下载的调研文件}
+            \begin{itemize}
+            \item 来源：本地文件存储
+            \item 去向：调研管理
+            \item 内容：调研文件 = 用户账号 + 调研编号 + 文件
+            \item 数据类型：\\
+            用户账号 = \{0...9\}\\
+            调研编号 = \{0...9\}\\
+            文件 = 二进制数据包\\
+            \end{itemize}
+
+            \subsubsection{\color{red} 上传的审批材料}
+            \begin{itemize}
+            \item 来源：审批模块
+            \item 去向：本地文件存储
+            \item 内容：审批材料 = 申请者账号 + 审批者账号 + 审批编号 + \{文件\}
+            \item 数据类型：\\
+            申请者账号 = \{0...9\}\\
+            审批者账号 = \{0...9\}\\
+            审批编号 = \{0...9\}\\
+            文件 = 二进制数据包\\
+            \end{itemize}
+
+            \subsubsection{\color{red} 下载的审批材料}
+            \begin{itemize}
+            \item 来源：本地文件存储
+            \item 去向：审批模块
+            \item 内容：审批材料 = 申请者账号 + 审批者账号 + 审批编号 + \{文件\}
+            \item 数据类型：\\
+            申请者账号 = \{0...9\}\\
+            审批者账号 = \{0...9\}\\
+            审批编号 = \{0...9\}\\
+            文件 = 二进制数据包\\
+            \end{itemize}
+
+            \subsubsection{\color{red} 待解决的issue提醒}
+            \begin{itemize}
+            \item 来源：团队管理
+            \item 去向：团队用户
+            \item 内容：待解决的issue提醒 = \{issue编号 + issue内容\} 
+            \item 数据类型：\\
+            issue编号 = \{0...9\}\\
+            issue内容 = \{char\}\\
+            \end{itemize}
+            
+            \subsubsection{\color{red} 解决的issue}
+            \begin{itemize}
+            \item 来源：团队用户
+            \item 去向：团队管理
+            \item 内容：解决的issue = issue编号 + issue的解决方案
+            \item 数据类型：\\
+            issue编号 = \{0...9\}\\
+            issue的解决方案 = \{char\}\\
+            \end{itemize}
+
+            % ===================== old =================%
+
             \subsubsection{音视频信息(out)}
             \begin{itemize}
                 \item 来源：个人用户
