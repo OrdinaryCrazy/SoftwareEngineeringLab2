@@ -369,6 +369,232 @@ public class Update{
 }
 \end{lstlisting}
 
+{\color{red}
+
+\subsubsection{数据结构11：Survey\_client}
+该数据结构定义了调查问卷的基本属性，以及问题的属性（包括选择题和问答题），将被用于信息调研模块。
+\begin{lstlisting}[language=Java, caption=Survey定义]
+
+public class Survey{
+    private String title;//标题
+    private String introduction;//简介
+    private ArrayList<Question> questions;//问题列表
+    private int mode;//模式
+    private ArrayList<User> respondents;//允许填写问卷的用户列表，null代表所有人
+
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getIntroduction() {
+        return introduction;
+    }
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+    public void setQuestions(ArrayList<Question> questions) {
+        this.questions = questions;
+    }
+
+    public int getMode() {
+        return mode;
+    }
+
+    public void setMode(int mode) {
+        this.mode = mode;
+    }
+
+    public ArrayList<User> getRespondents() {
+        return respondents;
+    }
+
+    public void setRespondents(ArrayList<User> respondents) {
+        this.respondents = respondents;
+    }   
+}
+
+
+abstract class Question{
+    String description;
+}
+
+class MultipleChoiceQuestion extends Question{
+    String[] items;//选项
+    ArrayList<User>[] choices; //选择每一个选项的用户列表
+
+    public MultipleChoiceQuestion(String[] items) {
+
+    }
+    public void insertChoice(User user,int item){
+        
+    }   
+}
+class AnswerQuestion extends Question{
+    HashMap<User,String> answerMap;//每一个用户和他的答案
+
+    public AnswerQuestion() {
+    }
+    public void insertAnswer(User user,String answer){
+        
+    }
+}
+\end{lstlisting}
+
+\subsubsection{数据结构12：Approval\_client}
+该数据结构定义了审批流程的基本属性，用于审批模块。
+\begin{lstlisting}[language=Java, caption=Approval定义]
+public class Approval {
+    private String content;//申请内容
+    private File[] annex;//附件列表
+    private int mode;//模式
+    private ArrayList<User> managers;//有序的经办人列表
+    private ArrayList<String> opinions;//每一个经办人的意见
+    private ArrayList<Boolean> agreed;//每一个经办人是否批准
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public File[] getAnnex() {
+        return annex;
+    }
+
+    public void setAnnex(File[] annex) {
+        this.annex = annex;
+    }
+
+    public int getMode() {
+        return mode;
+    }
+
+    public void setMode(int mode) {
+        this.mode = mode;
+    }
+
+    public ArrayList<User> getManagers() {
+        return managers;
+    }
+
+    public void setManagers(ArrayList<User> managers) {
+        this.managers = managers;
+    }
+
+    public ArrayList<String> getOpinions() {
+        return opinions;
+    }
+
+    public void setOpinions(ArrayList<String> opinions) {
+        this.opinions = opinions;
+    }
+
+    public ArrayList<Boolean> getAgreed() {
+        return agreed;
+    }
+
+    public void setAgreed(ArrayList<Boolean> agreed) {
+        this.agreed = agreed;
+    }
+    
+}
+\end{lstlisting}
+
+\subsubsection{数据结构13：Issue\_client}
+该数据结构定义了Issue的基本属性，以及被其使用的回答类的属性。
+
+\begin{lstlisting}[language=Java, caption=Issue定义]
+public class Issue {
+    private String question;//问题内容
+    private User creater;//问题发布者
+    private Time time;//发布时间
+    private boolean closed;//问题是否关闭
+    private ArrayList<Answer> answers;//回答列表
+
+    public Issue() {
+    }
+    
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public User getCreater() {
+        return creater;
+    }
+
+    public void setCreater(User creater) {
+        this.creater = creater;
+    }
+
+    public boolean isClosed() {
+        return closed;
+    }
+
+    public void setClosed(boolean closed) {
+        this.closed = closed;
+    }
+
+    public ArrayList<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(ArrayList<Answer> answers) {
+        this.answers = answers;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+    
+}
+
+class Answer{
+    private String content;//回答内容
+    private User author;//回答作者
+    private Time time;//发布时间
+    private boolean recommended;//是否被issue发布者置顶
+
+    public Answer(String content, User author, Time time) {
+
+    }
+    
+    public String getContent(){
+    
+    }
+    
+    public void setContent(String content){
+    
+    }
+    
+    public boolean getRecommend(){
+        
+    }
+    public void setRecommend(boolean b){
+        
+    }
+}
+\end{lstlisting}
+
+
+}
+
+
+
 
 
 \subsection{服务器端数据结构}
@@ -397,8 +623,40 @@ public class Message{
 }
 \end{lstlisting}
 
+\subsubsection{数据结构3：GroupMessage\_server}
+该数据结构定义了群聊时发送的信息，继承自Message类。同样，所有属性都是不可修改的。
+\begin{lstlisting}[language=Java, caption=GroupMessage定义]
+public class GroupMessage extends Message{
+    private Group group;//所属的群聊
+}
+\end{lstlisting}
 
-\subsubsection{数据结构3：AddressBook\_server}
+\subsubsection{数据结构4：Group\_server}
+该数据结构定义了群聊的基本属性。
+\begin{lstlisting}[language=Java, caption=Group定义]
+public class Group{
+    private String ID;//群ID，唯一
+    private String name;//群名称，不唯一
+    private User master;//群主
+    private User[] managerList;//管理员列表
+    private User[] memberList;//群成员列表
+    private Scene scene; //场景
+}
+\end{lstlisting}
+
+
+\subsubsection{数据结构5：Friend\_server}
+该数据结构定义了通讯录中好友的基本属性。通讯录可以对好友分组管理，这是通过tag实现的，具有相同tag的用户被认为是一个组。
+\begin{lstlisting}[language=Java, caption=Friend定义]
+public class Friend{
+    private User user;//用户
+    private String tag;//分组标记，内容是组名
+    private String remark;//备注名
+}
+\end{lstlisting}
+
+
+\subsubsection{数据结构6：AddressBook\_server}
 该数据结构定义了通讯录，包括好友列表，群聊列表和黑名单。
 \begin{lstlisting}[language=Java, caption=AddressBook定义]
 public class AddressBook{
@@ -408,7 +666,7 @@ public class AddressBook{
 }
 \end{lstlisting}
 
-\subsubsection{数据结构4：Task\_server}
+\subsubsection{数据结构7：Task\_server}
 该数据结构定义了任务的基本属性，它将在活动/任务发布与管理功能中应用。
 \begin{lstlisting}[language=Java, caption=Task定义]
 public class Task{
@@ -420,7 +678,7 @@ public class Task{
 }
 \end{lstlisting}
 
-\subsubsection{数据结构5：Activity\_server}
+\subsubsection{数据结构8：Activity\_server}
 该数据结构定义了活动项的基本属性，将被用于日历应用。
 \begin{lstlisting}[language=Java, caption=Activity定义]
 public class Activity{
@@ -430,7 +688,7 @@ public class Activity{
 }
 \end{lstlisting}
 
-\subsubsection{数据结构6：SystemMessage\_server}
+\subsubsection{数据结构9：SystemMessage\_server}
 该数据结构定义了系统消息，继承自Message类。
 \begin{lstlisting}[language=Java, caption=SystemMessage定义]
 public class SystemMessage extends Message{
@@ -438,7 +696,7 @@ public class SystemMessage extends Message{
 }
 \end{lstlisting}
 
-\subsubsection{数据结构7：Error\_server}
+\subsubsection{数据结构10：Error\_server}
 该数据结构定义了报错的结构体。
 \begin{lstlisting}[language=Java, caption=Error定义]
 public class SystemMessage extends Message{
@@ -449,6 +707,72 @@ public class SystemMessage extends Message{
 }
 \end{lstlisting}
 
+
+{\color{red}
+
+\subsubsection{数据结构11：Survey\_server}
+该数据结构定义了调查问卷的基本属性，以及问题的属性（包括选择题和问答题），将被用于信息调研模块。
+\begin{lstlisting}[language=Java, caption=Survey定义]
+
+public class Survey{
+    private String title;//标题
+    private String introduction;//简介
+    private ArrayList<Question> questions;//问题列表
+    private int mode;//模式
+    private ArrayList<User>  
+}
+
+
+abstract class Question{
+    String description;
+}
+
+class MultipleChoiceQuestion extends Question{
+    String[] items;//选项
+    ArrayList<User>[] choices; //选择每一个选项的用户列表
+}
+class AnswerQuestion extends Question{
+    HashMap<User,String> answerMap;//每一个用户和他的答案
+}
+\end{lstlisting}
+
+\subsubsection{数据结构12：Approval\_server}
+该数据结构定义了审批流程的基本属性，用于审批模块。
+\begin{lstlisting}[language=Java, caption=Approval定义]
+public class Approval {
+    private String content;//申请内容
+    private File[] annex;//附件列表
+    private int mode;//模式
+    private ArrayList<User> managers;//有序的经办人列表
+    private ArrayList<String> opinions;//每一个经办人的意见
+    private ArrayList<Boolean> agreed;//每一个经办人是否批准
+}
+\end{lstlisting}
+
+\subsubsection{数据结构13：Issue\_server}
+该数据结构定义了Issue的基本属性，以及被其使用的回答类的属性。
+
+\begin{lstlisting}[language=Java, caption=Issue定义]
+public class Issue {
+    private String question;//问题内容
+    private User creater;//问题发布者
+    private Time time;//发布时间
+    private boolean closed;//问题是否关闭
+    private ArrayList<Answer> answers;//回答列表
+}
+class Answer{
+    private String content;//回答内容
+    private User author;//回答作者
+    private Time time;//发布时间
+    private boolean recommended;//是否被issue发布者置顶
+}
+\end{lstlisting}
+}
+
+
+
+
+\subsubsection{数据结构14：UserInfoManagement\_server}
 
 \begin{lstlisting}[language=Java, caption=用户信息管理类]
 public class UserInfoManagement{
@@ -485,18 +809,8 @@ public class UserInfoManagement{
     }
 \end{lstlisting}
 
-\begin{lstlisting}[language=Java, caption=Group定义]
-public class Group{
-    private String ID;//群ID，唯一
-    private String name;//群名称，不唯一
-    private User master;//群主
-    private User[] managerList;//管理员列表
-    private User[] memberList;//群成员列表
-    private Scene scene; //场景
-}
-\end{lstlisting}
 %--------
-
+\subsubsection{数据结构15：CommunicationManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=通讯管理类]
 public class CommunicationManagement{
@@ -525,7 +839,7 @@ public class CommunicationManagement{
 }
 \end{lstlisting}
 %--------
-
+\subsubsection{数据结构16：CommunicationManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=文件管理类]
 public class FileManagement{
@@ -567,7 +881,7 @@ public class FileManagement{
 }
 \end{lstlisting}
 %--------
-
+\subsubsection{数据结构17：CalendarManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=日历管理类]
 public class CalendarManagement{
@@ -603,7 +917,7 @@ public class CalendarManagement{
 }
 \end{lstlisting}
 %--------
-
+\subsubsection{数据结构18：GroupManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=团队管理类]
 public static class GroupManagement{
@@ -632,7 +946,7 @@ public static class GroupManagement{
 }
 \end{lstlisting}
 %--------
-
+\subsubsection{数据结构19：CoopeartionManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=在线协作类]
 public static class CoopeartionManagement{
@@ -660,6 +974,7 @@ public static class CoopeartionManagement{
 } 
 \end{lstlisting}
 %--------
+\subsubsection{数据结构20：ErrorManagement\_server}
 \begin{lstlisting}[language=Java, caption=在线协作类]
 public static class ErrorManagement{
 
@@ -676,6 +991,9 @@ public static class ErrorManagement{
 } 
 \end{lstlisting}
 
+
+
+
     %-----------------------------------------------------------------------------
     \section{物理结构设计}
     %-----------------------------------------------------------------------------
@@ -685,81 +1003,120 @@ public static class ErrorManagement{
     %================================ GUIDE ======================================
     % [此处指的是不同的数据结构分配到哪些模块去实现。可按不同的端拆分此表]
     %================================ GUIDE ======================================
+{\color{red}
         \begin{table}[htbp]
             \centering
-            \caption{数据结构与程序代码的关系表} \label{tab:datastructure-module}
-            \begin{tabular}{|p{9em}|p{2.5em}|p{2.5em}|p{2.5em}|p{2.5em}|p{2.5em}|
-                            p{2.5em}|p{2.5em}|p{2.5em}|}
+            \caption{数据结构与程序代码的关系表}
+            \label{tab:datastructure-module}
+            \begin{tabular}{|p{6.3em}|p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|
+                            p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|}
                 \hline %**********************************************************
             ·   & 用户信息管理模块      & 错误信息处理模块  & 云文件管理模块 
                 & 文件管理模块          & 日历管理模块      & 团队管理模块      
-                & 在线文档协作平台模块  & 通讯管理模块\\
+                & 在线文档协作平台模块  & 通讯管理模块      &
+                爬虫模块
+                & 流程审批模块          & 信息调研模块
+                \\
                 \hline
                 User                & Y   & Y     & · 
                                     & .   & .     & Y
-                                    & .   & Y     \\
+                                    & .   & Y     & Y
+                                    & Y   & Y     \\
                 \hline
                 Message             & .   & Y     & Y 
                                     & Y   & .     & .
-                                    & .   & Y     \\
+                                    & .   & Y     & .
+                                    & .   & .     \\
                 \hline
                 GrouopMessage       & .   & Y     & Y 
                                     & Y   & .     & Y
-                                    & .   & Y     \\
+                                    & .   & Y     & .
+                                    & .   & .     \\
                 \hline
                 Group               & .   & Y     & . 
                                     & .   & .     & Y
-                                    & .   & Y     \\
+                                    & .   & Y     & .
+                                    & Y   & Y     \\
                 \hline
                 AddressBook         & Y   & Y     & . 
                                     & .   & .     & Y
-                                    & .   & Y     \\
+                                    & .   & Y     & .
+                                    & Y   & Y     \\
                 \hline
                 Friend              & Y   & Y     & . 
                                     & .   & .     & .
-                                    & .   & Y     \\
+                                    & .   & Y     & .
+                                    & Y   & Y     \\
                 \hline
                 Task                & .   & Y     & . 
                                     & .   & .     & Y
+                                    & .   & .     & .
                                     & .   & .     \\
                 \hline
                 Activity            & .   & Y     & . 
                                     & .   & Y     & .
+                                    & .   & .     & .
                                     & .   & .     \\
                 \hline
                 Error               & Y   & Y     & Y 
                                     & Y   & Y     & Y
-                                    & Y   & Y     \\
-                
-                \hline
-                SystemMessage       & Y   & Y     & Y 
                                     & Y   & Y     & Y
                                     & Y   & Y     \\
                 \hline
-                UserInfoManagement       & Y   & .     & .
+                Survey              & .   & .     & . 
                                     & .   & .     & .
-                                    & .   & .     \\
-                \hline
-                CommunicationManagement       & .   & .     & . 
                                     & .   & .     & .
                                     & .   & Y     \\
                 \hline
-                CalendarManagement       & .   & .     & .
-                                    & .   & Y     & .
-                                    & .   & .     \\
-                \hline
-                GroupManagement       & .   & .     & . 
-                                    & .   & .     & Y
-                                    & .   & .     \\
-                \hline
-                CooperationManagement       & .   & .     & . 
+                Approval            & .   & .     & . 
+                                    & .   & .     & .
                                     & .   & .     & .
                                     & Y   & .     \\
                 \hline
+                Issue               & .   & .     & . 
+                                    & .   & .     & .
+                                    & .   & Y     & .
+                                    & .   & .     \\
+                \hline
+                SystemMessage       & Y   & Y     & Y 
+                                    & Y   & Y     & Y
+                                    & Y   & Y     & Y
+                                    & .   & .     \\
+                \hline
+                \tabincell{l}{UserInfo \\ Management}
+                  & Y   & .     & .
+                                    & .   & .     & .
+                                    & .   & .     & .
+                                    & .   & .     \\
+                \hline
+                \tabincell{l}{Communication \\ Management}
                 
-                
-                
+                                    & .   & .     & . 
+                                    & .   & .     & .
+                                    & .   & Y     & .
+                                    & .   & .     \\
+                \hline
+                \tabincell{l}{Calendar \\ Management}
+                       & .   & .     & .
+                                    & .   & Y     & .
+                                    & .   & .     & .
+                                    & .   & .     \\
+                \hline
+                \tabincell{l}{Group \\ Management}
+                       & .   & .     & . 
+                                    & .   & .     & Y
+                                    & .   & .     & .
+                                    & .   & .     \\
+                \hline
+                \tabincell{l}{Cooperation \\ Management }
+                 
+                                    & .   & .     & . 
+                                    & .   & .     & .
+                                    & Y   & .     & .
+                                    & .   & .     \\
+                \hline
             \end{tabular}
             \note{各项数据结构的实现与各个程序模块的分配关系}
         \end{table}
+}
 %=================================================================================
