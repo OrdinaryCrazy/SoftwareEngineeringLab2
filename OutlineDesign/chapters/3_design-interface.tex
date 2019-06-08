@@ -37,6 +37,8 @@ public class UserInfoManager{
 
 
 \subsection{通讯管理模块}
+{\color{red}
+
 \begin{lstlisting}[language=Java, caption=通讯管理模块接口]
 public class CommunicationManager{
     public static void sendMessage(Message message){
@@ -68,10 +70,23 @@ public class CommunicationManager{
         User user,Date date){
         //下载与指定对象在指定时间的聊天记录(null不进行指定)
     }
+    
+    public static void publishIssue(Issue issue){
+        //发布一个issue
+    }
+    
+    public static void answerIssue(Issue issue, Answer answer){
+        //回答指定的issue
+    }
+    
+    public static void closeIssue(Issue issue){
+        //关闭指定的Issue
+    }
+    
+    
 }
 \end{lstlisting}
-
-
+}
 \subsection{文件管理模块}
 \begin{lstlisting}[language=Java, caption=文件管理模块接口]
 public class FileManager{
@@ -197,3 +212,55 @@ public class ErrorManager{
     }
 }
 \end{lstlisting}
+
+
+{\color{red}
+
+\subsection{\color{red}爬虫模块}
+\begin{lstlisting}[language=Java, caption=爬虫模块接口]
+public class CrawlerManager{
+    public static String fetch(URL url){
+        //爬取网页，并返回重要信息
+    } 
+    public static String[] analyse(String s){
+        //解析网页信息
+    }
+}
+\end{lstlisting}
+
+\subsection{\color{red}信息调研模块}
+\begin{lstlisting}[language=Java, caption=信息调研模块接口]
+public class SurveyManager{
+    public static Survey downloadSurvey(){
+        //下载问卷
+    }
+    public static void uploadSurvey(Survey survey){
+        //上传问卷
+    }
+    public static void updateSurvey(Survey survey){
+        //更新问卷
+    }
+}
+\end{lstlisting}
+
+
+\subsection{\color{red}流程审批模块}
+\begin{lstlisting}[language=Java, caption=流程模块接口]
+public class ApprovalManager{
+    public static Approval downloadApproval(){
+        //下载审批
+    }
+    public static void uploadApproval(Approval approval){
+        //上传审批
+    }
+    public static void acceptApproval(Approval approval,String opinion){
+        //批准审批
+    }
+    public static void refuseApproval(Approval approval,String opinion){
+        //不批准审批
+    }
+}
+\end{lstlisting}
+
+
+}
