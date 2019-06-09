@@ -1,4 +1,4 @@
-\chapter{数据库设计}
+\chapter{\color{red} 数据库设计}
 \section{数据库环境说明}
 本系统的数据系统采用Oracle数据库系统，并基于关系数据库进行扩展\\
 扩展部分结合非关系型数据库NoSQL实现\\
@@ -14,7 +14,7 @@
 \section{数据库的命名规则}
 \begin{itemize}
     \item 1. 实体的命名方式为驼峰命名
-    \item 2. 允许单词缩写，很长的单词可以采取前几个字母作为代表
+    \item 2. 允许单词缩写，很长的单词可以采取辅音字母作为代表。例如tp表示第三方平台(third platform), pw表示password
     \item 3. 属性名采用小写命名的方式，可以通过下划线添加备注前缀
     \item 4. 字段不带类型前缀
     \item 5. 实体表名为单数
@@ -22,11 +22,11 @@
     \item 7. 字符数限制：20
 \end{itemize}
 
-\section{逻辑设计}
-\subsection{实体与属性设计}
+\section{\color{red}逻辑设计}
+\subsection{\color{red}实体与属性设计}
 \begin{table}[htbp]
 \centering
-\caption{实体设计} \label{tab:client-database}
+\caption{\color{red}实体设计} \label{tab:client-database}
 \begin{tabular}{|c|c|c|c|c|}
     \hline
     实体 & 说明 & 属性 \\
@@ -41,15 +41,17 @@
     \hline 
     协作文档 & 存储在线协作文档 & 文档ID(主键), 文档内容 \\
     \hline
+    issue & 存储团队中的issue & issueID(主键),issue内容, issue状态 \\
+    \hline
 \end{tabular}
 \note{实体设计}
 \end{table}
 
-\subsection{关系设计}
+\subsection{\color{red}关系设计}
 \newpage
 \begin{table}[htbp]
 \centering
-\caption{关系设计} \label{tab:client-database}
+\caption{\color{red}关系设计} \label{tab:client-database}
 \begin{tabular}{|p{4em}|p{8em}|p{20em}|}
     \hline
     关系 & 说明 & 属性 \\
@@ -67,22 +69,25 @@
     聊天关系 & 用户和用户聊天 & 发送者ID(主键), 接收者ID(主键)，发送时间（主键），接受时间 \\
     \hline 
     好友关系 & 用户和用户是好友 & 用户一ID(主键), 用户二ID(主键) \\
-    
+    \hline
+    调研关系 & 用户调研用户 & 用户一ID(主键), 用户二ID(主键)，调研ID(主键)等\\
+    \hline
+    审批关系 & 用户和用户是好友 & 用户一ID(主键), 用户二ID(主键), 审批ID(主键)等\\
     \hline
 \end{tabular}
 \note{关系设计}
 \end{table}
-\subsection{ER图}
+\subsection{\color{red} ER图}
         \begin{figure}[ht]
             \centering
             \includegraphics[scale =0.6]{数据库.png}\label{tab:classification}
-            \caption{数据库逻辑图}\label{fig:noted-figure}
+            \caption{\color{red} 数据库逻辑图}\label{fig:noted-figure}
         \end{figure}
         \newpage
 
 
-\section{物理设计}
-\subsection{数据库产品}
+\section{\color{red} 物理设计}
+\subsection{\color{red} 数据库产品}
 \begin{itemize}
     \item 采用Oracle数据库和Hbase分布式数据库结合
     \item 采用Oracle集中数据库存储文件，用户信息
@@ -92,12 +97,13 @@
 \end{itemize}
 
 
-\subsection{实体属性、类型、精度}
+\subsection{\color{red} 实体属性、类型、精度}
 
-\subsubsection{用户数据表设计}
+\subsubsection{\color{red} 用户数据表设计}
 \begin{table}[htbp]
 \centering
-\caption{用户数据表User设计} \label{tab:client-database}
+{\color {red}
+\caption{\color{red} 用户数据表User设计} \label{tab:client-database}
 \begin{tabular}{|c|c|c|c|c|}
     \hline
     字段名 & 类型 & 大小 & 说明 & 备注 \\
@@ -110,8 +116,13 @@
     \hline
     phone & char & 11 & 用户的联系电话 & · \\
     \hline
+    tp\_id & char  & 64 & 第三方平台登陆账号 & · \\
+    \hline
+    tp\_pw & char & 64 & 第三方平台登陆密码 & · \\
+    \hline
 \end{tabular}
-\note{用户数据表User设计}
+\note{\color{red}用户数据表User设计}
+}
 \end{table}
 %========================================
 \newpage
@@ -132,6 +143,7 @@
 \end{tabular}
 \note{团队数据表Group设计}
 \end{table}
+\newpage
 %========================================
 \subsubsection{日历数据表设计}
 \begin{table}[htbp]
@@ -162,6 +174,8 @@
     id & char & 64 & 文件的唯一标识符 & 主键\\
     \hline
     file & char & 10G & 文件的内容 & · \\
+    \hline
+    type & char & 1 & 文件的类型 & 类型包括审批材料，调研文件，日历文件等 \\
     \hline
 \end{tabular}
 \note{文件数据表File设计}
@@ -305,11 +319,13 @@
 \note{聊天关系数据表User\_User\_Chat设计}
 \end{table}
 %========================================
-\subsubsection{用户-文件关系数据表设计}
+
+\subsubsection{\color{red}用户-文件关系数据表设计}
 \begin{table}[htbp]
 \centering
-\caption{收发关系数据表User\_File} \label{tab:order-database}
-\begin{tabular}{|c|c|c|c|c|}
+\caption{\color{red} 收发关系数据表User\_File} \label{tab:order-database}
+{\color{red}
+\begin{tabular}{|p{4em}|p{2.5em}|p{2.5em}|p{10em}|p{11em}|}
     \hline
     字段名 & 类型 & 大小 & 说明 & 备注 \\
     \hline
@@ -321,15 +337,165 @@
     \hline
     time & time & 4 & 文件的发送时间 & · \\ 
     \hline
+    file\_type& bool & 1 & 文件的类型 & 类型包括审批材料，调研文件，日历文件等\\ 
+    \hline
 \end{tabular}
-\note{用户-文件收发关系数据表User\_File设计}
+\note{\color{red}用户-文件收发关系数据表User\_File设计}
+}
 \end{table}
+\newpage
+{\color{red}
+%========================================
+\subsubsection{issue数据表设计}
+\begin{table}[htbp]
+\centering
+\caption{\color{red} issue数据表Issue\_File} \label{tab:order-database}
+{\color{red}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    字段名 & 类型 & 大小 & 说明 & 备注 \\
+    \hline
+    issue\_id & char & 64 & issue的标识符 & 主键 \\
+    \hline
+    status & char & 1 & issue的状态，已解决或未解决 & · \\
+    \hline
+    content\_id & char & 512 & issue的内容 & ·\\
+    \hline
+\end{tabular}
+\note{\color{red}issue数据表Issue\_File设计}
+}
+\end{table}
+
+%========================================
+\subsubsection{调研关系数据表设计}
+\begin{table}[htbp]
+\centering
+{\color{red}
+\caption{\color{red}调研关系数据表Survey\_File} \label{tab:order-database}
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    字段名 & 类型 & 大小 & 说明 & 备注 \\
+    \hline
+    send\_id & char & 64 & 调研关系的标识符之一 & 主键|外键，来自用户表 \\
+    \hline
+    recv\_id & char & 64 & 调研关系的标识符之一 & 主键|外键，来自用户表 \\
+    \hline
+    survey\_id & char & 64 & 调研关系的标识符之一 & 主键 \\
+    \hline
+    title & char & 128 & 调研的标题 & · \\ 
+    \hline
+    file\_link & char & 256 & 调研文件的ID & 外键，来自文件表 \\
+    \hline
+\end{tabular}
+\note{\color{red}调研关系数据表Survey\_File设计}
+}
+\end{table}
+\newpage
+%========================================
+\subsubsection{审批关系数据表设计}
+\begin{table}[htbp]
+\centering
+{\color{red}
+\caption{\color{red}审批关系数据表Approval\_File} \label{tab:order-database}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    字段名 & 类型 & 大小 & 说明 & 备注 \\
+    \hline
+    send\_id & char & 64 & 审批关系的标识符之一 & 主键|外键，来自用户表 \\
+    \hline
+    recv\_id & char & 64 & 审批关系的标识符之一 & 主键|外键，来自用户表 \\
+    \hline
+    approval\_id & char & 64 & 审批关系的标识符之一 & 主键 \\
+    \hline
+    content & char & 128 & 审批的内容 & · \\ 
+    \hline
+    file\_link & char & 256 & 审批文件的ID & 外键，来自文件表 \\
+    \hline
+\end{tabular}
+\note{\color{red}审批关系数据表Approval\_File设计}
+}
+\end{table}
+
+
+}
+
+
+
 
 
 
 \newpage
+{\color{red}
+\section{\color{red} 细化数据库设计}
 
-\section{安全性设计}
+\subsection{\color{red} 检索速度}
+随着使用时间的增加，聊天记录，文件的数目都会快速增长，从而导致数据库检索时间减慢。为了保证检索文件，聊天记录等的速度，针对以下问题进行细化。
+
+
+\subsubsection{\color{red} 机器配置}
+\begin{itemize}
+    \item 硬件要求：每个城市均配备三级存储。高速存储DRAM，中速存储DRAM，大容量存储机械硬盘。
+    \item 软件要求: Oracle, Hbase
+    \item 操作系统：Oracle 12c
+\end{itemize}
+\subsubsection{\color{red} 数据库选取}
+即时通讯系统中，既包含传统的文本数据，可以用关系数据库存储；同时也包含音视频等非关系模式的数据，因此必须结合NoSQL数据库进行存储。\\
+\\
+关系数据库的查找速度较快，但不适于存储多媒体数据；\\
+NoSQL的存取速度较慢，但具有多种新型拓扑结构，也适用于分布式存储。\\
+\\
+综合考虑，使用功能稳定，机密性强，兼容性好的Oracle18.3存储关系型数据，具有较完善安全机制的Hbase存储非关系型数据。
+
+\subsubsection{\color{red} 存储方案}
+为了提高访问速度，优化性能，采用以下方案：\\
+1. RAID阵列存储 \\
+其优势在于：\\
+\begin{itemize}
+    \item 逻辑统一：把多个磁盘组织在一起作为一个逻辑卷提供磁盘跨越功能；
+    \item 加快速度：把数据分成多个数据块（Block）并行写入/读出多个磁盘以提高访问磁盘的速度
+    \item 容错能力强：通过镜像或校验操作提供容错能力
+\end{itemize}
+2. 分级存储 \\
+综合考虑性能与成本，采用分级存储方案：
+在每1000个用户的密度下设置高性能存储器，使用SRAM, 容量小，存取速度快；而且由于
+距离用户空间距离近，传输时间短。该SRAM仅存储1天内的数据。\\
+在每100,000个用户的密度下设置中级性能存储器，其容量稍大，但存取稍慢。其存储近1个月的数据。\\
+在主要城市设置大型存储机群。其存储该城市所有用户的本地数据，但存取较慢。\\
+3. 三副本 \\
+三副本可以提高并发访问的速度，且可以防止数据丢失。\\
+采用异地存储。两个副本存储在本城市，提高访问速度；另一个副本云存储在外地，从而在本地出现灾害时，可以保证数据不丢失。
+
+\subsubsection{\color{red} 建立索引}
+
+创建索引可以大大提高系统的性能。例如，其可以大大加快数据的检索速度，加速表和表之间的连接，特别是在实现数据的参考完整性方面特别有意义;在使用分组和排序子句进行数据检索时，可以显著减少查询中分组和排序的时间;通过使用索引，可以在查询的过程中，使用优化隐藏器，提高系统的性能。\\
+
+采用以下索引方式：
+\begin{itemize}
+    \item 聚集索引：一个表只能包含一个聚集索引。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。因此，采用该表中最常使用的字段作为聚集索引的关键字。
+    \item 主键索引: 数据库将自动设置主键索引。其一般为对应表项的ID。
+\end{itemize}
+
+\subsection{\color{red} 数据一致性}
+在即时通讯系统中，并发用户很多。尤其是在线文档协作平台等功能，存在大量并发操作。
+往往需要加锁。因此，需要对数据库设置合适的隔离级别，从而保证数据的一致性。
+事务的隔离级别分为4种，其对于一致性的保证顺序为：\\
+未提交读 < 提交读 < 可重复读 < 可串行读\\
+一致性级别越高，访问速度也越低。\\
+
+本数据库采用的方式为：根据流量自动调整隔离级别：\\
+并行访问量 < 1000: 可串行读。其不存在脏读，不可重复读，幻像问题。\\
+并行访问量 <100,000: 可重复读。其可能存在幻像问题。\\
+并行访问量 >100,000: 提交读。其可能存在不可重复读和幻像问题。\\
+
+三个级别都可以保证不出现脏读问题。其通过对锁的类型的切换来实现切换隔离级别。
+
+
+}
+
+\newpage
+
+\section{\color{red}安全性设计}
 安全性设计主要包括容灾和备份设计。容灾是为了在遭遇灾害时能保证信息系统能正常运行，从而实现业务连续性；备份是为了应对灾难来临时造成的数据丢失问题。
 
 对于即时通讯系统，由于其用户群体巨大且即时通讯需求强，因此遭遇灾害时迅速恢复是至关重要的设计；此外对于用户尤其是企业级用户，文件及数据的机密性，可靠性，可用性等必须通过备份保证。
@@ -359,9 +525,12 @@
 高可靠性软件用于自动检测系统的运行状态，在一台服务器出现故障的情况下，自动地把设定的服务转到另一台服务器上。当运行服务器提供的服务不可用时，备份服务器自动接替运行服务器的工作而不用重新启动系统，而当运行服务器恢复正常后，按照使用者的设定以自动或手动方式将服务切换到运行服务上运行。
 \end{itemize}
 
-\subsection{权限管理}
+\subsection{\color{red}权限管理}
 为了保证数据的安全，包括其机密性，完整性，可用性，数据库需要对用户进行访问控制。权限管理采用PMI和PKI模型。\\
-PMI以资源管理为核心，对资源的访问控制权交由授权机构统一处理，即由资源的所有者来进行访问控制 。PKI以公开密钥技术为基础，以数据的机密性、完整性和无可抵赖性为安全目的而构建的认证、授权、加密等硬件、软件的综合设施
+PMI以资源管理为核心，对资源的访问控制权交由授权机构统一处理，即由资源的所有者来进行访问控制 。PKI以公开密钥技术为基础，以数据的机密性、完整性和无可抵赖性为安全目的而构建的认证、授权、加密等硬件、软件的综合设施 \\
+{\color{red}
+对于新增加的审批功能, 由于其涉及到资金与机密性的问题，应该对其流程与相关数据库采用采取数据加密，身份认证，访问控制等功能，从而保证审批数据的机密性与完整性。
+}
 
 
 \section{数据库管理与维护说明}

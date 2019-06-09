@@ -1,4 +1,4 @@
-\chapter{总体设计}
+\chapter{\color{red} 总体设计}
 %==================================================================
 \section{\color{red}软件描述}
     系统包括前台和后台两个部分。
@@ -42,12 +42,13 @@
         \end{figure}
         \newpage
     %--------------------------------------------------------------
-    \subsection{系统基本流程}
+    \subsection{\color{red} 系统基本流程}
         % 此处应当有一个图和对应的描述。
+        下图为系统基本流程，标识了功能如何传递到响应的模块中执行，并存储到对应的数据库。{\color{red} 更新部分为红色}
         \begin{figure}[ht]
             \centering
-            \includegraphics[scale = 0.75]{系统整体流程.png}\label{tab:classification}
-            \caption{系统基本流程}\label{fig:noted-figure}
+            \includegraphics[scale = 1.1]{系统整体流程.png}\label{tab:classification}
+            \caption{\color{red} 系统基本流程}\label{fig:noted-figure}
         \end{figure}
         \newpage
     %--------------------------------------------------------------
@@ -529,7 +530,7 @@
         \newpage
         %--------------------------------------------------------------
 %==================================================================
-\section{功能结构设计}
+\section{\color{red} 功能结构设计}
     %--------------------------------------------------------------
     \subsection{整体结构}
         即时通讯系统的整体结构为客户端前端————服务器————Oracle数据库架构，三个子系统
@@ -559,15 +560,15 @@
             \caption{\color{red}用户端结构}
             \label{fig:server_flow}
         \end{figure}
-    \subsection{服务器端结构}
+\subsection{\color{red}服务器端结构}
     
 %============================== GUIDE ========================================
 % 此处应当有一个图和对应的描述。这只是举个例子
         \newpage
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.65]{OutlineDesign/figures/服务器端功能结构.png}
-            \caption{服务器端功能结构}
+            \includegraphics[scale=1]{OutlineDesign/figures/服务器端功能结构.png}
+            \caption{\color{red}服务器端功能结构}
             \label{fig:server_flow}
         \end{figure}。
 %============================== GUIDE ========================================
@@ -578,8 +579,8 @@
 \newpage
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.75]{OutlineDesign/figures/数据库存储结构.png}
-            \caption{后台数据库维护模块结构}
+            \includegraphics[scale=0.95]{OutlineDesign/figures/数据库存储结构.png}
+            \caption{\color{red}后台数据库维护模块结构}
             \label{fig:server_flow}
         \end{figure}
 %============================== GUIDE ========================================

@@ -1,4 +1,4 @@
-\chapter{接口设计}
+\chapter{\color{red} 接口设计}
 %====================================================================================
 \section{外部接口}
 %====================================================================================
@@ -6,28 +6,234 @@
 %====================================================================================
 JavaMail是由Sun发布的用来处理email的API，它是Java EE的一部分。我们调用该接口查询和发送邮件。
 
-\section{内部接口}
-\subsection{用户信息管理模块}
+
+\section{\color{red} 内部接口}
+{\color{red}
+\subsection{\color{red}状态码(返回值)定义}
+\begin{itemize}
+    \item 001: 操作执行成功
+    \item 002: 数据不存在
+    \item 003: 网络连接错误
+    \item 004: 数据不一致
+    \item 005: 访问冲突
+    \item 006：输入数据错误
+    \item 007: 访问超时
+\end{itemize}
+}
+
+
+\subsection{\color{red} 接口中的数据结构定义}
+\subsubsection{\color{red} 数据结构1：User\_server}
+该数据结构定义了用户的基本属性。
+\begin{lstlisting}[language=Java, caption=User定义]
+public class User{
+    private String ID;//用户ID，唯一
+    private String name;//昵称，不唯一
+    private String sex="Male";//性别，默认男性
+    private Date birthday;//用户的出生日期，可以为空
+    private Time createTime;//账户创建时间
+    private String address;//用户地址，可以为空
+    private String email;//用户绑定的邮箱，可以为空
+    private ArrayList<String> tpIDs; //用户的第三方平台账号
+    private ArrayList<String> tpPasswords; //用户的第三方平台密码
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构2：Message\_server}
+该数据结构定义了一对一聊天时发送的信息，所有属性都是不可修改的。此外，在发送文件时，该数据结构也会被使用，用于声明文件的一些基本信息（使用message域）。
+\begin{lstlisting}[language=Java, caption=Message定义]
+public class Message{
+    private User sender,receiver;//该信息的发送方和接收方
+    private String message;//信息内容
+    private Time sendtime;//发送时间
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构3：GroupMessage\_server}
+该数据结构定义了群聊时发送的信息，继承自Message类。同样，所有属性都是不可修改的。
+\begin{lstlisting}[language=Java, caption=GroupMessage定义]
+public class GroupMessage extends Message{
+    private Group group;//所属的群聊
+}
+\end{lstlisting}
+
+{\color{red}
+\subsubsection{\color{red} 数据结构4：Group\_server}
+该数据结构定义了群聊的基本属性。
+\begin{lstlisting}[language=Java, caption=Group定义]
+public class Group{
+    private String ID;//群ID，唯一
+    private String name;//群名称，不唯一
+    private User master;//群主
+    private User[] managerList;//管理员列表
+    private User[] memberList;//群成员列表
+    private Scene scene; //场景
+    private ArrayList<Issue_server> issuelist;//本群中所有的issue
+    
+\end{lstlisting}
+}
+
+
+\subsubsection{\color{red} 数据结构5：Friend\_server}
+该数据结构定义了通讯录中好友的基本属性。通讯录可以对好友分组管理，这是通过tag实现的，具有相同tag的用户被认为是一个组。
+\begin{lstlisting}[language=Java, caption=Friend定义]
+public class Friend{
+    private User user;//用户
+    private String tag;//分组标记，内容是组名
+    private String remark;//备注名
+}
+\end{lstlisting}
+
+
+\subsubsection{\color{red} 数据结构6：AddressBook\_server}
+该数据结构定义了通讯录，包括好友列表，群聊列表和黑名单。
+\begin{lstlisting}[language=Java, caption=AddressBook定义]
+public class AddressBook{
+    private Friend[] friendList;//好友列表
+    private User[] blackList;//黑名单
+    private Group[] groupList;//群聊列表
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构7：Task\_server}
+该数据结构定义了任务的基本属性，它将在活动/任务发布与管理功能中应用。
+\begin{lstlisting}[language=Java, caption=Task定义]
+public class Task{
+    private User organizer;//组织者
+    private User[] participants;//参与者列表
+    private String address;//任务地点
+    private Time time;//任务时间
+    private String content;//任务内容
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构8：Activity\_server}
+该数据结构定义了活动项的基本属性，将被用于日历应用。
+\begin{lstlisting}[language=Java, caption=Activity定义]
+public class Activity{
+    private Date date;//活动日期
+    private Time time;//活动具体时间
+    private String content;//活动内容
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构9：SystemMessage\_server}
+该数据结构定义了系统消息，继承自Message类。
+\begin{lstlisting}[language=Java, caption=SystemMessage定义]
+public class SystemMessage extends Message{
+    private int type; //系统消息类型
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构10：Error\_server}
+该数据结构定义了报错的结构体。
+\begin{lstlisting}[language=Java, caption=Error定义]
+public class SystemMessage extends Message{
+    private int position; //出错位置
+    private int type; //错误类型
+    private Date date; //出错日期
+    private Time time; //出错时间
+}
+\end{lstlisting}
+
+
+{\color{red}
+
+\subsubsection{\color{red} 数据结构11：Survey\_server}
+该数据结构定义了调查问卷的基本属性，以及问题的属性（包括选择题和问答题），将被用于信息调研模块。
+\begin{lstlisting}[language=Java, caption=Survey定义]
+
+public class Survey{
+    private String title;//标题
+    private String introduction;//简介
+    private ArrayList<Question> questions;//问题列表
+    private int mode;//模式
+    private ArrayList<User>  
+}
+
+
+abstract class Question{
+    String description;
+}
+
+class MultipleChoiceQuestion extends Question{
+    String[] items;//选项
+    ArrayList<User>[] choices; //选择每一个选项的用户列表
+}
+class AnswerQuestion extends Question{
+    HashMap<User,String> answerMap;//每一个用户和他的答案
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构12：Approval\_server}
+该数据结构定义了审批流程的基本属性，用于审批模块。
+\begin{lstlisting}[language=Java, caption=Approval定义]
+public class Approval {
+    private String content;//申请内容
+    private File[] annex;//附件列表
+    private int mode;//模式
+    private ArrayList<User> managers;//有序的经办人列表
+    private ArrayList<String> opinions;//每一个经办人的意见
+    private ArrayList<Boolean> agreed;//每一个经办人是否批准
+}
+\end{lstlisting}
+
+\subsubsection{\color{red} 数据结构13：Issue\_server}
+该数据结构定义了Issue的基本属性，以及被其使用的回答类的属性。
+
+\begin{lstlisting}[language=Java, caption=Issue定义]
+public class Issue {
+    private String question;//问题内容
+    private User creater;//问题发布者
+    private Time time;//发布时间
+    private boolean closed;//问题是否关闭
+    private ArrayList<Answer> answers;//回答列表
+}
+class Answer{
+    private String content;//回答内容
+    private User author;//回答作者
+    private Time time;//发布时间
+    private boolean recommended;//是否被issue发布者置顶
+}
+\end{lstlisting}
+}
+
+\subsection{\color{red}用户信息管理模块}
 \begin{lstlisting}[language=Java, caption=用户信息管理模块接口]
 public class UserInfoManager{
-    public static void uploadUser(User user){
-        //将用户信息上传到服务器
+    public static int uploadUser(User user){
+        // 将用户信息上传到服务器
+        // 输入：User类实例，含有用户信息
+        //     （User类定义见第5章数据结构设计）
+        // 输出；状态码
     }
     public static User downloadUser(String userID){
-        //从服务器下载对应ID的用户信息
+        // 从服务器下载对应ID的用户信息
+        // 输入：userID字符串，唯一标记操作对应的用户
+        // 输出：下载的用户信息
     }
     public static User[] getRecommandedFriends(){
-        //向服务器获取个性化的推荐好友
+        // 向服务器获取个性化的推荐好友
+        // 输入：无
+        // 输出：推荐的好友用户信息列表
     }
-    public static void sendFriendRequest(User user){
-        //发送好友请求
+    public static int sendFriendRequest(User user){
+        // 发送好友请求
+        // 输入：User类实例，含有好友请求对象的用户信息
+        // 输出：状态码
     }
     public static SystemMessage[] receiveFriendRequest(){
-        //获取发送给自己的好友请求
+        // 获取发送给自己的好友请求
+        // 输入：无
+        // 输出：从服务器接收的好友请求
+        //（系统消息 SystemMessage类定义见第5章数据结构设计（Message子类））
     }
-    public static void responseFriendRequest(
-        SystemMessage request,boolean accept){
-        //对好友请求进行回复
+    public static int responseFriendRequest(SystemMessage request,boolean accept){
+        // 对好友请求进行回复
+        // 输入：
+        //      request：回复的好友申请信息
+        //      accept：该申请是否被通过
+        // 输出： 状态码
     }
 }
 
@@ -36,179 +242,284 @@ public class UserInfoManager{
 
 
 
-\subsection{通讯管理模块}
+\subsection{\color{red}通讯管理模块}
 {\color{red}
 
 \begin{lstlisting}[language=Java, caption=通讯管理模块接口]
 public class CommunicationManager{
-    public static void sendMessage(Message message){
-        //发送信息
+    public static int sendMessage(Message message){
+        // 发送信息
+        // 输入：message：Message实例，需要发送的实例
+        // 输出：状态码
     }
     public static Message receiveMessage(){
-        //接收信息（阻塞）
+        // 接收信息（阻塞）
+        // 输入：无
+        // 输出：接收到的消息
     }
-    public static boolean sendRadioConnectionRequest(
-        User user,int type){
-        //发送音视频连接请求（阻塞+超时机制）
+    public static boolean sendRadioConnectionRequest(User user, int type){
+        // 发送音视频连接请求（阻塞+超时机制）
+        // 输入：
+        //      user：User实例，请求对象
+        //      type：连接类型：0-音频连接，1-视频连接
+        // 输出：连接是否成功
     }
-    public static Connection 
-        receiveRadioConnectionRequest(){
-        //获取并回复发送给自己的音视频连接请求
+    public static Connection receiveRadioConnectionRequest(){
+        // 获取并回复发送给自己的音视频连接请求
+        // 输入：无
+        // 输出：接入的音视频连接
     }
-    public static void sendRadio(Connection connection,
-        byte[] data){
-        //发送音视频数据
+    public static int sendRadio(Connection connection, byte[] data){
+        // 发送音视频数据
+        // 输入：
+        //      connection：Connection实例，对应的音视频连接
+        //      data：音视频数据流
+        // 输出：状态码
     }
-    public static byte[] receiveRadio(
-        Connection connection){
-        //接收发送给自己的音视频数据
+    public static byte[] receiveRadio(Connection connection){
+        // 接收发送给自己的音视频数据
+        // 输入：connection：Connection实例，对应的音视频连接
+        // 输出：接收到的音视频数据流
     }
     public static void uploadMessage(Message message){
-        //上传聊天信息
+        // 上传聊天信息
+        // 输入：message：Message实例，上传的信息
+        // 输出：状态码
     }
-    public static Message[] downloadMessage(
-        User user,Date date){
-        //下载与指定对象在指定时间的聊天记录(null不进行指定)
-    }
-    
-    public static void publishIssue(Issue issue){
-        //发布一个issue
-    }
-    
-    public static void answerIssue(Issue issue, Answer answer){
-        //回答指定的issue
+    public static Message[] downloadMessage(User user, Date date){
+        // 下载与指定对象在指定时间的聊天记录(null不进行指定)
+        // 输入：
+        //      user：User实例，查找聊天记录的对象
+        //      date：Date实例，查找聊天记录对应的日期
+        // 输出：得到的聊天记录列表
     }
     
-    public static void closeIssue(Issue issue){
-        //关闭指定的Issue
+    public static int publishIssue(Issue issue){
+        // 发布一个issue
+        // 输入：issue：Issue实例，发布的Issue信息
+        // 输出：状态码
+    }
+    
+    public static int answerIssue(Issue issue, Answer answer){
+        // 回答指定的issue
+        // 输入：
+        //      issue：Issue实例，回答的Issue
+        //      answer：Answer实例，回答的内容
+        // 输出：状态码
+    }
+    
+    public static int closeIssue(Issue issue){
+        // 关闭指定的Issue
+        // 输入：issue：Issue实例，关闭的Issue
+        // 输出：状态码
     }
     
     
 }
 \end{lstlisting}
 }
-\subsection{文件管理模块}
+
+
+\subsection{\color{red}文件管理模块}
 \begin{lstlisting}[language=Java, caption=文件管理模块接口]
 public class FileManager{
-    public static void saveFile(File file,String path){
-        //保存文件
+    public static void saveFile(File file, String path){
+        // 保存文件
+        // 输入：
+        //      file：File实例，需要保存的文件
+        //      path：String实例，选定的保存文件的路径
+        // 输出：状态码
     }
     public static File loadFile(String path){
-        //加载指定文件
+        // 加载指定文件
+        // 输入：path：String实例，需要加载的文件的路径
+        // 输出：从服务器返回的文件
     }
     public static String[] searchFile(String name){
-        //查询指定文件
+        // 查询指定文件
+        // 输入：name：String实例，查找的文件名称
+        // 输出：符合条件的文件名列表
     }
-    public static Message sendFile(User user,File file){
-        //向指定用户发送文件,文件信息存放在返回的Message中。
-        //这个Message将被发送给对方，对方可以使用这个Message接收文件
+    public static Message sendFile(User user, File file){
+        // 向指定用户发送文件,文件信息存放在返回的Message中。
+        // 这个Message将被发送给对方，对方可以使用这个Message接收文件
+        // 输入：
+        //      user：User实例，发送对象的用户信息
+        //      file：File实例，发送的文件
+        // 输出：即将发送的Message
     }
     public static File receiveFile(Message message){
-        //使用存放有文件信息的Message接收文件
+        // 使用存放有文件信息的Message接收文件
+        // 输入：message：Message实例，接收到的含有文件的信息
+        // 输出：从Message中取出的接收文件
     }
 
 }
 \end{lstlisting}
 
-\subsection{云文件管理模块}
+\subsection{\color{red}云文件管理模块}
 \begin{lstlisting}[language=Java, caption=云文件管理模块接口]
 public class CloudFileManager{
     public static String defaultURL;
-    public static void uploadFile(File file,String url){
-        //上传云文件
+    public static void uploadFile(File file, String url){
+        // 上传云文件
+        // 输入：
+        //      file：上传的文件
+        //      url：String实例，上传的文件的统一资源定位符
+        //          （本地资源）
+        // 输出：状态码
     }
     public static File downloadFile(String url){
-        //下载云文件
+        // 下载云文件
+        // 输入：url：String实例，下载的文件的统一资源定位符
+        // 输出：下载接收到的文件
     }
     public static String[] searchFile(String name){
-        //查询指定的云文件
+        // 查询指定的云文件
+        // 输入：name：String实例，查找的文件名
+        // 输出：符合条件的云文件名称列表
     }
     public static String getFileInfo(String url){
-        //得到指定url对应的文件信息
+        // 得到指定url对应的文件信息
+        // 输入：url：String实例，查找的文件的统一资源定位符
+        // 输出：查找的文件信息
     }
 }
 \end{lstlisting}
 
-\subsection{团队管理模块}
+\subsection{\color{red}团队管理模块}
 \begin{lstlisting}[language=Java, caption=团队管理模块接口]
 public class GroupManager{
-    public static void uploadFile(Group group,File file){
-        //上传群文件
+    public static void uploadFile(Group group, File file){
+        // 上传群文件
+        // 输入：
+        //      group：Group实例，上传文件的群聊对象
+        //      file：File实例，上传的文件
+        // 输出：无
     }
-    public static File downloadFile(Group group,
-        String name){
-        //下载群文件
+    public static File downloadFile(Group group, String name){
+        // 下载群文件
+        // 输入：
+        //      group：Group实例：
+        //      name：String实例：
+        // 输出：下载得到的文件
     }
-    public static Group createGroup(User user,String name){
-        //创建群聊
+    public static Group createGroup(User user, String name){
+        // 创建群聊
+        // 输入：
+        //      user：
+        //      name：
+        // 输出：创建的新群组
     }
     public static Group getGroup(String groupID){
-        //得到对应ID的群聊
+        // 得到对应ID的群聊
+        // 输入：groupID
+        // 输出：查找得到的群组
     }
-    public static void disbandGroup(Group group){
-        //解散群聊
+    public static int disbandGroup(Group group){
+        // 解散群聊
+        // 输入：group
+        // 输出：状态码
     }
-    public static void updateGroupInfo(Group group,
-        int type,User user){
-        //对群管理信息进行更新，包括增减群成员和改变群成员权限
+    public static int updateGroupInfo(Group group, int type, User user){
+        // 对群管理信息进行更新，包括增减群成员和改变群成员权限
+        // 输入：Group: 群组
+        //       type: 功能的类型,比如增加群成员，改变成员权限
+        //       user: 被改变的成员
+        //      
+        // 输出：状态码
     }
-    public static void publishTask(Group group,Task task){
-        //发布任务
+    public static int publishTask(Group group, Task task){
+        // 发布任务
+        // 输入：group: 群组
+        //      task:发布的任务
+        //      
+        // 输出：状态码
     }
-    public static void updateTask(Group group,Task task){
-        //更新任务
+    public static int updateTask(Group group, Task task){
+        // 更新任务
+        // 输入：group：群组
+        //      task:更新的任务
+        //      
+        // 输出：状态码
     }
 }
 \end{lstlisting}
 
-\subsection{日历管理模块}
+\subsection{\color{red}日历管理模块}
 \begin{lstlisting}[language=Java, caption=日历管理模块接口]
 public class CalanderManager{
     public static Activity[][] calanderBuffer;
     public static Activity[] downloadActivities(){
-        //下载活动项
+        // 下载活动项
+        // 输入：无
+        // 输出：Activity[]:日程信息列表
     }
-    public static void uploadActivity(Activity activity){
-        //上传活动项
+    public static int uploadActivity(Activity activity){
+        // 上传活动项
+        // 输入：Activity:日程信息
+        // 输出：状态码
     }
-    public static void deleteActivity(Activity activity){
-        //删除活动项
+    public static int deleteActivity(Activity activity){
+        // 删除活动项
+        // 输入：Activity:日程信息
+        // 输出：状态码
     }
-    public static void addActivity(Activity activity){
-        //新增活动项
+    public static int addActivity(Activity activity){
+        // 新增活动项
+        // 输入：Activity: 日程信息
+        // 输出：状态码
     }
-    public static void getActivities(Date date,int length){
-        //获取某一段时间的所有活动，写入calanderBuffer
+    public static int getActivities(Date date,int length){
+        // 获取某一段时间的所有活动，写入calanderBuffer
+        // 输入：Date: 日期，length: 活动的数目
+        // 输出：状态码
     }
 }
 \end{lstlisting}
 
-\subsection{共享文档管理模块}
+\subsection{\color{red}共享文档管理模块}
 \begin{lstlisting}[language=Java, caption=共享文档管理模块接口]
 public class DocumentCooperationManager{
     public static String createDocument(File file){
-        //创建共享文档，返回URL
+        // 创建共享文档，返回URL
+        // 输入：file，File实例，初始化的文件
+        // 输出：创建的共享文档的连接URL
     }
     public static File openDocument(String url){
-        //使用URL打开共享文档
+        // 使用URL打开共享文档
+        // 输入：url：String实例，需要打开的共享文档的统一资源定位符
+        // 输出：打开的文件，本地或从服务器获得的副本
     }
-    public static void sendUpdate(String url,Update update){
-        //发送更改
+    public static int sendUpdate(String url,Update update){
+        // 发送更改
+        // 输入： 
+        //      update：更新信息
+        //      url：URL
+        // 输出：状态码
     }
     public static Update receiveUpdate(){
-        //接收更改
+        // 接收更改
+        // 输入：无
+        // 输出：从服务器接收到的更改信息
     }
     public static File applyUpdate(File file,Update update){
-        //应用更改
+        // 应用更改
+        // 输入：
+        //      file：共享文档
+        //      update：更新的内容
+        // 输出：修改之后的文件
     }
 }
 \end{lstlisting}
 
-\subsection{错误管理模块}
+\subsection{\color{red}错误管理模块}
 \begin{lstlisting}[language=Java, caption=错误管理模块接口]
 public class ErrorManager{
     public static void reportError(Exception ex){
-        //向服务器报告错误
+        // 向服务器报告错误
+        // 输入：ex：Exception实例，报告的错误
+        // 输出：状态码
     }
 }
 \end{lstlisting}
@@ -216,14 +527,18 @@ public class ErrorManager{
 
 {\color{red}
 
-\subsection{\color{red}爬虫模块}
+\subsection{\color{red} 第三方信息获取模块}
 \begin{lstlisting}[language=Java, caption=爬虫模块接口]
 public class CrawlerManager{
     public static String fetch(URL url){
-        //爬取网页，并返回重要信息
+        // 爬取网页，并返回重要信息
+        // 输入：url：URL实例，需要爬取的网页的地址
+        // 输出：网页内容
     } 
     public static String[] analyse(String s){
-        //解析网页信息
+        // 解析网页信息
+        // 输入：s：String实例，爬取到的网页
+        // 输出：网页元素列表
     }
 }
 \end{lstlisting}
@@ -232,13 +547,19 @@ public class CrawlerManager{
 \begin{lstlisting}[language=Java, caption=信息调研模块接口]
 public class SurveyManager{
     public static Survey downloadSurvey(){
-        //下载问卷
+        // 下载问卷
+        // 输入：无
+        // 输出：下载得到的问卷
     }
-    public static void uploadSurvey(Survey survey){
-        //上传问卷
+    public static int uploadSurvey(Survey survey){
+        // 上传问卷
+        // 输入：survey：Survey实例，上传的问卷
+        // 输出：状态码
     }
-    public static void updateSurvey(Survey survey){
-        //更新问卷
+    public static int updateSurvey(Survey survey){
+        // 更新问卷
+        // 输入：survey：Survey实例，更新的问卷
+        // 输出：状态码
     }
 }
 \end{lstlisting}
@@ -248,16 +569,28 @@ public class SurveyManager{
 \begin{lstlisting}[language=Java, caption=流程模块接口]
 public class ApprovalManager{
     public static Approval downloadApproval(){
-        //下载审批
+        // 下载审批
+        // 输入：无
+        // 输出：下载得到的审批
     }
     public static void uploadApproval(Approval approval){
-        //上传审批
+        // 上传审批
+        // 输入：approval：Approval实例，上传的审批
+        // 输出：状态码
     }
     public static void acceptApproval(Approval approval,String opinion){
-        //批准审批
+        // 批准审批
+        // 输入：
+        //      approval：Approval实例，批准的审批
+        //      opinion：String实例，批准审批意见
+        // 输出：状态码
     }
     public static void refuseApproval(Approval approval,String opinion){
-        //不批准审批
+        // 不批准审批
+        // 输入：
+        //      approval：Approval实例，被拒的审批
+        //      opinion：String实例，拒绝审批意见
+        // 输出：状态码
     }
 }
 \end{lstlisting}
