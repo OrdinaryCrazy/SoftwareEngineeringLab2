@@ -1,6 +1,7 @@
-\chapter{数据结构设计}
+\chapter{\color{red} 数据结构设计}
 %=================================================================================
-    \section{逻辑结构设计}
+{\color{red}
+    \section{{\color{red}逻辑结构设计}}
     %-----------------------------------------------------------------------------
 
         %================================ GUIDE ==================================
@@ -8,8 +9,8 @@
         % 只是举个例子，此处应和3.3一致。
         %================================ GUIDE ==================================
     %-----------------------------------------------------------------------------
-        \subsection{客户端数据结构}
-        
+        \subsection{{\color{red}客户端数据结构}}
+}        
     %-----------------------------------------------------------------------------
 
         
@@ -594,12 +595,14 @@ class Answer{
 }
 
 
+{\color{red}
 
 
 
-\subsection{服务器端数据结构}
+\subsection{{\color{red}服务器端数据结构}}
+}
 %--------
-\subsubsection{数据结构1：User\_server}
+\subsubsection{\color{red} 数据结构1：User\_server}
 该数据结构定义了用户的基本属性。
 \begin{lstlisting}[language=Java, caption=User定义]
 public class User{
@@ -610,6 +613,8 @@ public class User{
     private Time createTime;//账户创建时间
     private String address;//用户地址，可以为空
     private String email;//用户绑定的邮箱，可以为空
+    private ArrayList<String> tpIDs; //用户的第三方平台账号
+    private ArrayList<String> tpPasswords; //用户的第三方平台密码
 }
 \end{lstlisting}
 
@@ -631,6 +636,7 @@ public class GroupMessage extends Message{
 }
 \end{lstlisting}
 
+{\color{red}
 \subsubsection{数据结构4：Group\_server}
 该数据结构定义了群聊的基本属性。
 \begin{lstlisting}[language=Java, caption=Group定义]
@@ -641,8 +647,10 @@ public class Group{
     private User[] managerList;//管理员列表
     private User[] memberList;//群成员列表
     private Scene scene; //场景
-}
+    private ArrayList<Issue_server> issuelist;//本群中所有的issue
+    
 \end{lstlisting}
+}
 
 
 \subsubsection{数据结构5：Friend\_server}
@@ -839,7 +847,7 @@ public class CommunicationManagement{
 }
 \end{lstlisting}
 %--------
-\subsubsection{数据结构16：CommunicationManagement\_server}
+\subsubsection{数据结构16：FileManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=文件管理类]
 public class FileManagement{
@@ -917,7 +925,8 @@ public class CalendarManagement{
 }
 \end{lstlisting}
 %--------
-\subsubsection{数据结构18：GroupManagement\_server}
+{\color{red}
+\subsubsection{\color{red} 数据结构18：GroupManagement\_server}
 %--------
 \begin{lstlisting}[language=Java, caption=团队管理类]
 public static class GroupManagement{
@@ -943,8 +952,28 @@ public static class GroupManagement{
     group){
         //从数据库下载团队信息
     }
+    
+    public static Issue_server[] GetIncompletedIssues(){
+        //获取未解决的issue
+    }
+    public static Issue_server[] GetCompletedIssues(){
+        //获取已经解决的issue
+    }
+    public static void upLoadIssue(Issue_server[]){
+        //向issue记录存储数据库上传文件
+    }
+    public static Issue_server[] downLoadIssue(){
+        //从issue记录存储数据库下载文件
+    }
+    public static Answer recvSolution(){
+        //从团队用户处获取issue的解决方案
+    }
+    public static void sendQuestion(){
+        //向团队用户发送未解决的issue
+    }
 }
 \end{lstlisting}
+}
 %--------
 \subsubsection{数据结构19：CoopeartionManagement\_server}
 %--------
@@ -991,7 +1020,69 @@ public static class ErrorManagement{
 } 
 \end{lstlisting}
 
+%--------
+{\color{red}
 
+\subsubsection{数据结构21：SurveyManagement\_server}
+\begin{lstlisting}[language=Java, caption=信息调研管理类]
+public static class SurveyManagement{
+
+    public static Survey LaunchSurvey(){
+        //启动调研
+    }
+    public static void UpdateSurvey(Survey, Question){
+        //用户回答问题后，更新调研表的统计信息
+    }
+    public static Survey FeedbackSurvey(){
+        //返回调研结果
+    }
+
+} 
+\end{lstlisting}
+
+
+%--------
+\subsubsection{数据结构22：ApprovalManagement\_server}
+\begin{lstlisting}[language=Java, caption=审批管理类]
+public static class ApprovalManagement{
+    
+    ArrayList<Approval> [] IncompletedApproval;//待完成的审批列表
+    ArrayList<Approval> [] completedApproval;//已完成的审批列表
+
+    public static void ApplyFor(Approval approval){
+        //申请项目审批
+    }
+    public static Approval ProgressInquiry(){
+        //查询审批进度
+    }
+    public static Approval GetResult(int ApprovalID){
+        //接收审批返回的结果
+    }
+
+} 
+\end{lstlisting}
+
+%--------
+\subsubsection{数据结构23：ThirdPartyManagement\_server}
+\begin{lstlisting}[language=Java, caption=第三方账号管理类]
+public static class ThirdPartyManagement{
+    User[] Users; //与第三方平台有交互的用户列表
+    public static void Bind(Int tpID, String tpPassword){
+        //绑定第三方平台账号
+    }
+    public static String fetch(User user){
+        //获取第三方平台上的新内容
+    }
+    public static String analyse(String s){
+        //分析获取得到的第三方内容
+    }
+
+} 
+\end{lstlisting}
+
+
+
+}
 
 
     %-----------------------------------------------------------------------------
@@ -999,14 +1090,15 @@ public static class ErrorManagement{
     %-----------------------------------------------------------------------------
         各数据结构无特殊物理结构要求。
     %-----------------------------------------------------------------------------
-    \section{数据结构与程序模块的关系}
+  
+    \section{{\color{red}数据结构与程序模块的关系}}
     %================================ GUIDE ======================================
     % [此处指的是不同的数据结构分配到哪些模块去实现。可按不同的端拆分此表]
     %================================ GUIDE ======================================
-{\color{red}
+{\color{red}  
         \begin{table}[htbp]
             \centering
-            \caption{数据结构与程序代码的关系表}
+            \caption{{\color{red}数据结构与程序代码的关系表}}
             \label{tab:datastructure-module}
             \begin{tabular}{|p{6.3em}|p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|
                             p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|p{2em}|}
