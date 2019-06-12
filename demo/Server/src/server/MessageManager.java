@@ -129,7 +129,7 @@ public class MessageManager {
             case 5://删除好友
                 forwardMessage(type,sender,receiver,content);
                 AddressBookManager.getAddressBook(sender).deleteFriend(receiver);
-                AddressBookManager.getAddressBook(receiver).deleteFriend(receiver);
+                AddressBookManager.getAddressBook(receiver).deleteFriend(sender);
                 break;
             case 7://接受入群邀请
                 forwardMessage(type,sender,receiver,content);

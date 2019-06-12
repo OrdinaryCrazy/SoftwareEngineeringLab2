@@ -1,5 +1,5 @@
 # 即时聊天系统Demo报告
-> PB16111485 张劲暾&emsp;PB16080210 戴路&emsp;PB16110428 王浩宇&emsp;
+> PB16110428 王浩宇
 
 ## 实验环境
 + 操作系统：Windows 10
@@ -29,46 +29,42 @@
 + 系统消息
 + 图形用户界面（GUI）
 
-## 项目结构
-![pic](pic/structure.png)
-
-
-## 多线程管理
+## 多线程
 ### 服务器
-&emsp;&emsp;使用线程池管理线程，每接到一个TCP连接请求就新建一个线程。该线程会接收对应的客户端发送的所有报文并进行处理，返回对应的报文。当客户端退出时，该线程也会结束。
+每接到一个TCP连接请求就新建一个线程。该线程会接收对应的客户端发送的所有报文并进行处理，返回对应的报文。当客户端退出时，该线程也会结束。
 ### 客户端
-&emsp;&emsp;新建一个监听线程接收服务器发送的报文并进行处理；另有GUI线程处理用户在界面上的操作，根据不同的操作发送不同的报文。
+新建一个监听线程接收服务器发送的报文并进行处理；另有GUI线程处理用户在界面上的操作，根据不同的操作发送不同的报文。
 ## TCP交互
-&emsp;&emsp;Java会将TCP连接包装为输入输出流，使用TCP报文等价于使用流。每一份报文使用换行符分割，在读取时使用Scanner类的readLine()方法，在输出时使用PrintWriter类的println()方法。
+Java会将TCP连接包装为输入输出流，使用TCP报文等价于使用流。每一份报文使用换行符分割，在读取时使用Scanner类的readLine()方法，在输出时使用PrintWriter类的println()方法。
 
-## TCP报文
+## 报文
 
 ### 注册
-&emsp;&emsp;客户端发送下面的报文，注意使用方括号包裹的是一个字符串变量，空格作为分隔符。
+客户端发送下面的报文，注意使用方括号包裹的是一个字符串变量，空格作为分隔符。
 > Register [name] [sex] [password]  
 
-&emsp;&emsp;服务器接收后发送下面的报文(User的toString()方法已经重载)：
+服务器接收后发送下面的报文(User的toString()方法已经重载)：
 > NewUser [user]
 
 ### 登录
-&emsp;&emsp;客户端发送下面的报文：
+客户端发送下面的报文：
 > Login [ID] [password]
 
-&emsp;&emsp;服务器接收后，如果用户存在且密码正确，发送下面的报文：
+服务器接收后，如果用户存在且密码正确，发送下面的报文：
 > LoginSucceed [user]
 
-&emsp;&emsp;否则，发送下面的报文：
+否则，发送下面的报文：
 > LoginFailed
 
 ### 消息
-&emsp;&emsp;客户端发送下面的报文：
+客户端发送下面的报文：
 > Message [type] [sender] [receiver] [content]
 
-&emsp;&emsp;服务器接收后，如果接收方在线就进行转发，否则将其缓存，转发时增加发送时间的字段：
+服务器接收后，如果接收方在线就进行转发，否则将其缓存，转发时增加发送时间的字段：
 > Message [type] [sender] [receiver] [date] [content]
 
 
-&emsp;&emsp;根据不同的type,服务器进行下面的处理：
+根据不同的type,服务器进行下面的处理：
 
 + 私聊
   + type=0
@@ -131,37 +127,37 @@
   + content无效
   + 服务器修改通讯录和群信息，并将其转发给群主
 ### 建群
-&emsp;&emsp;客户端发送以下报文：
+客户端发送以下报文：
 > NewGroup [name]
 
-&emsp;&emsp;服务器建立群聊，将它加入群主的通讯录，返回下面的报文：
+服务器建立群聊，将它加入群主的通讯录，返回下面的报文：
 > Group [group]  
 
 
 ### 获取数据
-&emsp;&emsp;客户端发送以下报文：
+客户端发送以下报文：
 > Get {User|Group|AddressBook} [ID]
 
-&emsp;&emsp;服务器根据ID和类型返回下列报文：  
+服务器根据ID和类型返回下列报文：
 > User [user]  
 > Group [group]  
 > AddressBook [addressbook]
 
-&emsp;&emsp;三者的toString()方法均已重载。
+三者的toString()方法均已重载。
 
 ### 获取消息
-&emsp;&emsp;客户端发送以下报文：
+客户端发送以下报文：
 > Fetch [ID]
 
-&emsp;&emsp;服务器根据ID返回缓存的所有消息。
+服务器根据ID返回缓存的所有消息。
 
 ### 退出
-&emsp;&emsp;客户端发送下面的报文：
+客户端发送下面的报文：
 > Exit
 
 ## 数据管理
 ### 用户数据
-&emsp;&emsp;下面的两个类用于管理用户数据。User类储存了用户数据，UserManager类管理所有的用户数据。
+下面的两个类用于管理用户数据。User类储存了用户数据，UserManager类管理所有的用户数据。
 ```java
 public class UserManager {
     private static final int MAXUSERS=100;
@@ -217,7 +213,7 @@ class User{
 ```
 
 ### 群聊数据
-&emsp;&emsp;下面的两个类用于管理群聊数据。Group类储存了群聊数据，GroupManager类管理所有的群聊数据。
+下面的两个类用于管理群聊数据。Group类储存了群聊数据，GroupManager类管理所有的群聊数据。
 ```java
 public class GroupManager {
     private static final int MAXGROUP=100;
@@ -270,7 +266,7 @@ class Group{
 ```
 
 ### 通讯录数据
-&emsp;&emsp;下面的两个类用于管理通讯录数据。AddressBook类储存了通讯录数据，AddressBookManager类管理所有的通讯录数据。
+下面的两个类用于管理通讯录数据。AddressBook类储存了通讯录数据，AddressBookManager类管理所有的通讯录数据。
 ```java
 public class AddressBookManager {
     private static final int MAXUSERS=100;
@@ -306,7 +302,7 @@ class AddressBook{
 ```
 
 ### 消息数据
-&emsp;&emsp;下面的两个类用于管理消息数据。Message类储存了消息数据，MessageManager类管理所有的消息数据。
+下面的两个类用于管理消息数据。Message类储存了消息数据，MessageManager类管理所有的消息数据。
 
 ```java
 public class MessageManager {
@@ -386,28 +382,19 @@ class Message{
 
 ## 系统演示
 ### 登录界面
-**&emsp;&emsp;点击注册跳转到注册界面；输入账号密码后点击登录，如果密码正确跳转到主界面，否则弹出对话框提示账号或密码错误。**  
 ![pic](pic/login.png)
 ### 注册界面
-**&emsp;&emsp;填写所有信息后点击注册按钮：如果两次输入的密码不相同，则弹出对话框提示；如果相同，弹出对话框告知系统分配的账户，并自动跳转到主界面（相当于直接登录）。**  
 ![pic](pic/register.png)
 ### 主界面-私聊消息
-**&emsp;&emsp;在主界面中点击左侧的聊天消息按钮可以查看聊天消息。再点击列表中的用户，在右上文本框中显示对应的聊天信息。在右下的输入框中输入想要发送的内容，再点击发送按钮进行发送。**  
 ![pic](pic/singlechat.png)
 ### 主界面-群聊消息
-**&emsp;&emsp;在主界面中点击左侧的聊天消息按钮可以查看聊天消息。再点击列表中的群聊，在右上文本框中显示对应的聊天信息。在右下的输入框中输入想要发送的内容，再点击发送按钮进行发送。**   
 ![pic](pic/groupchat.png)
 ### 主界面-联系人
-**&emsp;&emsp;在主界面中点击左侧的联系人按钮可以查看联系人。加号用于添加好友。点击列表中的好友，在右侧显示对应的信息，点击删除好友按钮可以删除该好友。**     
+**加号用于添加好友。**     
 ![pic](pic/friend.png)
 ### 主界面-群聊
-**&emsp;&emsp;在主界面中点击左侧的群聊按钮可以查看群聊。加号用于新建群聊。点击列表中的群聊，在右侧显示对应的信息。群主在输入框中输入想要邀请的用户账号，再点击邀请按钮可以发送邀请。**     
+**加号用于新建群聊。**     
 ![pic](pic/group.png)
-
-
-**&emsp;&emsp;普通群成员可以点击退出群聊按钮退出群聊。**   
-![pic](pic/group2.png)
-### 系统消息界面
-**&emsp;&emsp;在主界面中点击左侧的系统消息按钮会弹出系统消息界面。点击列表中的消息，如果该消息是一个邀请，那么接受和拒绝按钮都是可用的，可以点击以接受或拒绝邀请。**     
+### 系统消息
 ![pic](pic/system.png)
 

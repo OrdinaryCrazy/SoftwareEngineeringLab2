@@ -55,6 +55,10 @@ public class TCPAnalyzer {
         else if (message.startsWith("Login")){
             //登录的报文应当满足格式： Login [ID] [password]
             String s[]=message.split(" ");
+            if (s.length<3){
+                sendMessage(th,"LoginFailed");
+                return;
+            }
             User user=UserManager.getUser(s[1]);
             if (user==null || !user.checkPassword(s[2])){
                 sendMessage(th,"LoginFailed");
