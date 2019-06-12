@@ -1,13 +1,23 @@
 # 即时聊天系统Demo报告
 > PB16111485 张劲暾&emsp;PB16080210 戴路&emsp;PB16110428 王浩宇&emsp;
 
+---
+
+## 目录
+
+[TOC]
+
+---
+
 ## 实验环境
-+ 操作系统：Windows 10
-+ 语言： Java 8
-+ IDE： NetBeans 8.2
+
++ 操作系统：`Windows 10`
++ 语言： `Java 8`
++ `IDE`： `NetBeans 8.2`
 
 ## 实现功能
 ### 注册
+
 + 用户输入昵称、性别和密码，发送给服务器
 + 服务器接收这些信息，自动生成账号，并进行存储
 + 生成的账号会反馈给用户，用户之后可以使用账号和密码登录
@@ -63,9 +73,10 @@
 ### 系统消息
 &emsp;&emsp;用户可以统一查看所有的系统消息，对于某些邀请类消息，可以进行接受操作或拒绝操作。
 ### 图形用户界面（GUI）
-&emsp;&emsp;采用标准的Java Swing库完成用户界面。
+&emsp;&emsp;采用标准的`Java Swing`库完成用户界面。
 
 ## 项目结构
+
 ![pic](pic/structure.png)
 
 
@@ -119,6 +130,7 @@ PrintWriter writer = new PrintWriter(socket.getOutputStream());//得到输出流
 > LoginFailed
 
 ### 消息
+
 &emsp;&emsp;客户端发送下面的报文：
 > Message [type] [sender] [receiver] [content]
 
@@ -218,6 +230,7 @@ PrintWriter writer = new PrintWriter(socket.getOutputStream());//得到输出流
 > Exit
 
 ## 数据管理
+
 ### 用户数据
 &emsp;&emsp;下面的两个类用于管理用户数据。User类储存了用户数据，UserManager类管理所有的用户数据。
 ```java
